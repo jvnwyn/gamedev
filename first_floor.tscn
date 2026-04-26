@@ -826,7 +826,6 @@ transform = Transform( 10, 0, 1.42109e-14, 0, 5, 0, 1.13687e-13, 0, 0.5, 0, 4.93
 shape = SubResource( 2 )
 
 [node name="OS_room" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="floor_white_tile_2x2_meters51" parent="OS_room" instance=ExtResource( 2 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -4.4754, -3.93001, 3.59742 )
@@ -1135,7 +1134,6 @@ shape = SubResource( 2 )
 transform = Transform( 0.999807, -0.0198781, 0, 0.0198781, 0.999807, 0, 0, 0, 1, 30.9052, 0.397475, -45.5881 )
 
 [node name="faculty2" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Sofa" type="MeshInstance" parent="faculty2"]
 transform = Transform( 3.2189, 0, 0, 0, 5.58173, 0, 0, 0, 3.01571, 49.8447, 0.411317, 10.4209 )
@@ -1145,7 +1143,6 @@ skeleton = NodePath("../..")
 [node name="StaticBody" type="StaticBody" parent="faculty2/Sofa"]
 
 [node name="CollisionShape" type="CollisionShape" parent="faculty2/Sofa/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 4 )
 
 [node name="floor_white_tile_2x2_meters75" parent="faculty2" instance=ExtResource( 2 )]
@@ -1359,7 +1356,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7771, 0.00876856, -8.49512 
 shape = SubResource( 1 )
 
 [node name="floor_white_tile_2x2_meters96" parent="faculty2" instance=ExtResource( 2 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 1.48993, -3.93001, 68.3928 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -21.9349, -3.93001, 68.3928 )
 
 [node name="StaticBody" type="StaticBody" parent="faculty2/floor_white_tile_2x2_meters96"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43373, 0 )

@@ -1,0 +1,269 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
+[ext_resource path="res://Assets/floor_white_tile_2x2_meters.glb" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="Foundation" type="Spatial"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
+
+[node name="Floor" type="Spatial" parent="."]
+transform = Transform( 0.985, 0, 0, 0, 1, 0, 0, 0, 1, -88.4152, 0, 0 )
+
+[node name="floor_white_tile_2x2_meters1118" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 6 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1118"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1118/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1120" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 12 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1120"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1120/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1119" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 18 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1119"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1119/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1121" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 24 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1121"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1121/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1122" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 30 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1122"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1122/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1123" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 36 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1123"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1123/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1124" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 42 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1124"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1124/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1125" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.02119, 0, 6 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1125"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1125/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1126" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.02119, 0, 12 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1126"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1126/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1127" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.02119, 0, 18 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1127"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1127/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1128" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.02119, 0, 24 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1128"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1128/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1129" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.02119, 0, 30 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1129"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1129/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1130" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.02119, 0, 36 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1130"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1130/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1131" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 6.02119, 0, 42 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1131"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1131/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1132" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 11.9982, 0, 6 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1132"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1132/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1133" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 11.9982, 0, 12 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1133"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1133/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1134" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 11.9982, 0, 18 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1134"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1134/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1135" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 11.9982, 0, 24 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1135"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1135/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1136" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 11.9982, 0, 30 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1136"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1136/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1137" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 11.9982, 0, 36 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1137"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1137/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1138" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 11.9982, 0, 42 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1138"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1138/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1139" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.0194, 0, 6 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1139"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1139/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1140" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.0194, 0, 12 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1140"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1140/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1141" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.0194, 0, 18 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1141"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1141/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1142" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.0194, 0, 24 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1142"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1142/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1143" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.0194, 0, 30 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1143"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1143/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1144" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.0194, 0, 36 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1144"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1144/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="floor_white_tile_2x2_meters1145" parent="Floor" instance=ExtResource( 2 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.0194, 0, 42 )
+
+[node name="StaticBody" type="StaticBody" parent="Floor/floor_white_tile_2x2_meters1145"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1145/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="Wall" type="Spatial" parent="."]
+
+[node name="wall_plain" parent="Wall" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.6928, 4.59421, 19.1296 )

@@ -646,7 +646,7 @@ transform = Transform( -7.21238e-08, 0, 0.5, 0, 0.8, 0, -1.65, 0, -2.18557e-08, 
 [node name="StaticBody" type="StaticBody" parent="Node/wall_plain3"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Node/wall_plain3/StaticBody"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 4.95794, 0 )
+transform = Transform( 10, 0, 4.44089e-16, 0, 5, 0, 0, 0, 0.5, 0, 4.95794, 0 )
 shape = SubResource( 7 )
 
 [node name="door_25_v2" parent="Node" instance=ExtResource( 9 )]
