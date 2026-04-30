@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
 [ext_resource path="res://FloorBase.tscn" type="PackedScene" id=2]
@@ -8,6 +8,11 @@
 [ext_resource path="res://Assets/double_stairs.glb" type="PackedScene" id=6]
 [ext_resource path="res://Assets/picture_window.glb" type="PackedScene" id=7]
 [ext_resource path="res://Assets/double_doors_with_windows.glb" type="PackedScene" id=8]
+[ext_resource path="res://Assets/office_desk.glb" type="PackedScene" id=9]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/low_poly_file_cabinet.glb" type="PackedScene" id=11]
+
+[sub_resource type="BoxShape" id=3]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -30,6 +35,78 @@ transform = Transform( -2.62268e-08, 0, 0.8, 0, 0.6, 0, -0.6, 0, -3.49691e-08, 8
 
 [node name="IT Faculty" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, -0.8, 0, 0.6, 0, 0.6, 0, -3.49691e-08, 108.219, 1.481, -2.59333 )
+
+[node name="office_desk12" parent="IT Faculty" instance=ExtResource( 9 )]
+transform = Transform( 3.33308, 0, 7.10543e-14, 0, 3.33333, 0, 2.84217e-14, 0, 2.50034, -35.4356, 4.44109, 14.0244 )
+
+[node name="StaticBody" type="StaticBody" parent="IT Faculty/office_desk12"]
+
+[node name="CollisionShape" type="CollisionShape" parent="IT Faculty/office_desk12/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk15" parent="IT Faculty" instance=ExtResource( 9 )]
+transform = Transform( 3.33308, 0, 7.10543e-14, 0, 3.33333, 0, 2.84217e-14, 0, 2.50034, -35.4356, 4.44899, 6.47633 )
+
+[node name="StaticBody" type="StaticBody" parent="IT Faculty/office_desk15"]
+
+[node name="CollisionShape" type="CollisionShape" parent="IT Faculty/office_desk15/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk17" parent="IT Faculty" instance=ExtResource( 9 )]
+transform = Transform( 3.33308, 0, 7.10543e-14, 0, 3.33333, 0, 2.84217e-14, 0, 2.50034, -35.4356, 4.43314, -0.805779 )
+
+[node name="StaticBody" type="StaticBody" parent="IT Faculty/office_desk17"]
+
+[node name="CollisionShape" type="CollisionShape" parent="IT Faculty/office_desk17/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk19" parent="IT Faculty" instance=ExtResource( 9 )]
+transform = Transform( 3.33308, 0, 7.10543e-14, 0, 3.33333, 0, 2.84217e-14, 0, 2.50034, -35.4356, 4.39727, -8.68095 )
+
+[node name="StaticBody" type="StaticBody" parent="IT Faculty/office_desk19"]
+
+[node name="CollisionShape" type="CollisionShape" parent="IT Faculty/office_desk19/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk13" parent="IT Faculty" instance=ExtResource( 9 )]
+transform = Transform( 3.33308, 0, 7.10543e-14, 0, 3.33333, 0, 2.84217e-14, 0, 2.50034, -43.0281, 4.40889, 14.0244 )
+
+[node name="StaticBody" type="StaticBody" parent="IT Faculty/office_desk13"]
+
+[node name="CollisionShape" type="CollisionShape" parent="IT Faculty/office_desk13/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk14" parent="IT Faculty" instance=ExtResource( 9 )]
+transform = Transform( 3.33308, 0, 7.10543e-14, 0, 3.33333, 0, 2.84217e-14, 0, 2.50034, -43.0281, 4.39431, 6.73827 )
+
+[node name="StaticBody" type="StaticBody" parent="IT Faculty/office_desk14"]
+
+[node name="CollisionShape" type="CollisionShape" parent="IT Faculty/office_desk14/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk16" parent="IT Faculty" instance=ExtResource( 9 )]
+transform = Transform( 3.33308, 0, 7.10543e-14, 0, 3.33333, 0, 2.84217e-14, 0, 2.50034, -43.0281, 4.39548, -0.77713 )
+
+[node name="StaticBody" type="StaticBody" parent="IT Faculty/office_desk16"]
+
+[node name="CollisionShape" type="CollisionShape" parent="IT Faculty/office_desk16/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk18" parent="IT Faculty" instance=ExtResource( 9 )]
+transform = Transform( 3.33308, 0, 7.10543e-14, 0, 3.33333, 0, 2.84217e-14, 0, 2.50034, -43.0281, 4.42756, -8.69033 )
+
+[node name="StaticBody" type="StaticBody" parent="IT Faculty/office_desk18"]
+
+[node name="CollisionShape" type="CollisionShape" parent="IT Faculty/office_desk18/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
 
 [node name="Walls" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.127 )
@@ -359,3 +436,18 @@ transform = Transform( -2, 0, -8.74228e-08, 0, 2, 0, 1.74846e-07, 0, -1, 190.277
 
 [node name="double_doors_with_windows2" parent="Door" instance=ExtResource( 8 )]
 transform = Transform( -2, 0, -8.74228e-08, 0, 2, 0, 1.74846e-07, 0, -1, 199.374, 4.4411, -33.0115 )
+
+[node name="Player" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 117.022, 4.13025, -11.538 )
+
+[node name="low_poly_file_cabinet" parent="." instance=ExtResource( 11 )]
+transform = Transform( -3.15413e-09, 0, 0.0929664, 0, 0.0684895, 0, -0.072158, 0, -4.06369e-09, 92.6844, 4.13461, -18.3933 )
+
+[node name="low_poly_file_cabinet2" parent="." instance=ExtResource( 11 )]
+transform = Transform( -3.15413e-09, 0, 0.0929664, 0, 0.0684895, 0, -0.072158, 0, -4.06369e-09, 92.6844, 4.13461, -19.1549 )
+
+[node name="low_poly_file_cabinet3" parent="." instance=ExtResource( 11 )]
+transform = Transform( -3.15413e-09, 0, 0.0929664, 0, 0.0684895, 0, -0.072158, 0, -4.06369e-09, 92.6844, 4.13461, -19.909 )
+
+[node name="low_poly_file_cabinet4" parent="." instance=ExtResource( 11 )]
+transform = Transform( -3.15413e-09, 0, 0.0929664, 0, 0.0684895, 0, -0.072158, 0, -4.06369e-09, 92.6844, 4.13461, -20.6623 )
