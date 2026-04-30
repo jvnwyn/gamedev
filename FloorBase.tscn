@@ -1,17 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
 [ext_resource path="res://Assets/floor_white_tile_2x2_meters.glb" type="PackedScene" id=2]
 
 [sub_resource type="BoxShape" id=1]
 
-[sub_resource type="BoxShape" id=2]
-
 [node name="FloorBase" type="Spatial"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -234.358, 0, 0 )
 
 [node name="Floor" type="Spatial" parent="."]
-transform = Transform( 0.985, 0, 0, 0, 1, 0, 0, 0, 1, -88.4152, 0, 0 )
 
 [node name="floor_white_tile_2x2_meters880" parent="Floor" instance=ExtResource( 2 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
@@ -2412,158 +2408,3 @@ transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.1573, 1.37206, -8.49423 )
 [node name="CollisionShape" type="CollisionShape" parent="Floor/floor_white_tile_2x2_meters1119/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.60153, -0.266554, -0.0267105 )
 shape = SubResource( 1 )
-
-[node name="Walls" type="Spatial" parent="."]
-
-[node name="wall_plain" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 3.8, 7.931 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain2" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3.8, 7.931 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain2"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain2/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain3" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 3.8, 7.931 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain3"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain3/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain4" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 3.8, 7.931 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain4"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain4/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain5" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 3.8, 7.931 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain5"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain5/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain6" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 3.8, -29.1224 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain6"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain6/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain7" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3.8, -29.1224 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain7"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain7/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain8" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 3.8, -29.1224 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain8"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain8/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain9" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 3.8, -29.1224 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain9"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain9/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain10" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 3.8, -29.1223 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain10"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain10/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain11" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 3.8, -29.1224 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain11"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain11/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain12" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 3.8, -29.1224 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain12"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain12/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain13" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 3.8, -29.1223 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain13"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain13/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain14" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.5207, 3.8, -1.51359 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain14"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain14/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain15" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.521, 3.8, -19.65 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain15"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain15/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain16" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -48.4116, 3.8, -1.51359 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain16"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain16/StaticBody"]
-shape = SubResource( 2 )
-
-[node name="wall_plain17" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -48.4113, 3.8, -19.65 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain17"]
-transform = Transform( 10, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 5, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain17/StaticBody"]
-shape = SubResource( 2 )

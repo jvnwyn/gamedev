@@ -12,7 +12,7 @@ data = PoolVector3Array( 19.4827, -24.6455, 51.3153, 19.5839, -25.0377, 52.5982,
 
 [sub_resource type="BoxShape" id=1]
 
-[node name="Foundation" type="Spatial"]
+[node name="Lec" type="Spatial"]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="computer_desk" parent="." instance=ExtResource( 5 )]

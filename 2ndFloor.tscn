@@ -1,0 +1,198 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
+[ext_resource path="res://2345FlrBase.tscn" type="PackedScene" id=2]
+[ext_resource path="res://RoomBase.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/double_stairs.glb" type="PackedScene" id=6]
+[ext_resource path="res://Assets/picture_window.glb" type="PackedScene" id=7]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="2ndFloor" type="Spatial"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -304.422, -17.6286, 85.1443 )
+
+[node name="Room102" parent="." instance=ExtResource( 3 )]
+transform = Transform( -2.62268e-08, 0, 0.7, 0, 0.6, 0, -0.6, 0, -3.0598e-08, 53.5218, 1.481, -20.6181 )
+
+[node name="Room107" parent="." instance=ExtResource( 3 )]
+transform = Transform( -2.62268e-08, 0, 0.7, 0, 0.6, 0, -0.6, 0, -3.0598e-08, 115.954, 1.481, -20.6181 )
+
+[node name="Room106" parent="." instance=ExtResource( 3 )]
+transform = Transform( -2.62268e-08, 0, 0.8, 0, 0.6, 0, -0.6, 0, -3.49691e-08, 84.9498, 1.481, -20.6181 )
+
+[node name="Room103" parent="." instance=ExtResource( 3 )]
+transform = Transform( -3.0598e-08, 0, -0.6, 0, 0.6, 0, 0.7, 0, -2.62268e-08, 58.4118, 1.481, 2.0892 )
+
+[node name="Room104" parent="." instance=ExtResource( 3 )]
+transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.6, 0, 0.7, 0, -3.0598e-08, 134.535, 1.481, 2.0892 )
+
+[node name="Room105" parent="." instance=ExtResource( 3 )]
+transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.6, 0, 0.7, 0, -3.0598e-08, 104.935, 1.481, 2.0892 )
+
+[node name="Walls" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.127 )
+
+[node name="wall_plain" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( -3.58433e-08, 0, -0.2, 0, 0.7, 0, 0.82, 0, -8.74228e-09, 37.401, 3.83694, 15.5088 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain"]
+transform = Transform( 0.8, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain/StaticBody"]
+transform = Transform( 0.8, 0, -1.13687e-14, 0, 5, 0, 2.0211e-14, 0, 0.45, 0.29302, 4.94658, 0.101528 )
+shape = SubResource( 1 )
+
+[node name="wall_plain2" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( 0.48, 0, 0, 0, 0.7, 0, 0, 0, 0.2, 42.1085, 3.837, 7.33778 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain2"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain2/StaticBody"]
+transform = Transform( 0.45, 0, 0, 0, 5, 0, 0, 0, 0.45, -0.274857, 4.94658, 0.101532 )
+shape = SubResource( 1 )
+
+[node name="wall_plain3" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( 1.05, 0, 0, 0, 0.7, 0, 0, 0, 0.2, 81.8634, 3.83694, 7.39052 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain3"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain3/StaticBody"]
+transform = Transform( 25, 0, 0, 0, 5, 0, 0, 0, 0.45, -0.274857, 4.93859, 0.10153 )
+shape = SubResource( 1 )
+
+[node name="wall_plain4" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( 0.6, 0, 0, 0, 0.7, 0, 0, 0, 0.2, 135.97, 3.83694, 40.6622 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain4"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain4/StaticBody"]
+transform = Transform( 22, 0, 0, 0, 5, 0, 0, 0, 0.45, -0.274857, 4.85676, 0.101532 )
+shape = SubResource( 1 )
+
+[node name="wall_plain6" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( -1.44248e-08, 0, 0.2, 0, 0.7, 0, -0.33, 0, -8.74228e-09, 142.023, 3.83694, 43.8407 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain6"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain6/StaticBody"]
+transform = Transform( 20, 0, 0, 0, 5, 0, 0, 0, 0.45, -0.274857, 4.94658, 0.101532 )
+shape = SubResource( 1 )
+
+[node name="wall_plain11" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( -3.27835e-08, 0, 0.2, 0, 0.7, 0, -0.75, 0, -8.74228e-09, 150.633, 3.83694, 39.8042 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain11"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain11/StaticBody"]
+transform = Transform( 22, 0, -1.77636e-15, 0, 5, 0, -2.27374e-13, 0, 0.45, -0.274857, 4.94658, 0.101532 )
+shape = SubResource( 1 )
+
+[node name="wall_plain17" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( -1.96701e-08, 0, 0.05, 0, 0.3, 0, -0.45, 0, -2.18557e-09, 150.709, 3.88001, 27.8562 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain17"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain17/StaticBody"]
+transform = Transform( 22, 0, 6.66134e-15, 0, 5, 0, -9.09495e-13, 0, 0.45, 0.247284, 4.94658, 0.101501 )
+shape = SubResource( 1 )
+
+[node name="wall_plain16" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( -1.96701e-08, 0, 0.2, 0, 0.1, 0, -0.45, 0, -8.74228e-09, 150.633, 9.85287, 27.7621 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain16"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain16/StaticBody"]
+transform = Transform( 22, 0, -1.77636e-15, 0, 5, 0, 2.27374e-13, 0, 0.45, 0.224248, 4.94658, 0.101532 )
+shape = SubResource( 1 )
+
+[node name="wall_plain14" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( -3.49691e-08, 0, 0.2, 0, 0.7, 0, -0.8, 0, -8.74228e-09, 150.657, 3.83694, 15.4401 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain14"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain14/StaticBody"]
+transform = Transform( 22, 0, -4.44089e-15, 0, 5, 0, 0, 0, 0.45, 0.836601, 5.13642, 0.101517 )
+shape = SubResource( 1 )
+
+[node name="wall_plain7" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( -1.31134e-08, 0, 2, 0, 0.7, 0, -0.3, 0, -8.74228e-08, 130.848, 3.83694, 37.8042 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain7"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain7/StaticBody"]
+transform = Transform( 22, 0, 0, 0, 5, 0, 0, 0, 0.45, -0.274857, 4.94658, 0.101532 )
+shape = SubResource( 1 )
+
+[node name="wall_plain10" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( -1.31134e-08, 0, 2, 0, 0.7, 0, -0.3, 0, -8.74228e-08, 141.12, 3.83694, 37.8042 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain10"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain10/StaticBody"]
+transform = Transform( 22, 0, 0, 0, 5, 0, 1.42109e-14, 0, 0.45, 1.3254, 4.94658, 0.101532 )
+shape = SubResource( 1 )
+
+[node name="wall_plain5" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( 1.2, 0, 0, 0, 0.7, 0, 0, 0, 0.2, 138.743, 3.83694, 47.4565 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain5"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain5/StaticBody"]
+transform = Transform( 22, 0, 0, 0, 5, 0, 0, 0, 0.45, -0.274856, 4.94658, 0.653778 )
+shape = SubResource( 1 )
+
+[node name="wall_plain18" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( -1.96701e-08, 0, 0.05, 0, 0.3, 0, -0.45, 0, -2.18557e-09, 37.3844, 3.82228, 28.2622 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain18"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain18/StaticBody"]
+transform = Transform( 22, 0, 6.66134e-15, 0, 5, 0, -9.09495e-13, 0, 0.45, 0.247284, 4.94658, 0.101501 )
+shape = SubResource( 1 )
+
+[node name="wall_plain19" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( -1.96701e-08, 0, 0.2, 0, 0.1, 0, -0.45, 0, -8.74228e-09, 37.3084, 9.79514, 28.168 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain19"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain19/StaticBody"]
+transform = Transform( 22, 0, -1.77636e-15, 0, 5, 0, 2.27374e-13, 0, 0.45, 0.224248, 4.94658, 0.101532 )
+shape = SubResource( 1 )
+
+[node name="Stairs" type="Spatial" parent="."]
+
+[node name="double_stairs2" parent="Stairs" instance=ExtResource( 6 )]
+transform = Transform( 0.03, 0, 0, 0, 0.026, 0, 0, 0, 0.055, 142.26, 4.38047, -5.62039 )
+
+[node name="double_stairs" parent="Stairs" instance=ExtResource( 6 )]
+transform = Transform( -0.03, 0, -8.30477e-09, 0, 0.026, 0, 4.52987e-09, 0, -0.055, 45.9797, 4.38047, -17.6117 )
+
+[node name="Window" type="Spatial" parent="."]
+
+[node name="picture_window" parent="Window" instance=ExtResource( 7 )]
+transform = Transform( -0.0678438, 0, -0.032855, 0, 0.04, 0, 0.0423935, 0, -0.052579, 148.089, 6.72377, -11.4453 )
+
+[node name="picture_window2" parent="Window" instance=ExtResource( 7 )]
+transform = Transform( 0.0678438, 0, 0.032855, 0, 0.04, 0, -0.0423935, 0, 0.052579, 153.187, 6.72377, -11.1735 )
+
+[node name="picture_window3" parent="Window" instance=ExtResource( 7 )]
+transform = Transform( -0.0678438, 0, -0.032855, 0, 0.04, 0, 0.0423935, 0, -0.052579, 34.7644, 6.66604, -11.0393 )
+
+[node name="picture_window4" parent="Window" instance=ExtResource( 7 )]
+transform = Transform( 0.0678438, 0, 0.032855, 0, 0.04, 0, -0.0423935, 0, 0.052579, 39.8624, 6.66604, -10.7676 )
+
+[node name="FloorBase" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.465, 0, 0, 0, 0.5, 0, 0, 0, 0.37, -20.0061, -1.92171, -0.11709 )
