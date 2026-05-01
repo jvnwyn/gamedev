@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
 [ext_resource path="res://2345FlrBase.tscn" type="PackedScene" id=2]
@@ -14,12 +14,18 @@
 [ext_resource path="res://Assets/monoblock.glb" type="PackedScene" id=12]
 [ext_resource path="res://Assets/os_room/school_chair.glb" type="PackedScene" id=13]
 [ext_resource path="res://Assets/aircon/mini_air_cooler.glb" type="PackedScene" id=14]
+[ext_resource path="res://Assets/w&d/door/simple_wood_door.glb" type="PackedScene" id=15]
+[ext_resource path="res://Assets/w&d/window/window.glb" type="PackedScene" id=16]
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 160.945, 408.607, 178.707 )
 
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 1, 0.924379, 0.757264 )
+
+[sub_resource type="BoxShape" id=5]
+
+[sub_resource type="BoxShape" id=6]
 
 [sub_resource type="BoxShape" id=4]
 
@@ -400,7 +406,6 @@ transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -12.5664 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row1/monoblock"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row1/monoblock/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -410,7 +415,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -8.63324 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row1/monoblock2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row1/monoblock2/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -420,7 +424,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -4.94769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row1/monoblock3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row1/monoblock3/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -430,7 +433,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -1.20886 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row1/monoblock4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row1/monoblock4/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -440,7 +442,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 2.35945 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row1/monoblock5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row1/monoblock5/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -450,7 +451,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row1/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row1/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -463,7 +463,6 @@ transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -11.0445,
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -12.5664 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row4/monoblock"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row4/monoblock/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -473,7 +472,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -8.63324 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row4/monoblock2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row4/monoblock2/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -483,7 +481,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -4.94769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row4/monoblock3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row4/monoblock3/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -493,7 +490,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -1.20886 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row4/monoblock4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row4/monoblock4/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -503,7 +499,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 2.35945 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row4/monoblock5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row4/monoblock5/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -513,7 +508,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row4/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row4/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -525,7 +519,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row2/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row2/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -535,7 +528,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 2.38539 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row2/monoblock7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row2/monoblock7/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -545,7 +537,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -1.3954 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row2/monoblock8"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row2/monoblock8/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -555,7 +546,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -4.97011 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row2/monoblock9"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row2/monoblock9/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -565,7 +555,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -8.69708 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row2/monoblock10"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row2/monoblock10/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -575,7 +564,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -12.0769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row2/monoblock11"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row2/monoblock11/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -588,7 +576,6 @@ transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -11.4656,
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row3/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row3/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -598,7 +585,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 2.38539 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row3/monoblock7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row3/monoblock7/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -608,7 +594,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -1.3954 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row3/monoblock8"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row3/monoblock8/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -618,7 +603,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -4.97011 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row3/monoblock9"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row3/monoblock9/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -628,7 +612,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -8.69708 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row3/monoblock10"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row3/monoblock10/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -638,7 +621,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -12.0769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row3/monoblock11"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row3/monoblock11/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -650,7 +632,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -41.7993, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row5/monoblock"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row5/monoblock/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -660,7 +641,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -38.267, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row5/monoblock2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row5/monoblock2/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -670,7 +650,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -34.541, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row5/monoblock3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row5/monoblock3/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -680,7 +659,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -30.7901, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl301/mnblck/row5/monoblock4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl301/mnblck/row5/monoblock4/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -703,6 +681,44 @@ transform = Transform( 0.0734155, 0, -1.13505e-09, 0, 0.0709574, 0, -4.07454e-10
 
 [node name="cabinet4" parent="ccl301/stuff/cabinet2" instance=ExtResource( 9 )]
 transform = Transform( 0.0734155, 0, -1.83354e-09, 0, 0.0709574, 0, -4.07454e-10, 0, 0.0635317, -26.6096, 6.10047, -23.0054 )
+
+[node name="w&d" type="Spatial" parent="ccl301"]
+
+[node name="window" parent="ccl301/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl301/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl301/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="ccl301/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl301/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl301/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="ccl301/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl301/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl301/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="ccl301/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl301/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl301/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
 
 [node name="ccl302" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, 0.7, 0, 0.6, 0, -0.6, 0, -3.0598e-08, 115.954, 1.481, -20.6181 )
@@ -1073,7 +1089,6 @@ transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -12.5664 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row1/monoblock"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row1/monoblock/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1083,7 +1098,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -8.63324 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row1/monoblock2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row1/monoblock2/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1093,7 +1107,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -4.94769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row1/monoblock3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row1/monoblock3/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1103,7 +1116,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -1.20886 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row1/monoblock4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row1/monoblock4/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1113,7 +1125,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 2.35945 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row1/monoblock5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row1/monoblock5/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1123,7 +1134,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row1/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row1/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1136,7 +1146,6 @@ transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -11.0445,
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -12.5664 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row4/monoblock"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row4/monoblock/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1146,7 +1155,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -8.63324 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row4/monoblock2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row4/monoblock2/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1156,7 +1164,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -4.94769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row4/monoblock3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row4/monoblock3/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1166,7 +1173,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -1.20886 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row4/monoblock4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row4/monoblock4/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1176,7 +1182,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 2.35945 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row4/monoblock5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row4/monoblock5/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1186,7 +1191,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row4/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row4/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1198,7 +1202,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row2/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row2/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1208,7 +1211,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 2.38539 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row2/monoblock7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row2/monoblock7/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1218,7 +1220,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -1.3954 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row2/monoblock8"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row2/monoblock8/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1228,7 +1229,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -4.97011 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row2/monoblock9"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row2/monoblock9/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1238,7 +1238,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -8.69708 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row2/monoblock10"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row2/monoblock10/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1248,7 +1247,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -12.0769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row2/monoblock11"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row2/monoblock11/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1261,7 +1259,6 @@ transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -11.4656,
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row3/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row3/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1271,7 +1268,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 2.38539 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row3/monoblock7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row3/monoblock7/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1281,7 +1277,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -1.3954 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row3/monoblock8"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row3/monoblock8/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1291,7 +1286,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -4.97011 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row3/monoblock9"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row3/monoblock9/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1301,7 +1295,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -8.69708 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row3/monoblock10"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row3/monoblock10/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1311,7 +1304,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -12.0769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row3/monoblock11"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row3/monoblock11/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1323,7 +1315,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -41.7993, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row5/monoblock"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row5/monoblock/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1333,7 +1324,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -38.267, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row5/monoblock2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row5/monoblock2/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1343,7 +1333,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -34.541, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row5/monoblock3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row5/monoblock3/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1353,7 +1342,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -30.7901, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl302/mnblck/row5/monoblock4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl302/mnblck/row5/monoblock4/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1379,6 +1367,44 @@ transform = Transform( -3.58755, 0, -0.00387465, 0, 3.19221, 0, 0.0139002, 0, -0
 
 [node name="outlet4" parent="ccl302/outlets" instance=ExtResource( 4 )]
 transform = Transform( -3.58755, 0, -0.00387465, 0, 3.19221, 0, 0.0139002, 0, -0.999992, -35.6527, 10.3505, -22.0407 )
+
+[node name="w&d" type="Spatial" parent="ccl302"]
+
+[node name="window" parent="ccl302/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl302/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl302/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="ccl302/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl302/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl302/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="ccl302/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl302/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl302/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="ccl302/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl302/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl302/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
 
 [node name="ccl303" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, 0.8, 0, 0.6, 0, -0.6, 0, -3.49691e-08, 84.9498, 1.481, -20.6181 )
@@ -1749,7 +1775,6 @@ transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -12.5664 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row1/monoblock"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row1/monoblock/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1759,7 +1784,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -8.63324 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row1/monoblock2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row1/monoblock2/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1769,7 +1793,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -4.94769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row1/monoblock3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row1/monoblock3/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1779,7 +1802,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -1.20886 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row1/monoblock4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row1/monoblock4/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1789,7 +1811,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 2.35945 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row1/monoblock5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row1/monoblock5/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1799,7 +1820,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row1/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row1/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1812,7 +1832,6 @@ transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -11.0445,
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -12.5664 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row4/monoblock"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row4/monoblock/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1822,7 +1841,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -8.63324 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row4/monoblock2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row4/monoblock2/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1832,7 +1850,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -4.94769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row4/monoblock3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row4/monoblock3/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1842,7 +1859,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -1.20886 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row4/monoblock4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row4/monoblock4/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1852,7 +1868,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 2.35945 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row4/monoblock5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row4/monoblock5/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1862,7 +1877,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row4/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row4/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1874,7 +1888,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row2/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row2/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1884,7 +1897,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 2.38539 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row2/monoblock7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row2/monoblock7/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1894,7 +1906,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -1.3954 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row2/monoblock8"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row2/monoblock8/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1904,7 +1915,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -4.97011 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row2/monoblock9"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row2/monoblock9/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1914,7 +1924,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -8.69708 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row2/monoblock10"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row2/monoblock10/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1924,7 +1933,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -12.0769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row2/monoblock11"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row2/monoblock11/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1937,7 +1945,6 @@ transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -11.4656,
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row3/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row3/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1947,7 +1954,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 2.38539 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row3/monoblock7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row3/monoblock7/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1957,7 +1963,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -1.3954 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row3/monoblock8"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row3/monoblock8/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1967,7 +1972,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -4.97011 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row3/monoblock9"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row3/monoblock9/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1977,7 +1981,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -8.69708 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row3/monoblock10"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row3/monoblock10/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1987,7 +1990,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -12.0769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row3/monoblock11"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row3/monoblock11/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -1999,7 +2001,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -41.7993, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row5/monoblock"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row5/monoblock/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2009,7 +2010,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -38.267, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row5/monoblock2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row5/monoblock2/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2019,7 +2019,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -34.541, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row5/monoblock3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row5/monoblock3/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2029,7 +2028,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -30.7901, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl303/mnblck/row5/monoblock4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl303/mnblck/row5/monoblock4/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2055,6 +2053,44 @@ transform = Transform( -3.58755, 0, -0.00387465, 0, 3.19221, 0, 0.0139002, 0, -0
 
 [node name="outlet4" parent="ccl303/outlets" instance=ExtResource( 4 )]
 transform = Transform( -3.58755, 0, -0.00387465, 0, 3.19221, 0, 0.0139002, 0, -0.999992, -35.6527, 10.3505, -22.0407 )
+
+[node name="w&d" type="Spatial" parent="ccl303"]
+
+[node name="window" parent="ccl303/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl303/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl303/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="ccl303/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl303/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl303/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="ccl303/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl303/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl303/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="ccl303/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl303/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl303/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
 
 [node name="ccl304" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, 0.7, 0, 0.6, 0, -0.6, 0, -3.0598e-08, 53.5218, 1.481, -20.6181 )
@@ -2425,7 +2461,6 @@ transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -12.5664 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row1/monoblock"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row1/monoblock/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2435,7 +2470,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -8.63324 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row1/monoblock2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row1/monoblock2/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2445,7 +2479,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -4.94769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row1/monoblock3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row1/monoblock3/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2455,7 +2488,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -1.20886 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row1/monoblock4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row1/monoblock4/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2465,7 +2497,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 2.35945 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row1/monoblock5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row1/monoblock5/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2475,7 +2506,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row1/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row1/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2488,7 +2518,6 @@ transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -11.0445,
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -12.5664 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row4/monoblock"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row4/monoblock/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2498,7 +2527,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -8.63324 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row4/monoblock2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row4/monoblock2/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2508,7 +2536,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -4.94769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row4/monoblock3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row4/monoblock3/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2518,7 +2545,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, -1.20886 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row4/monoblock4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row4/monoblock4/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2528,7 +2554,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 2.35945 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row4/monoblock5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row4/monoblock5/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2538,7 +2563,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.55691e-08, 0, 1.95759, 0, 2.50027, 0, -1.95759, 0, -8.55691e-08, -27.8879, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row4/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row4/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2550,7 +2574,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row2/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row2/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2560,7 +2583,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 2.38539 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row2/monoblock7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row2/monoblock7/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2570,7 +2592,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -1.3954 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row2/monoblock8"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row2/monoblock8/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2580,7 +2601,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -4.97011 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row2/monoblock9"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row2/monoblock9/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2590,7 +2610,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -8.69708 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row2/monoblock10"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row2/monoblock10/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2600,7 +2619,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -12.0769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row2/monoblock11"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row2/monoblock11/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2613,7 +2631,6 @@ transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -11.4656,
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 6.1134 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row3/monoblock6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row3/monoblock6/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2623,7 +2640,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, 2.38539 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row3/monoblock7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row3/monoblock7/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2633,7 +2649,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -1.3954 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row3/monoblock8"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row3/monoblock8/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2643,7 +2658,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -4.97011 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row3/monoblock9"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row3/monoblock9/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2653,7 +2667,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -8.69708 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row3/monoblock10"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row3/monoblock10/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2663,7 +2676,6 @@ shape = SubResource( 3 )
 transform = Transform( -8.5569e-08, 0, -1.95759, 0, 2.50027, 0, 1.95759, 0, -8.5569e-08, -32.7646, 7.20035, -12.0769 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row3/monoblock11"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row3/monoblock11/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2675,7 +2687,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -41.7993, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row5/monoblock"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row5/monoblock/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2685,7 +2696,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -38.267, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row5/monoblock2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row5/monoblock2/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2695,7 +2705,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -34.541, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row5/monoblock3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row5/monoblock3/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2705,7 +2714,6 @@ shape = SubResource( 3 )
 transform = Transform( -1.95759, 0, -1.71138e-07, 0, 2.50027, 0, 1.71138e-07, 0, -1.95759, -30.7901, 7.20035, -18.7817 )
 
 [node name="StaticBody" type="StaticBody" parent="ccl304/mnblck/row5/monoblock4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="ccl304/mnblck/row5/monoblock4/StaticBody"]
 transform = Transform( 0.41942, 0, 0, 0, 0.833493, 0, 0, 0, 0.411274, -0.0809326, 0, -0.0366335 )
@@ -2731,6 +2739,44 @@ transform = Transform( -3.58755, 0, -0.00387465, 0, 3.19221, 0, 0.0139002, 0, -0
 
 [node name="outlet4" parent="ccl304/outlets" instance=ExtResource( 4 )]
 transform = Transform( -3.58755, 0, -0.00387465, 0, 3.19221, 0, 0.0139002, 0, -0.999992, -35.6527, 10.3505, -22.0407 )
+
+[node name="w&d" type="Spatial" parent="ccl304"]
+
+[node name="window" parent="ccl304/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl304/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl304/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="ccl304/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl304/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl304/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="ccl304/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl304/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl304/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="ccl304/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl304/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl304/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
 
 [node name="itc301" parent="." instance=ExtResource( 3 )]
 transform = Transform( -3.0598e-08, 0, -0.6, 0, 0.6, 0, 0.7, 0, -2.62268e-08, 107.012, 1.481, 2.0892 )
@@ -3002,6 +3048,44 @@ transform = Transform( -0.0102589, 0, -2.72124, 0, 2.05861, 0, 2.29362, 0, -0.01
 [node name="computer_desk" parent="itc301/stuff" instance=ExtResource( 10 )]
 transform = Transform( -1.00138, 0, -8.73221e-08, 0, 1, 0, 8.75431e-08, 0, -0.998848, 3.76246, 4.64756, -23.4634 )
 
+[node name="w&d" type="Spatial" parent="itc301"]
+
+[node name="window" parent="itc301/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="itc301/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc301/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="itc301/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="itc301/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc301/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="itc301/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="itc301/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc301/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="itc301/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="itc301/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc301/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
 [node name="itc302" parent="." instance=ExtResource( 3 )]
 transform = Transform( -3.0598e-08, 0, -0.58, 0, 0.6, 0, 0.7, 0, -2.53526e-08, 82.0474, 1.481, 2.0892 )
 
@@ -3272,6 +3356,44 @@ transform = Transform( -0.0102589, 0, -2.72124, 0, 2.05861, 0, 2.29362, 0, -0.01
 [node name="computer_desk" parent="itc302/stuff" instance=ExtResource( 10 )]
 transform = Transform( -1.00138, 0, -8.73221e-08, 0, 1, 0, 8.75431e-08, 0, -0.998848, 3.76246, 4.64756, -23.4634 )
 
+[node name="w&d" type="Spatial" parent="itc302"]
+
+[node name="window" parent="itc302/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="itc302/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc302/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="itc302/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="itc302/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc302/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="itc302/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="itc302/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc302/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="itc302/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="itc302/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc302/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
 [node name="itc303" parent="." instance=ExtResource( 3 )]
 transform = Transform( -3.0598e-08, 0, -0.58, 0, 0.6, 0, 0.7, 0, -2.53526e-08, 58.4118, 1.481, 2.0892 )
 
@@ -3541,6 +3663,44 @@ transform = Transform( -0.0102589, 0, -2.72124, 0, 2.05861, 0, 2.29362, 0, -0.01
 
 [node name="computer_desk" parent="itc303/stuff" instance=ExtResource( 10 )]
 transform = Transform( -1.00138, 0, -8.73221e-08, 0, 1, 0, 8.75431e-08, 0, -0.998848, 3.76246, 4.64756, -23.4634 )
+
+[node name="w&d" type="Spatial" parent="itc303"]
+
+[node name="window" parent="itc303/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="itc303/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc303/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="itc303/w&d" instance=ExtResource( 16 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="itc303/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc303/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="itc303/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="itc303/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc303/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="itc303/w&d" instance=ExtResource( 15 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="itc303/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc303/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
 
 [node name="Walls" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.127 )

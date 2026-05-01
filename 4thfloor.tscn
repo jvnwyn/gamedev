@@ -1,17 +1,23 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
 [ext_resource path="res://2345FlrBase.tscn" type="PackedScene" id=2]
 [ext_resource path="res://RoomBase.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/outlet.glb" type="PackedScene" id=4]
+[ext_resource path="res://Assets/w&d/window/window.glb" type="PackedScene" id=5]
 [ext_resource path="res://Assets/double_stairs.glb" type="PackedScene" id=6]
 [ext_resource path="res://Assets/picture_window.glb" type="PackedScene" id=7]
 [ext_resource path="res://Assets/os_room/low_poly_whiteboard.glb" type="PackedScene" id=8]
+[ext_resource path="res://Assets/w&d/door/simple_wood_door.glb" type="PackedScene" id=9]
 [ext_resource path="res://Assets/computer_desk.glb" type="PackedScene" id=10]
 [ext_resource path="res://Assets/os_room/school_chair.glb" type="PackedScene" id=13]
 [ext_resource path="res://Assets/aircon/mini_air_cooler.glb" type="PackedScene" id=14]
 
 [sub_resource type="BoxShape" id=4]
+
+[sub_resource type="BoxShape" id=5]
+
+[sub_resource type="BoxShape" id=6]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -306,6 +312,44 @@ transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 4 )
 
+[node name="w&d" type="Spatial" parent="itc401"]
+
+[node name="window" parent="itc401/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="itc401/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc401/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="itc401/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="itc401/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc401/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="itc401/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="itc401/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc401/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="itc401/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="itc401/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc401/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
 [node name="itc402" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, 0.7, 0, 0.6, 0, -0.6, 0, -3.0598e-08, 115.954, 1.481, -20.6181 )
 
@@ -594,6 +638,44 @@ transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 4 )
 
+[node name="w&d" type="Spatial" parent="itc402"]
+
+[node name="window" parent="itc402/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="itc402/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc402/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="itc402/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="itc402/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc402/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="itc402/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="itc402/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc402/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="itc402/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="itc402/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc402/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
 [node name="itc403" parent="." instance=ExtResource( 3 )]
 transform = Transform( -3.0598e-08, 0, -0.6, 0, 0.6, 0, 0.7, 0, -2.62268e-08, 107.012, 1.481, 2.0892 )
 
@@ -863,6 +945,44 @@ transform = Transform( -0.0102589, 0, -2.72124, 0, 2.05861, 0, 2.29362, 0, -0.01
 
 [node name="computer_desk" parent="itc403/stuff" instance=ExtResource( 10 )]
 transform = Transform( -1.00138, 0, -8.73221e-08, 0, 1, 0, 8.75431e-08, 0, -0.998848, 3.76246, 4.64756, -23.4634 )
+
+[node name="w&d" type="Spatial" parent="itc403"]
+
+[node name="window" parent="itc403/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="itc403/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc403/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="itc403/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="itc403/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc403/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="itc403/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="itc403/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc403/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="itc403/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="itc403/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc403/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
 
 [node name="itc404" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, 0.8, 0, 0.6, 0, -0.6, 0, -3.49691e-08, 84.9498, 1.481, -20.6181 )
@@ -1152,6 +1272,44 @@ transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 4 )
 
+[node name="w&d" type="Spatial" parent="itc404"]
+
+[node name="window" parent="itc404/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="itc404/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc404/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="itc404/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="itc404/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc404/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="itc404/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="itc404/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc404/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="itc404/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="itc404/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc404/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
 [node name="itc405" parent="." instance=ExtResource( 3 )]
 transform = Transform( -3.0598e-08, 0, -0.58, 0, 0.6, 0, 0.7, 0, -2.53526e-08, 82.0474, 1.481, 2.0892 )
 
@@ -1421,6 +1579,44 @@ transform = Transform( -0.0102589, 0, -2.72124, 0, 2.05861, 0, 2.29362, 0, -0.01
 
 [node name="computer_desk" parent="itc405/stuff" instance=ExtResource( 10 )]
 transform = Transform( -1.00138, 0, -8.73221e-08, 0, 1, 0, 8.75431e-08, 0, -0.998848, 3.76246, 4.64756, -23.4634 )
+
+[node name="w&d" type="Spatial" parent="itc405"]
+
+[node name="window" parent="itc405/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="itc405/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc405/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="itc405/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="itc405/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc405/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="itc405/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="itc405/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc405/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="itc405/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="itc405/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc405/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
 
 [node name="itc406" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, 0.7, 0, 0.6, 0, -0.6, 0, -3.0598e-08, 53.5218, 1.481, -20.6181 )
@@ -1710,6 +1906,44 @@ transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 4 )
 
+[node name="w&d" type="Spatial" parent="itc406"]
+
+[node name="window" parent="itc406/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="itc406/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc406/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="itc406/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="itc406/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc406/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="itc406/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="itc406/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc406/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="itc406/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="itc406/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc406/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
 [node name="itc407" parent="." instance=ExtResource( 3 )]
 transform = Transform( -3.0598e-08, 0, -0.58, 0, 0.6, 0, 0.7, 0, -2.53526e-08, 58.4118, 1.481, 2.0892 )
 
@@ -1979,6 +2213,44 @@ transform = Transform( -0.0102589, 0, -2.72124, 0, 2.05861, 0, 2.29362, 0, -0.01
 
 [node name="computer_desk" parent="itc407/stuff" instance=ExtResource( 10 )]
 transform = Transform( -1.00138, 0, -8.73221e-08, 0, 1, 0, 8.75431e-08, 0, -0.998848, 3.76246, 4.64756, -23.4634 )
+
+[node name="w&d" type="Spatial" parent="itc407"]
+
+[node name="window" parent="itc407/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.494e-07, 0, -1.80459, 0, 1.87748, 0, 3.41788, 0, -7.8881e-08, -24.0035, 6.78005, 5.67014 )
+
+[node name="StaticBody" type="StaticBody" parent="itc407/w&d/window"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc407/w&d/window/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="window2" parent="itc407/w&d" instance=ExtResource( 5 )]
+transform = Transform( -1.52533e-07, 0, -1.80459, 0, 1.87748, 0, 3.48956, 0, -7.8881e-08, -24.0035, 6.78005, -8.54282 )
+
+[node name="StaticBody" type="StaticBody" parent="itc407/w&d/window2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc407/w&d/window2/StaticBody"]
+transform = Transform( 1.08808, 0, -9.59197e-15, 0, 1.27543, 0, -9.08356e-15, 0, 0.049939, -0.0328178, 1.50994, 0 )
+shape = SubResource( 5 )
+
+[node name="simple_wood_door" parent="itc407/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+
+[node name="StaticBody" type="StaticBody" parent="itc407/w&d/simple_wood_door"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc407/w&d/simple_wood_door/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
+
+[node name="simple_wood_door2" parent="itc407/w&d" instance=ExtResource( 9 )]
+transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+
+[node name="StaticBody" type="StaticBody" parent="itc407/w&d/simple_wood_door2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="itc407/w&d/simple_wood_door2/StaticBody"]
+transform = Transform( 0.373161, 0, -1.83938e-15, 0, 2.00749, 0, -9.96889e-16, 0, 0.254021, -0.469372, 0, 0 )
+shape = SubResource( 6 )
 
 [node name="Walls" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.127 )
