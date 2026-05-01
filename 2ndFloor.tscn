@@ -1,33 +1,1885 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
 [ext_resource path="res://2345FlrBase.tscn" type="PackedScene" id=2]
 [ext_resource path="res://RoomBase.tscn" type="PackedScene" id=3]
+[ext_resource path="res://desktop/desktop_pc.glb" type="PackedScene" id=4]
+[ext_resource path="res://Assets/computer set/cabs/cabinet.glb" type="PackedScene" id=5]
 [ext_resource path="res://Assets/double_stairs.glb" type="PackedScene" id=6]
 [ext_resource path="res://Assets/picture_window.glb" type="PackedScene" id=7]
+[ext_resource path="res://Assets/air_conditioner.glb" type="PackedScene" id=8]
+[ext_resource path="res://Assets/computer set/school_desk.glb" type="PackedScene" id=9]
+[ext_resource path="res://Assets/computer_desk.glb" type="PackedScene" id=10]
+[ext_resource path="res://Assets/os_room/low_poly_whiteboard.glb" type="PackedScene" id=11]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 160.945, 408.607, 178.707 )
 
 [sub_resource type="BoxShape" id=1]
 
 [node name="2ndFloor" type="Spatial"]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -304.422, -17.6286, 85.1443 )
 
-[node name="Room102" parent="." instance=ExtResource( 3 )]
-transform = Transform( -2.62268e-08, 0, 0.7, 0, 0.6, 0, -0.6, 0, -3.0598e-08, 53.5218, 1.481, -20.6181 )
+[node name="techroom" parent="." instance=ExtResource( 3 )]
+transform = Transform( -3.0598e-08, 0, -0.6, 0, 0.6, 0, 0.7, 0, -2.62268e-08, 136.675, 1.481, 2.0892 )
 
-[node name="Room107" parent="." instance=ExtResource( 3 )]
+[node name="ccl1" parent="." instance=ExtResource( 3 )]
+transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.6, 0, 0.7, 0, -3.0598e-08, 108.432, 1.481, 2.0892 )
+
+[node name="desktop2" type="Spatial" parent="ccl1"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 7.62939e-06, 0, -0.0423975 )
+
+[node name="school_desk" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -46.2356, 5.45793, 4.8964 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk2" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -46.1997, 5.45793, 1.06496 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk2/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk2" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk3" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -46.2323, 5.45793, -2.79065 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk3/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk3" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk4" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -46.2323, 5.45793, -6.67981 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk4/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk4" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk5" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -46.2323, 5.45793, -10.5427 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk5/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk5" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk6" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -46.2323, 5.45793, -14.4106 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk6/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk6" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk7" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -34.901, 5.45793, 4.80584 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk7"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk7/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk7" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk8" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -34.8651, 5.45793, 0.9744 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk8"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk8/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk8" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk9" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -34.8977, 5.45793, -2.88121 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk9"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk9/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk9" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk10" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -34.8977, 5.45793, -6.77037 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk10"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk10/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk10" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk11" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -34.8977, 5.45793, -10.6333 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk11"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk11/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk11" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk12" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -34.8977, 5.45793, -14.5012 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk12"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk12/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk12" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk13" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -37.5812, 5.45793, -10.9655 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk13"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk13/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk13" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk14" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -37.6002, 5.45793, -7.13391 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk14"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk14/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk14" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk15" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -37.5507, 5.45793, -3.27849 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk15"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk15/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk15" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk16" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -37.5336, 5.45793, 0.610638 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk16"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk16/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk16" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk17" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -37.5166, 5.45793, 4.4735 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk17"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk17/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk17" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk18" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -37.4996, 5.45793, 8.3414 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk18"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk18/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk18" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk19" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.9243, 5.45793, -11.0707 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk19"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk19/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk19" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk20" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.9433, 5.45793, -7.23916 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk20"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk20/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk20" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk21" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.8938, 5.45793, -3.38374 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk21"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk21/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk21" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk22" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.8767, 5.45793, 0.50539 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk22"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk22/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk22" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk23" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.8597, 5.45793, 4.36826 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk23"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk23/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk23" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk24" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.8426, 5.45793, 8.23616 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk24"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk24/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk24" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk25" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -0.00505814, 5.32404e-10, 5.66748e-10, 4.42197e-10, 0.00608999, 0, 4.42197e-10, -4.65442e-17, 0.00648284, -32.0867, 5.45793, -20.7296 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk25"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk25/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk25" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk26" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -0.00505814, 5.32404e-10, 5.66748e-10, 4.42197e-10, 0.00608999, 0, 4.42197e-10, -4.65442e-17, 0.00648284, -35.9637, 5.45793, -20.7296 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk26"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk26/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk26" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk27" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -0.00505814, 5.32404e-10, 5.66748e-10, 4.42197e-10, 0.00608999, 0, 4.42197e-10, -4.65442e-17, 0.00648284, -28.2684, 5.45793, -20.7296 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk27"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk27/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk27" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk28" parent="ccl1/desktop2" instance=ExtResource( 9 )]
+transform = Transform( -0.00505814, 5.32404e-10, 5.66748e-10, 4.42197e-10, 0.00608999, 0, 4.42197e-10, -4.65442e-17, 0.00648284, -39.7359, 5.45793, -20.7296 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl1/desktop2/school_desk28"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl1/desktop2/school_desk28/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl1/desktop2/school_desk28" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="cabinet2" type="Spatial" parent="ccl1"]
+transform = Transform( -1, 0, 8.74227e-08, 0, 1, 0, -8.74227e-08, 0, -1, -57.7385, -0.0236893, -3.31349 )
+
+[node name="cabinet" parent="ccl1/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -29.6493, 8.50897, -20.8241 )
+
+[node name="cabinet4" parent="ccl1/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -29.6493, 6.05345, -20.8241 )
+
+[node name="cabinet2" parent="ccl1/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -27.1147, 8.49468, -20.7948 )
+
+[node name="cabinet3" parent="ccl1/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -27.1147, 6.06521, -20.7948 )
+
+[node name="aircons" type="Spatial" parent="ccl1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, -1.42109e-14, 0, 1, -0.75322, 0, 0 )
+
+[node name="air_conditioner2" parent="ccl1/aircons" instance=ExtResource( 8 )]
+transform = Transform( -4.96281e-08, 0, -0.779224, 0, 0.748428, 0, 1.13536, 0, -3.40609e-08, -41.0742, 10.0499, -22.0068 )
+
+[node name="air_conditioner3" parent="ccl1/aircons" instance=ExtResource( 8 )]
+transform = Transform( -4.96281e-08, 0, -0.779224, 0, 0.748428, 0, 1.13536, 0, -3.40609e-08, -29.4101, 10.0763, -22.0259 )
+
+[node name="low_poly_whiteboard2" parent="ccl1/aircons" instance=ExtResource( 11 )]
+transform = Transform( 3.62451e-07, 0, 2.84116, 0, 2.39799, 0, -2.54869, 0, 3.49975e-07, -38.7418, 5.4952, 17.5288 )
+
+[node name="computer_desk" parent="ccl1/aircons" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, -1.03029e-13, 0, 1, 0, 0, 0, 1, -34.8465, 8.17301, 12.7762 )
+
+[node name="ccl2" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, 0.7, 0, 0.6, 0, -0.6, 0, -3.0598e-08, 115.954, 1.481, -20.6181 )
 
-[node name="Room106" parent="." instance=ExtResource( 3 )]
+[node name="desktop" type="Spatial" parent="ccl2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="school_desk29" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.19851e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0002, 5.45793, -2.89446 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk29"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk29/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk29" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk30" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.19851e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0002, 5.45793, 0.926672 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk30"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk30/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk30" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk31" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.19851e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0002, 5.45793, 4.78508 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk31"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk31/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk31" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk32" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.19851e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0002, 5.45793, -6.72231 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk32"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk32/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk32" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk33" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.19851e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0002, 5.45793, -10.4885 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk33"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk33/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk33" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk34" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.19851e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0002, 5.45793, -14.3085 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk34"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk34/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk34" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk51" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.19851e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -34.7336, 5.45793, -3.20882 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk51"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk51/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk51" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk52" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.19851e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -34.7336, 5.45793, 0.612309 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk52"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk52/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk52" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk53" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.19851e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -34.7336, 5.45793, 4.47071 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk53"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk53/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk53" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk54" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.19851e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -34.7336, 5.45793, -7.03668 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk54"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk54/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk54" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk55" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.19851e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -34.7336, 5.45793, -10.8029 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk55"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk55/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk55" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk56" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.19851e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -34.7336, 5.45793, -14.6229 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk56"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk56/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk56" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk35" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -0.0058898, 5.32404e-10, 5.68229e-10, 5.14903e-10, 0.00608999, 0, 5.14903e-10, -4.65442e-17, 0.00649978, -40.3912, 5.45793, -20.5807 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk35"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk35/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk35" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk36" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -0.0058898, 5.32404e-10, 5.68229e-10, 5.14903e-10, 0.00608999, 0, 5.14903e-10, -4.65442e-17, 0.00649978, -36.0229, 5.45793, -20.5807 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk36"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk36/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk36" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk37" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -0.0058898, 5.32404e-10, 5.68229e-10, 5.14903e-10, 0.00608999, 0, 5.14903e-10, -4.65442e-17, 0.00649978, -31.6379, 5.45793, -20.5807 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk37"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk37/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk37" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk38" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -0.0058898, 5.32404e-10, 5.68229e-10, 5.14903e-10, 0.00608999, 0, 5.14903e-10, -4.65442e-17, 0.00649978, -27.231, 5.45793, -20.5807 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk38"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk38/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk38" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk39" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.20999e-10, -2.32721e-17, -0.00757482, -4.41998e-10, 0.00608999, 0, -0.00505587, -5.32404e-10, 3.31106e-10, -26.536, 5.45793, -10.7644 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk39"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk39/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk39" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk40" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.20999e-10, -2.32721e-17, -0.00757482, -4.41998e-10, 0.00608999, 0, -0.00505587, -5.32404e-10, 3.31106e-10, -26.536, 5.45793, -6.98033 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk40"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk40/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk40" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk41" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.20999e-10, -2.32721e-17, -0.00757482, -4.41998e-10, 0.00608999, 0, -0.00505587, -5.32404e-10, 3.31106e-10, -26.536, 5.45793, -3.21968 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk41"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk41/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk41" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk42" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.20999e-10, -2.32721e-17, -0.00757482, -4.41998e-10, 0.00608999, 0, -0.00505587, -5.32404e-10, 3.31106e-10, -26.536, 5.45793, 0.529831 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk42"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk42/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk42" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk43" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.20999e-10, -2.32721e-17, -0.00757482, -4.41998e-10, 0.00608999, 0, -0.00505587, -5.32404e-10, 3.31106e-10, -26.536, 5.45793, 4.2949 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk43"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk43/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk43" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk44" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.20999e-10, -2.32721e-17, -0.00757482, -4.41998e-10, 0.00608999, 0, -0.00505587, -5.32404e-10, 3.31106e-10, -26.536, 5.45793, 8.08209 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk44"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk44/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk44" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk45" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.20999e-10, -2.32721e-17, -0.00757482, -4.41998e-10, 0.00608999, 0, -0.00505587, -5.32404e-10, 3.31106e-10, -37.5845, 5.45793, -10.7644 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk45"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk45/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk45" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk46" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.20999e-10, -2.32721e-17, -0.00757482, -4.41998e-10, 0.00608999, 0, -0.00505587, -5.32404e-10, 3.31106e-10, -37.5845, 5.45793, -6.98033 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk46"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk46/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk46" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk47" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.20999e-10, -2.32721e-17, -0.00757482, -4.41998e-10, 0.00608999, 0, -0.00505587, -5.32404e-10, 3.31106e-10, -37.5845, 5.45793, -3.21968 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk47"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk47/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk47" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk48" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.20999e-10, -2.32721e-17, -0.00757482, -4.41998e-10, 0.00608999, 0, -0.00505587, -5.32404e-10, 3.31106e-10, -37.5845, 5.45793, 0.529831 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk48"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk48/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk48" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk49" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.20999e-10, -2.32721e-17, -0.00757482, -4.41998e-10, 0.00608999, 0, -0.00505587, -5.32404e-10, 3.31106e-10, -37.5845, 5.45793, 4.2949 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk49"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk49/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk49" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk50" parent="ccl2/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.20999e-10, -2.32721e-17, -0.00757482, -4.41998e-10, 0.00608999, 0, -0.00505587, -5.32404e-10, 3.31106e-10, -37.5845, 5.45793, 8.08209 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl2/desktop/school_desk50"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl2/desktop/school_desk50/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl2/desktop/school_desk50" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="cabinet2" type="Spatial" parent="ccl2"]
+transform = Transform( -1, 0, 8.74227e-08, 0, 1, 0, -8.74227e-08, 0, -1, -57.8545, -0.0236893, -3.2317 )
+
+[node name="cabinet" parent="ccl2/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -29.6493, 8.50897, -20.8241 )
+
+[node name="cabinet4" parent="ccl2/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -29.6493, 6.05345, -20.8241 )
+
+[node name="cabinet2" parent="ccl2/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -27.1147, 8.49468, -20.7948 )
+
+[node name="cabinet3" parent="ccl2/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -27.1147, 6.06521, -20.7948 )
+
+[node name="aircons" type="Spatial" parent="ccl2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1675, 0, 0 )
+
+[node name="air_conditioner2" parent="ccl2/aircons" instance=ExtResource( 8 )]
+transform = Transform( -4.96281e-08, 0, -0.779224, 0, 0.748428, 0, 1.13536, 0, -3.40609e-08, -39.3045, 10.0263, -21.0367 )
+
+[node name="air_conditioner3" parent="ccl2/aircons" instance=ExtResource( 8 )]
+transform = Transform( -4.96281e-08, 0, -0.779224, 0, 0.748428, 0, 1.13536, 0, -3.40609e-08, -30.0475, 10.0263, -21.0119 )
+
+[node name="low_poly_whiteboard2" parent="ccl2/aircons" instance=ExtResource( 11 )]
+transform = Transform( 3.62451e-07, 0, 2.84116, 0, 2.39799, 0, -2.54869, 0, 3.49974e-07, -36.6923, 5.4952, 17.5288 )
+
+[node name="computer_desk" parent="ccl2/aircons" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, -1.03029e-13, 0, 1, 0, 0, 0, 1, -32.9387, 8.17301, 12.7762 )
+
+[node name="ccl3" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, 0.8, 0, 0.6, 0, -0.6, 0, -3.49691e-08, 84.9498, 1.481, -20.6181 )
 
-[node name="Room103" parent="." instance=ExtResource( 3 )]
-transform = Transform( -3.0598e-08, 0, -0.6, 0, 0.6, 0, 0.7, 0, -2.62268e-08, 58.4118, 1.481, 2.0892 )
+[node name="cabinet2" type="Spatial" parent="ccl3"]
+transform = Transform( -1, 0, 8.74227e-08, 0, 1, 0, -8.74227e-08, 0, -1, -57.0229, -0.0236893, -4.09798 )
 
-[node name="Room104" parent="." instance=ExtResource( 3 )]
-transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.6, 0, 0.7, 0, -3.0598e-08, 134.535, 1.481, 2.0892 )
+[node name="cabinet" parent="ccl3/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -29.6493, 8.50897, -20.8241 )
 
-[node name="Room105" parent="." instance=ExtResource( 3 )]
-transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.6, 0, 0.7, 0, -3.0598e-08, 104.935, 1.481, 2.0892 )
+[node name="cabinet4" parent="ccl3/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -29.6493, 6.05345, -20.8241 )
+
+[node name="cabinet2" parent="ccl3/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -27.1147, 8.49468, -20.7948 )
+
+[node name="cabinet3" parent="ccl3/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -27.1147, 6.06521, -20.7948 )
+
+[node name="aircons" type="Spatial" parent="ccl3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1675, 0, 0 )
+
+[node name="air_conditioner2" parent="ccl3/aircons" instance=ExtResource( 8 )]
+transform = Transform( -4.96281e-08, 0, -0.779224, 0, 0.748428, 0, 1.13536, 0, -3.40609e-08, -39.3045, 10.0263, -21.4379 )
+
+[node name="air_conditioner3" parent="ccl3/aircons" instance=ExtResource( 8 )]
+transform = Transform( -4.96281e-08, 0, -0.779224, 0, 0.748428, 0, 1.13536, 0, -3.40609e-08, -30.0475, 10.0263, -21.3863 )
+
+[node name="low_poly_whiteboard2" parent="ccl3/aircons" instance=ExtResource( 11 )]
+transform = Transform( 3.62451e-07, 0, 2.84116, 0, 2.39799, 0, -2.54869, 0, 3.49974e-07, -36.6923, 5.4952, 17.5288 )
+
+[node name="computer_desk" parent="ccl3/aircons" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, -1.03029e-13, 0, 1, 0, 0, 0, 1, -32.9387, 8.17301, 12.7762 )
+
+[node name="desktop" type="Spatial" parent="ccl3"]
+
+[node name="school_desk56" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0396, 5.45793, -3.12128 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk56"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk56/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk56" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk57" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0396, 5.45793, -6.94892 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk57"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk57/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk57" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk58" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0396, 5.45793, -10.7339 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk58"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk58/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk58" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk59" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0396, 5.45793, -14.5323 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk59"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk59/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk59" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk60" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0396, 5.45793, 0.646919 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk60"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk60/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk60" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk61" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0396, 5.45793, 4.43841 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk61"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk61/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk61" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk62" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -34.9361, 5.45793, -3.12128 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk62"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk62/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk62" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.10352e-05, -4.30722e-05, 576.853, -3.75167e-12, -4.74453e-05, 1.51059e-14, 541.898, 487.979, 533.605, 170.696 )
+
+[node name="school_desk63" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -33.9313, 5.45793, -6.94892 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk63"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk63/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk63" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk64" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -33.9313, 5.45793, -10.7339 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk64"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk64/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk64" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk65" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -33.9313, 5.45793, -14.5323 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk65"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk65/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk65" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk66" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -33.9313, 5.45793, 0.646919 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk66"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk66/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk66" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk67" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -33.9313, 5.45793, 4.43841 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk67"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk67/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk67" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk68" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -26.2696, 5.45793, 8.25284 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk68"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk68/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk68" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk69" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -26.2696, 5.45793, 4.46199 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk69"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk69/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk69" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk70" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -26.2696, 5.45793, 0.708214 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk70"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk70/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.26326e-14, 4.39939e-08, 1.30591, -2.5411e-21, -7.10543e-14, -2.75286e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk70" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk71" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -26.2696, 5.45793, -3.03605 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk71"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk71/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk71" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk72" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -26.2696, 5.45793, -6.77419 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk72"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk72/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk72" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk73" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -26.2696, 5.45793, -10.5248 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk73"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk73/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk73" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk78" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -36.7647, 5.45793, 7.95709 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk78"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk78/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk78" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk79" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -36.7647, 5.45793, 4.16623 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk79"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk79/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk79" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk80" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -36.7647, 5.45793, 0.41246 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk80"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk80/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.26326e-14, 4.39939e-08, 1.30591, -2.5411e-21, -7.10543e-14, -2.75286e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk80" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk81" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -36.7647, 5.45793, -3.33181 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk81"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk81/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk81" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk82" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -36.7647, 5.45793, -7.06994 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk82"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk82/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk82" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk83" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -36.7647, 5.45793, -10.8206 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk83"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk83/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk83" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk74" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -0.00670083, -5.32404e-10, -5.01562e-10, -5.85805e-10, 0.00608999, 0, -5.85805e-10, -4.65442e-17, 0.00573721, -36.1757, 5.45793, -20.6937 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk74"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk74/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk74" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk75" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -0.00670083, -5.32404e-10, -5.01562e-10, -5.85805e-10, 0.00608999, 0, -5.85805e-10, -4.65442e-17, 0.00573721, -41.3421, 5.45793, -20.6937 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk75"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk75/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk75" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk76" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -0.00670083, -5.32404e-10, -5.01562e-10, -5.85805e-10, 0.00608999, 0, -5.85805e-10, -4.65442e-17, 0.00573721, -31.1097, 5.45793, -20.6937 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk76"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk76/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk76" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk77" parent="ccl3/desktop" instance=ExtResource( 9 )]
+transform = Transform( -0.00670083, -5.32404e-10, -5.01562e-10, -5.85805e-10, 0.00608999, 0, -5.85805e-10, -4.65442e-17, 0.00573721, -26.0503, 5.45793, -20.6937 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl3/desktop/school_desk77"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl3/desktop/school_desk77/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl3/desktop/school_desk77" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="ccl4" parent="." instance=ExtResource( 3 )]
+transform = Transform( -2.62268e-08, 0, 0.7, 0, 0.6, 0, -0.6, 0, -3.0598e-08, 53.5218, 1.481, -20.6181 )
+
+[node name="desktop" type="Spatial" parent="ccl4"]
+
+[node name="school_desk56" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0396, 5.45793, -3.12128 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk56"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk56/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk56" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk57" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0396, 5.45793, -6.94892 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk57"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk57/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk57" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk58" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0396, 5.45793, -10.7339 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk58"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk58/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk58" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk59" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0396, 5.45793, -14.5323 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk59"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk59/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk59" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk60" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0396, 5.45793, 0.646919 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk60"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk60/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk60" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk61" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -46.0396, 5.45793, 4.43841 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk61"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk61/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk61" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk62" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23346e-10, -2.85122e-05, -33.8651, 5.45793, -3.12127 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk62"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk62/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk62" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.05583e-05, -4.30722e-05, 576.853, -3.78009e-12, -4.72069e-05, -1.08141e-15, 541.898, 487.188, 533.605, 30.4331 )
+
+[node name="school_desk63" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -33.9313, 5.45793, -6.94892 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk63"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk63/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk63" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk64" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -33.9313, 5.45793, -10.7339 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk64"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk64/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk64" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk65" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -33.9313, 5.45793, -14.5323 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk65"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk65/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk65" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk66" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -33.9313, 5.45793, 0.646919 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk66"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk66/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk66" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk67" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( 2.5954e-05, 3.1985e-12, 0.00756323, -3.77679e-10, 0.00608999, 0, 0.00505809, 6.23347e-10, -2.85122e-05, -33.9313, 5.45793, 4.43841 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk67"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk67/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk67" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk68" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -26.2696, 5.45793, 8.25284 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk68"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk68/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk68" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk69" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -26.2696, 5.45793, 4.46199 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk69"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk69/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk69" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk70" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -26.2696, 5.45793, 0.708214 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk70"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk70/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.26326e-14, 4.39939e-08, 1.30591, -2.5411e-21, -7.10543e-14, -2.75286e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk70" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk71" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -26.2696, 5.45793, -3.03605 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk71"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk71/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk71" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk72" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -26.2696, 5.45793, -6.77419 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk72"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk72/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk72" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk73" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -26.2696, 5.45793, -10.5248 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk73"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk73/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk73" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk78" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -36.7647, 5.45793, 7.95709 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk78"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk78/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk78" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk79" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -36.7647, 5.45793, 4.16623 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk79"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk79/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk79" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk80" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -36.7647, 5.45793, 0.41246 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk80"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk80/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.26326e-14, 4.39939e-08, 1.30591, -2.5411e-21, -7.10543e-14, -2.75286e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk80" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk81" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -36.7647, 5.45793, -3.33181 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk81"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk81/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk81" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk82" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -36.7647, 5.45793, -7.06994 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk82"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk82/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk82" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk83" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -2.21115e-10, 2.32721e-17, -0.00756294, 4.4223e-10, 0.00608999, 0, -0.00505853, 5.32404e-10, 3.30587e-10, -36.7647, 5.45793, -10.8206 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk83"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk83/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk83" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk74" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -0.00670083, -5.32404e-10, -5.01562e-10, -5.85805e-10, 0.00608999, 0, -5.85805e-10, -4.65442e-17, 0.00573721, -36.1757, 5.45793, -20.6937 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk74"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk74/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk74" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk75" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -0.00670083, -5.32404e-10, -5.01562e-10, -5.85805e-10, 0.00608999, 0, -5.85805e-10, -4.65442e-17, 0.00573721, -41.3421, 5.45793, -20.6937 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk75"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk75/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk75" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk76" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -0.00670083, -5.32404e-10, -5.01562e-10, -5.85805e-10, 0.00608999, 0, -5.85805e-10, -4.65442e-17, 0.00573721, -31.1097, 5.45793, -20.6937 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk76"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk76/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk76" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk77" parent="ccl4/desktop" instance=ExtResource( 9 )]
+transform = Transform( -0.00670083, -5.32404e-10, -5.01562e-10, -5.85805e-10, 0.00608999, 0, -5.85805e-10, -4.65442e-17, 0.00573721, -26.0503, 5.45793, -20.6937 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl4/desktop/school_desk77"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl4/desktop/school_desk77/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl4/desktop/school_desk77" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="aircons" type="Spatial" parent="ccl4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1675, 0, 0 )
+
+[node name="air_conditioner2" parent="ccl4/aircons" instance=ExtResource( 8 )]
+transform = Transform( -4.96282e-08, 0, -0.779224, 0, 0.748428, 0, 1.13536, 0, -3.40609e-08, -39.7144, 10.0263, -21.9379 )
+
+[node name="air_conditioner3" parent="ccl4/aircons" instance=ExtResource( 8 )]
+transform = Transform( -4.96281e-08, 0, -0.779224, 0, 0.748428, 0, 1.13536, 0, -3.40609e-08, -28.0455, 10.0263, -21.98 )
+
+[node name="low_poly_whiteboard2" parent="ccl4/aircons" instance=ExtResource( 11 )]
+transform = Transform( 3.62451e-07, 0, 2.84116, 0, 2.39799, 0, -2.54869, 0, 3.49974e-07, -36.6923, 5.4952, 17.5288 )
+
+[node name="computer_desk" parent="ccl4/aircons" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, -1.03029e-13, 0, 1, 0, 0, 0, 1, -32.9387, 8.17301, 12.7762 )
+
+[node name="cabinet2" type="Spatial" parent="ccl4"]
+transform = Transform( -0.882163, 0, -1.01392e-07, 0, 1, 0, 7.71211e-08, 0, -1.15979, -53.5492, 1.55323, -7.59969 )
+
+[node name="cabinet" parent="ccl4/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -29.6493, 8.50897, -20.8241 )
+
+[node name="cabinet4" parent="ccl4/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -29.6493, 6.05345, -20.8241 )
+
+[node name="cabinet2" parent="ccl4/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -27.1147, 8.49468, -20.7948 )
+
+[node name="cabinet3" parent="ccl4/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -27.1147, 6.06521, -20.7948 )
+
+[node name="ccl5" parent="." instance=ExtResource( 3 )]
+transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.6, 0, 0.7, 0, -3.0598e-08, 59.9291, 1.481, 2.0892 )
+
+[node name="desktop3" type="Spatial" parent="ccl5"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -72.196, 0, -3.11785 )
+
+[node name="school_desk" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -46.2356, 5.45793, 4.8964 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk2" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -46.1997, 5.45793, 1.06496 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk2/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk2" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk3" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -46.2323, 5.45793, -2.79065 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk3/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk3" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk4" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -46.2323, 5.45793, -6.67981 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk4/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk4" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk5" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -46.2323, 5.45793, -10.5427 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk5/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk5" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk6" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -46.2323, 5.45793, -14.4106 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk6/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk6" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk7" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -34.901, 5.45793, 4.80584 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk7"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk7/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk7" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk8" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -34.8651, 5.45793, 0.9744 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk8"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk8/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk8" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk9" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -34.8977, 5.45793, -2.88121 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk9"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk9/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk9" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk10" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -34.8977, 5.45793, -6.77037 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk10"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk10/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk10" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk11" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -34.8977, 5.45793, -10.6333 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk11"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk11/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk11" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk12" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.21098e-10, -2.72476e-17, 0.00648283, -3.77679e-10, 0.00608999, 0, 0.00505814, 6.23353e-10, 2.83372e-10, -34.8977, 5.45793, -14.5012 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk12"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk12/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk12" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk13" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -37.5812, 5.45793, -10.9655 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk13"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk13/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk13" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk14" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -37.6002, 5.45793, -7.13391 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk14"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk14/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk14" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk15" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -37.5507, 5.45793, -3.27849 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk15"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk15/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk15" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk16" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -37.5336, 5.45793, 0.610638 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk16"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk16/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk16" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk17" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -37.5166, 5.45793, 4.4735 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk17"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk17/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk17" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk18" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -37.4996, 5.45793, 8.3414 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk18"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk18/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk18" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk19" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.9243, 5.45793, -11.0707 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk19"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk19/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk19" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk20" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.9433, 5.45793, -7.23916 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk20"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk20/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk20" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk21" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.8938, 5.45793, -3.38374 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk21"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk21/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk21" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk22" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.8767, 5.45793, 0.50539 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk22"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk22/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk22" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk23" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.8597, 5.45793, 4.36826 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk23"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk23/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk23" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk24" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.8426, 5.45793, 8.23616 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk24"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk24/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk24" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk25" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -0.00505814, 5.32404e-10, 5.66748e-10, 4.42197e-10, 0.00608999, 0, 4.42197e-10, -4.65442e-17, 0.00648284, -32.0867, 5.45793, -20.7296 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk25"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk25/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk25" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk26" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -0.00505814, 5.32404e-10, 5.66748e-10, 4.42197e-10, 0.00608999, 0, 4.42197e-10, -4.65442e-17, 0.00648284, -35.9637, 5.45793, -20.7296 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk26"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk26/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk26" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk27" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -0.00505814, 5.32404e-10, 5.66748e-10, 4.42197e-10, 0.00608999, 0, 4.42197e-10, -4.65442e-17, 0.00648284, -28.2684, 5.45793, -20.7296 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk27"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk27/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk27" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="school_desk28" parent="ccl5/desktop3" instance=ExtResource( 9 )]
+transform = Transform( -0.00505814, 5.32404e-10, 5.66748e-10, 4.42197e-10, 0.00608999, 0, 4.42197e-10, -4.65442e-17, 0.00648284, -39.7359, 5.45793, -20.7296 )
+
+[node name="StaticBody" type="StaticBody" parent="ccl5/desktop3/school_desk28"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ccl5/desktop3/school_desk28/StaticBody"]
+transform = Transform( 2.0153, 8.74235e-08, -4.58434e-14, 4.39939e-08, 1.30591, -2.84305e-21, -4.76919e-14, -4.2493e-21, 1, 339.718, 0.00012207, 0 )
+shape = SubResource( 2 )
+
+[node name="desktop_pc2" parent="ccl5/desktop3/school_desk28" instance=ExtResource( 4 )]
+transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
+
+[node name="cabinet2" type="Spatial" parent="ccl5"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -7.10543e-15, 0, 1, -1.00191, 0, 0 )
+
+[node name="cabinet" parent="ccl5/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -29.6493, 8.50897, -20.8241 )
+
+[node name="cabinet4" parent="ccl5/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -29.6493, 6.05345, -20.8241 )
+
+[node name="cabinet2" parent="ccl5/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -27.1147, 8.49468, -20.7948 )
+
+[node name="cabinet3" parent="ccl5/cabinet2" instance=ExtResource( 5 )]
+transform = Transform( 0.0734155, 0, -4.32036e-10, 0, 0.0709574, 0, -4.32029e-10, 0, 0.0635317, -27.1147, 6.06521, -20.7948 )
+
+[node name="aircons" type="Spatial" parent="ccl5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1675, 0, 0 )
+
+[node name="air_conditioner2" parent="ccl5/aircons" instance=ExtResource( 8 )]
+transform = Transform( -4.96282e-08, 0, 0.779224, 0, 0.748428, 0, -1.13536, 0, -3.4061e-08, -39.4709, 10.0263, 18.7616 )
+
+[node name="air_conditioner3" parent="ccl5/aircons" instance=ExtResource( 8 )]
+transform = Transform( -4.96282e-08, 0, 0.779224, 0, 0.748428, 0, -1.13536, 0, -3.4061e-08, -27.9535, 10.0263, 18.6696 )
+
+[node name="low_poly_whiteboard2" parent="ccl5/aircons" instance=ExtResource( 11 )]
+transform = Transform( 3.62451e-07, 0, 2.84116, 0, 2.39799, 0, -2.54869, 0, 3.49974e-07, -36.6923, 5.4952, -20.0854 )
+
+[node name="computer_desk" parent="ccl5/aircons" instance=ExtResource( 10 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -34.0573, 8.17301, -15.5828 )
 
 [node name="Walls" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.127 )
@@ -53,7 +1905,7 @@ transform = Transform( 0.45, 0, 0, 0, 5, 0, 0, 0, 0.45, -0.274857, 4.94658, 0.10
 shape = SubResource( 1 )
 
 [node name="wall_plain3" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 1.05, 0, 0, 0, 0.7, 0, 0, 0, 0.2, 81.8634, 3.83694, 7.39052 )
+transform = Transform( 1.05, 0, 0, 0, 0.7, 0, 0, 0, 0.2, 84.7301, 3.83694, 7.39052 )
 
 [node name="StaticBody" type="StaticBody" parent="Walls/wall_plain3"]
 transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
