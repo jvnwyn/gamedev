@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
 [ext_resource path="res://FloorBase.tscn" type="PackedScene" id=2]
@@ -31,7 +31,6 @@
 [ext_resource path="res://Assets/divider/room_divider__mampara.glb" type="PackedScene" id=30]
 [ext_resource path="res://desktop/desktop_pc.glb" type="PackedScene" id=31]
 [ext_resource path="res://Assets/computer set/school_desk.glb" type="PackedScene" id=32]
-[ext_resource path="res://Assets/air_conditioner.glb" type="PackedScene" id=33]
 [ext_resource path="res://Assets/computer set/cabs/cabinet.glb" type="PackedScene" id=34]
 
 [sub_resource type="BoxShape" id=9]
@@ -401,12 +400,6 @@ shape = SubResource( 14 )
 transform = Transform( -2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 51.4443, 1.481, -20.8761 )
 
 [node name="Spatial" type="Spatial" parent="Room102"]
-
-[node name="air_conditioner2" parent="Room102/Spatial" instance=ExtResource( 33 )]
-transform = Transform( -4.96281e-08, 0, -0.779224, 0, 0.748428, 0, 1.13536, 0, -3.40609e-08, -41.5892, 10.0263, -22.5066 )
-
-[node name="air_conditioner3" parent="Room102/Spatial" instance=ExtResource( 33 )]
-transform = Transform( -4.96281e-08, 0, -0.779224, 0, 0.748428, 0, 1.13536, 0, -3.40609e-08, -30.0475, 10.0263, -22.5066 )
 
 [node name="low_poly_whiteboard2" parent="Room102/Spatial" instance=ExtResource( 23 )]
 transform = Transform( 4.01372e-07, 0, 3.31682, 0, 2.91366, 0, -2.54869, 0, 3.67796e-07, -39.8655, 4.6353, 17.5288 )
