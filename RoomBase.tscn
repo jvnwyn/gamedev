@@ -173,7 +173,6 @@ transform = Transform( -1.84824e-08, 0, 2.47641, 0, 1.17, 0, -0.422827, 0, -1.08
 
 [node name="wall-green17" parent="GreenWall" instance=ExtResource( 4 )]
 transform = Transform( -1.84899e-08, -21, -2.50903e-08, 0, -9.17939e-07, 0.574, -0.423, 9.17939e-07, 1.09673e-15, 107.532, 11.3291, 23.746 )
-visible = false
 
 [node name="wall-green2" parent="GreenWall" instance=ExtResource( 4 )]
 transform = Transform( 0.5, 0, 0, 0, 1.17, 0, 0, 0, 1, -98.6881, 0, -1.90735e-06 )

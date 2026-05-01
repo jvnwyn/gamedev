@@ -54,7 +54,6 @@ transform = Transform( -3.58755, 0, -0.00387465, 0, 3.19221, 0, 0.0139002, 0, -0
 
 [node name="desktop" type="Spatial" parent="ccl301"]
 transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
-visible = false
 
 [node name="school_desk24" parent="ccl301/desktop" instance=ExtResource( 11 )]
 transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.8721, 5.45793, 0.477783 )
@@ -393,7 +392,6 @@ shape = SubResource( 2 )
 transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
 
 [node name="mnblck" type="Spatial" parent="ccl301"]
-visible = false
 
 [node name="row1" type="Spatial" parent="ccl301/mnblck"]
 transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
@@ -729,7 +727,6 @@ transform = Transform( 0.0734155, 0, -1.83354e-09, 0, 0.0709574, 0, -4.07454e-10
 
 [node name="desktop" type="Spatial" parent="ccl302"]
 transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
-visible = false
 
 [node name="school_desk24" parent="ccl302/desktop" instance=ExtResource( 11 )]
 transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.8721, 5.45793, 0.477783 )
@@ -1068,7 +1065,6 @@ shape = SubResource( 2 )
 transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
 
 [node name="mnblck" type="Spatial" parent="ccl302"]
-visible = false
 
 [node name="row1" type="Spatial" parent="ccl302/mnblck"]
 transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
@@ -1407,7 +1403,6 @@ transform = Transform( 0.0734155, 0, -1.83354e-09, 0, 0.0709574, 0, -4.07454e-10
 
 [node name="desktop" type="Spatial" parent="ccl303"]
 transform = Transform( 1, 0, 0, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
-visible = false
 
 [node name="school_desk24" parent="ccl303/desktop" instance=ExtResource( 11 )]
 transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.8721, 5.45793, 0.477783 )
@@ -1746,7 +1741,6 @@ shape = SubResource( 2 )
 transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
 
 [node name="mnblck" type="Spatial" parent="ccl303"]
-visible = false
 
 [node name="row1" type="Spatial" parent="ccl303/mnblck"]
 transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
@@ -2085,7 +2079,6 @@ transform = Transform( 0.0734155, 0, -1.83354e-09, 0, 0.0709574, 0, -4.07454e-10
 
 [node name="desktop" type="Spatial" parent="ccl304"]
 transform = Transform( 1, 0, 0, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
-visible = false
 
 [node name="school_desk24" parent="ccl304/desktop" instance=ExtResource( 11 )]
 transform = Transform( -2.22467e-05, -2.74163e-12, -0.00648277, -3.77679e-10, 0.00608999, 0, -0.00505809, -6.23347e-10, 2.85128e-05, -25.8721, 5.45793, 0.477783 )
@@ -2424,7 +2417,6 @@ shape = SubResource( 2 )
 transform = Transform( -694.528, -7.10899e-05, -6.07175e-05, -4.30722e-05, 576.853, -3.76549e-12, -4.73742e-05, 3.07012e-18, 541.898, 487.23, 533.605, 37.8467 )
 
 [node name="mnblck" type="Spatial" parent="ccl304"]
-visible = false
 
 [node name="row1" type="Spatial" parent="ccl304/mnblck"]
 transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0 )
