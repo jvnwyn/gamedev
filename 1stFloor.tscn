@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
 [ext_resource path="res://FloorBase.tscn" type="PackedScene" id=2]
@@ -25,10 +25,34 @@
 [ext_resource path="res://Assets/os_room/low_poly_whiteboard.glb" type="PackedScene" id=23]
 [ext_resource path="res://Assets/os_room/school_chair.glb" type="PackedScene" id=24]
 [ext_resource path="res://Assets/os_room/low_poly_plywood_model.glb" type="PackedScene" id=25]
+[ext_resource path="res://Assets/os_room/long table/projector_table.glb" type="PackedScene" id=26]
+[ext_resource path="res://Assets/os_room/long table/projector_screen_low_poly.glb" type="PackedScene" id=27]
+[ext_resource path="res://Assets/os_room/long table/chair.glb" type="PackedScene" id=28]
+[ext_resource path="res://Assets/os_room/long table/long_table.glb" type="PackedScene" id=29]
+[ext_resource path="res://Assets/divider/room_divider__mampara.glb" type="PackedScene" id=30]
+
+[sub_resource type="BoxShape" id=9]
 
 [sub_resource type="BoxShape" id=8]
 
+[sub_resource type="BoxShape" id=11]
+
+[sub_resource type="BoxShape" id=10]
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 1.27074, 1.0549, 1 )
+
+[sub_resource type="BoxShape" id=13]
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 1.8895, 6.82497, 73.0343 )
+
+[sub_resource type="BoxShape" id=15]
+
 [sub_resource type="BoxShape" id=3]
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 0.136939, 1.08076, 0.275749 )
 
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 0.508671, 1, 1 )
@@ -36,12 +60,7 @@ extents = Vector3( 0.508671, 1, 1 )
 [sub_resource type="BoxShape" id=5]
 extents = Vector3( 0.827169, 1.0799, 1.22579 )
 
-[sub_resource type="BoxShape" id=6]
-extents = Vector3( 0.136939, 1.08076, 0.275749 )
-
 [sub_resource type="BoxShape" id=7]
-
-[sub_resource type="BoxShape" id=9]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -51,232 +70,518 @@ extents = Vector3( 0.136939, 1.08076, 0.275749 )
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -103.81, -23.715, 29.1133 )
 
 [node name="Room101" parent="." instance=ExtResource( 3 )]
-transform = Transform( -2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 51.4443, 1.481, -20.8761 )
+transform = Transform( -2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 110.525, 1.481, -20.8761 )
 
-[node name="school_chair" parent="Room101" instance=ExtResource( 24 )]
+[node name="low_poly_plywood_model" parent="Room101" instance=ExtResource( 25 )]
+transform = Transform( 1.71603e-14, -3.9258e-07, -24.2873, -15.9178, -6.95792e-07, 0, -3.92582e-07, 8.9812, -1.06163e-06, -36.1782, 4.38345, -5.62167 )
+
+[node name="StaticBody" type="StaticBody" parent="Room101/low_poly_plywood_model"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room101/low_poly_plywood_model/StaticBody"]
+transform = Transform( 0.389772, 1.44845e-08, 0, 1.44845e-08, 0.0584058, 0, 0, 0, 0.484407, 5.96046e-08, 0.47842, 0.00561613 )
+shape = SubResource( 9 )
+
+[node name="os_room" type="Spatial" parent="Room101"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8147e-06, 0, -98.4678 )
+
+[node name="school_chair" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -45.5259, 5.42857, 115.996 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair2" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair2" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -45.5259, 5.42858, 113.142 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair2"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair2"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair2/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair2/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair3" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair3" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -45.5259, 5.42858, 110.36 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair3"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair3"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair3/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair3/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair7" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair7" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -40.9167, 5.42858, 115.996 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair7"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair7"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair7/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair7/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair8" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair8" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -40.9167, 5.42858, 113.142 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair8"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair8"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair8/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair8/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair9" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair9" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -40.9167, 5.42858, 110.36 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair9"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair9"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair9/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair9/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair10" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair10" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -36.9, 5.42858, 115.996 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair10"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair10"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair10/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair10/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair11" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair11" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -36.9, 5.42858, 113.142 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair11"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair11"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair11/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair11/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair12" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair12" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -36.9, 5.42858, 110.36 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair12"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair12"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair12/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair12/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair13" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair13" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -33.2906, 5.42858, 115.996 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair13"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair13"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair13/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair13/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair14" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair14" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -33.2906, 5.42858, 113.142 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair14"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair14"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair14/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair14/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair15" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair15" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -33.2906, 5.42858, 110.36 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair15"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair15"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair15/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair15/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair4" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair4" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -45.5259, 5.42858, 98.6523 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair4"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair4"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair4/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair4/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair5" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair5" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -45.5259, 5.42858, 101.271 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair5"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair5"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair5/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair5/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair6" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair6" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -45.5259, 5.42858, 103.921 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair6"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair6"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair6/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair6/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair16" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair16" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -41.8311, 5.42858, 98.6523 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair16"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair16"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair16/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair16/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair17" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair17" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -41.8311, 5.42858, 101.271 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair17"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair17"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair17/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair17/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair18" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair18" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -41.8311, 5.42858, 103.921 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair18"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair18"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair18/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair18/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair19" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair19" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -37.7129, 5.42858, 98.6523 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair19"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair19"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair19/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair19/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair20" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair20" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -37.7129, 5.42858, 101.271 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair20"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair20"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair20/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair20/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair21" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair21" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -37.7129, 5.42858, 103.921 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair21"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair21"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair21/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair21/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair22" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair22" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -33.9659, 5.42858, 98.6523 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair22"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair22"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair22/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair22/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair23" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair23" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -33.9659, 5.42858, 101.271 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair23"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair23"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair23/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair23/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
-[node name="school_chair24" parent="Room101" instance=ExtResource( 24 )]
+[node name="school_chair24" parent="Room101/os_room" instance=ExtResource( 24 )]
 transform = Transform( 0.890116, 0, -1.2477e-08, 0, 0.861331, 0, -1.42252e-08, 0, 1.06618, -33.9659, 5.42858, 103.921 )
 
-[node name="StaticBody" type="StaticBody" parent="Room101/school_chair24"]
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/school_chair24"]
 
-[node name="CollisionShape" type="CollisionShape" parent="Room101/school_chair24/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/school_chair24/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 8 )
 
+[node name="computer_desk" parent="Room101/os_room" instance=ExtResource( 22 )]
+transform = Transform( 1.3826e-07, 0, 1.05434, 0, 1.05434, 0, -1.05434, 0, 1.3826e-07, -28.5084, 7.493, 105.546 )
+
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/computer_desk"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/computer_desk/StaticBody"]
+transform = Transform( 2.28215, 0, -8.33351e-08, 0, 1.4797, 0, -8.33347e-08, 0, 1.32891, -0.192131, -1.37938, -0.0466032 )
+shape = SubResource( 11 )
+
+[node name="low_poly_whiteboard" parent="Room101/os_room" instance=ExtResource( 23 )]
+transform = Transform( -2.54617, 0, 2.52427e-07, 0, 2.4708, 0, -2.52427e-07, 0, -3.22868, -26.1533, 4.6964, 104.888 )
+
+[node name="StaticBody" type="StaticBody" parent="Room101/os_room/low_poly_whiteboard"]
+transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Room101/os_room/low_poly_whiteboard/StaticBody"]
+transform = Transform( 0.334906, 0, -7.81728e-08, 0, 3.37542, 0, -7.81726e-08, 0, -1.45347, -0.0449846, 0, -0.238411 )
+shape = SubResource( 10 )
+
+[node name="def_room" type="Spatial" parent="Room101"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8147e-06, 0, -98.4678 )
+
+[node name="projector_table" parent="Room101/def_room" instance=ExtResource( 26 )]
+transform = Transform( -9.90705e-08, 0, -2.39385, 0, 2.84238, 0, 2.26647, 0, -1.04638e-07, -36.4602, 4.51321, 85.8169 )
+
+[node name="StaticBody" type="StaticBody" parent="Room101/def_room/projector_table"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room101/def_room/projector_table/StaticBody"]
+transform = Transform( 0.485141, 0, -1.79109e-15, 0, 1.15139, 0, 8.47893e-16, 0, 0.742234, -0.137024, 0, -0.08356 )
+shape = SubResource( 12 )
+
+[node name="projector_screen_low_poly" parent="Room101/def_room" instance=ExtResource( 27 )]
+transform = Transform( -5.75732e-08, 0, -1.31712, 0, 1.31712, 0, 1.31712, 0, -5.75732e-08, -36.5341, 10.3635, 76.4106 )
+
+[node name="airconditioner_electrolux_fusion" parent="Room101/def_room" instance=ExtResource( 21 )]
+transform = Transform( -2.75403e-07, 0, 6.3005, 0, 6.3005, 0, -6.3005, 0, -2.75403e-07, -47.1175, 13.6681, 86.5915 )
+
+[node name="furnitures" type="Spatial" parent="Room101/def_room"]
+
+[node name="chair" parent="Room101/def_room/furnitures" instance=ExtResource( 28 )]
+transform = Transform( -2.56264, 0, 1.96018e-07, 0, 2.59413, 0, -2.27962e-07, 0, -2.28084, -31.2104, 6.97199, 94.3809 )
+
+[node name="StaticBody" type="StaticBody" parent="Room101/def_room/furnitures/chair"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room101/def_room/furnitures/chair/StaticBody"]
+transform = Transform( 0.392678, 0, 2.57535e-09, 0, 1, 0, 3.48318e-09, 0, 0.461198, 0.0618839, 0, -0.0538368 )
+shape = SubResource( 13 )
+
+[node name="chair2" parent="Room101/def_room/furnitures" instance=ExtResource( 28 )]
+transform = Transform( -2.56264, 0, 1.96018e-07, 0, 2.59413, 0, -2.27962e-07, 0, -2.28084, -36.0242, 6.97199, 94.3809 )
+
+[node name="StaticBody" type="StaticBody" parent="Room101/def_room/furnitures/chair2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room101/def_room/furnitures/chair2/StaticBody"]
+transform = Transform( 0.392678, 0, 2.57535e-09, 0, 1, 0, 3.48318e-09, 0, 0.461198, 0.0618839, 0, -0.0538368 )
+shape = SubResource( 13 )
+
+[node name="chair3" parent="Room101/def_room/furnitures" instance=ExtResource( 28 )]
+transform = Transform( -2.56264, 0, 1.96018e-07, 0, 2.59413, 0, -2.27962e-07, 0, -2.28084, -40.7907, 6.97199, 94.3809 )
+
+[node name="StaticBody" type="StaticBody" parent="Room101/def_room/furnitures/chair3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room101/def_room/furnitures/chair3/StaticBody"]
+transform = Transform( 0.392678, 0, 2.57536e-09, 0, 1, 0, 3.48318e-09, 0, 0.461198, -0.0860672, 0, -0.0538368 )
+shape = SubResource( 13 )
+
+[node name="chair4" parent="Room101/def_room/furnitures" instance=ExtResource( 28 )]
+transform = Transform( -2.30727, 0, 0.992548, 0, 2.59413, 0, -1.11518, 0, -2.05355, -44.7026, 6.97199, 91.4833 )
+
+[node name="StaticBody" type="StaticBody" parent="Room101/def_room/furnitures/chair4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room101/def_room/furnitures/chair4/StaticBody"]
+transform = Transform( 0.39088, 0, -0.0392359, 0, 1, 0, 0.0421717, 0, 0.459086, -0.056673, 0, 0.0105362 )
+shape = SubResource( 13 )
+
+[node name="chair5" parent="Room101/def_room/furnitures" instance=ExtResource( 28 )]
+transform = Transform( -2.25713, 0, -1.08002, 0, 2.59413, 0, 1.21346, 0, -2.00892, -27.0567, 6.97199, 91.4833 )
+
+[node name="StaticBody" type="StaticBody" parent="Room101/def_room/furnitures/chair5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Room101/def_room/furnitures/chair5/StaticBody"]
+transform = Transform( 0.392137, 0, 0.0215546, 0, 0.999999, 0, -0.0231673, 0, 0.460561, 0.000318527, 0, -0.0910416 )
+shape = SubResource( 13 )
+
+[node name="longtable" parent="Room101/def_room/furnitures" instance=ExtResource( 29 )]
+transform = Transform( -2.44926e-08, 0, -0.477968, 0, 0.599398, 0, 0.560327, 0, -2.08926e-08, -35.9305, 4.3842, 90.1959 )
+
+[node name="StaticBody" type="StaticBody" parent="Room101/def_room/furnitures/longtable"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 1.69407e-21, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Room101/def_room/furnitures/longtable/StaticBody"]
+transform = Transform( 1.52851, 0, -4.73619e-15, 0, 1.02427, 0, 2.22093e-14, 0, 0.183931, 0.00515747, 0, 0.151295 )
+shape = SubResource( 14 )
+
 [node name="Room102" parent="." instance=ExtResource( 3 )]
-transform = Transform( -2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 110.525, 1.481, -20.8761 )
+transform = Transform( -2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 51.4443, 1.481, -20.8761 )
+
+[node name="desktop_set" type="Spatial" parent="Room102"]
 
 [node name="Room103" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 58.1909, 1.481, -2.5671 )
 
 [node name="CS Faculty" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, 0.8, 0, 0.6, 0, -0.6, 0, -3.49691e-08, 81.1652, 1.481, -20.8761 )
+
+[node name="entrance" type="Spatial" parent="CS Faculty"]
+transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="office_chair2" parent="CS Faculty/entrance" instance=ExtResource( 19 )]
+transform = Transform( -0.0409942, 0, 3.40353e-09, 0, 0.0336797, 0, -2.5196e-09, 0, -0.0272489, -28.9331, 4.38653, -12.3816 )
+
+[node name="low_poly_file_cabinet5" parent="CS Faculty/entrance" instance=ExtResource( 11 )]
+transform = Transform( 0.120264, 0, 5.32907e-15, 0, 0.114149, 0, 2.66454e-15, 0, 0.116208, -28.7224, 4.4227, -22.1501 )
+
+[node name="low_poly_file_cabinet6" parent="CS Faculty/entrance" instance=ExtResource( 11 )]
+transform = Transform( 0.120264, 0, 5.32907e-15, 0, 0.114149, 0, 2.66454e-15, 0, 0.116208, -29.9792, 4.4227, -22.1501 )
+
+[node name="low_poly_file_cabinet7" parent="CS Faculty/entrance" instance=ExtResource( 11 )]
+transform = Transform( 0.120264, 0, 5.32907e-15, 0, 0.114149, 0, 2.66454e-15, 0, 0.116208, -31.2486, 4.4227, -22.1501 )
+
+[node name="low_poly_file_cabinet8" parent="CS Faculty/entrance" instance=ExtResource( 11 )]
+transform = Transform( 0.120264, 0, 5.32907e-15, 0, 0.114149, 0, 2.66454e-15, 0, 0.116208, -27.4991, 4.4227, -22.1501 )
+
+[node name="countertable2" parent="CS Faculty/entrance" instance=ExtResource( 12 )]
+transform = Transform( 0.0321644, 0, 1.14227e-09, 0, 0.0323831, 0, 4.7076e-10, 0, 0.0243012, -29.6956, 7.92106, -14.2471 )
+
+[node name="room_divider__mampara" parent="CS Faculty/entrance" instance=ExtResource( 30 )]
+transform = Transform( -3.30873e-07, 0, -4.43698, 0, 4.43698, 0, 5.67712, 0, -1.4546e-07, -36.2092, 4.38454, -17.1826 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/entrance/room_divider__mampara"]
+transform = Transform( 1, 0, 6.35275e-22, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/entrance/room_divider__mampara/StaticBody"]
+transform = Transform( 0.736157, 0, -1.13361e-15, 0, 1.79475, 0, 0, 0, 0.192715, -0.0411692, 0, -0.216721 )
+shape = SubResource( 15 )
+
+[node name="prof_desk" type="Spatial" parent="CS Faculty"]
+
+[node name="office_desk21" parent="CS Faculty/prof_desk" instance=ExtResource( 9 )]
+transform = Transform( 4.00768e-07, 0, 3.33327, 0, 3.33333, 0, -2.5005, 0, 3.64254e-07, -42.0439, 4.44899, -5.41312 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/prof_desk/office_desk21"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/prof_desk/office_desk21/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk24" parent="CS Faculty/prof_desk" instance=ExtResource( 9 )]
+transform = Transform( 4.00768e-07, 0, 3.33327, 0, 3.33333, 0, -2.5005, 0, 3.64254e-07, -42.0439, 4.44899, 1.26954 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/prof_desk/office_desk24"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/prof_desk/office_desk24/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk26" parent="CS Faculty/prof_desk" instance=ExtResource( 9 )]
+transform = Transform( 4.00768e-07, 0, 3.33327, 0, 3.33333, 0, -2.5005, 0, 3.64254e-07, -42.0439, 4.44899, 6.51725 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/prof_desk/office_desk26"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/prof_desk/office_desk26/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk22" parent="CS Faculty/prof_desk" instance=ExtResource( 9 )]
+transform = Transform( 4.00768e-07, 0, 3.33327, 0, 3.33333, 0, -2.5005, 0, 3.64254e-07, -30.2361, 4.44899, -5.41312 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/prof_desk/office_desk22"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/prof_desk/office_desk22/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk23" parent="CS Faculty/prof_desk" instance=ExtResource( 9 )]
+transform = Transform( 4.00768e-07, 0, 3.33327, 0, 3.33333, 0, -2.5005, 0, 3.64254e-07, -30.2361, 4.44899, 1.1379 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/prof_desk/office_desk23"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/prof_desk/office_desk23/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk25" parent="CS Faculty/prof_desk" instance=ExtResource( 9 )]
+transform = Transform( 4.00768e-07, 0, 3.33327, 0, 3.33333, 0, -2.5005, 0, 3.64254e-07, -30.2361, 4.44899, 6.7765 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/prof_desk/office_desk25"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/prof_desk/office_desk25/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="office_desk27" parent="CS Faculty/prof_desk" instance=ExtResource( 9 )]
+transform = Transform( 4.00768e-07, 0, 3.33327, 0, 3.33333, 0, -2.5005, 0, 3.64254e-07, -30.2361, 4.44899, 12.569 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/prof_desk/office_desk27"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/prof_desk/office_desk27/StaticBody"]
+transform = Transform( 0.4, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="stuffs" type="Spatial" parent="CS Faculty"]
+transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="computer_desk2" parent="CS Faculty/stuffs" instance=ExtResource( 22 )]
+transform = Transform( -3.52844e-08, 0, -1.04179, 0, 1.05434, 0, 0.807213, 0, -4.5538e-08, -46.5909, 7.493, 15.3516 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/stuffs/computer_desk2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/stuffs/computer_desk2/StaticBody"]
+transform = Transform( 2.28215, 0, -8.33351e-08, 0, 1.4797, 0, -8.33347e-08, 0, 1.32891, -0.192131, -1.37938, -0.0466032 )
+shape = SubResource( 11 )
+
+[node name="the_canon_printer2" parent="CS Faculty/stuffs" instance=ExtResource( 14 )]
+transform = Transform( -0.144351, 0, 1.26998e-08, 0, 0.152822, 0, -9.46467e-09, 0, -0.108952, -40.398, 6.66445, 17.8085 )
+
+[node name="office_bin2" parent="CS Faculty/stuffs" instance=ExtResource( 13 )]
+transform = Transform( -0.537419, 0, 4.58922e-08, 0, 0.662434, 0, -3.42015e-08, 0, -0.38179, -37.2226, 4.38366, 18.3357 )
+
+[node name="airconditioner_electrolux_fusion3" parent="CS Faculty/stuffs" instance=ExtResource( 21 )]
+transform = Transform( -1.72914e-07, 0, 9.37664, 0, 7.0325, 0, -3.9558, 0, -4.09866e-07, -47.0871, 13.522, 8.2408 )
+
+[node name="airconditioner_electrolux_fusion4" parent="CS Faculty/stuffs" instance=ExtResource( 21 )]
+transform = Transform( -1.72914e-07, 0, 9.37664, 0, 7.0325, 0, -3.9558, 0, -4.09866e-07, -47.0871, 13.522, -11.0591 )
+
+[node name="sala" type="Spatial" parent="CS Faculty"]
+transform = Transform( 1, 0, -3.90799e-14, 0, 1, 0, 0, 0, 1, -15.9381, 0, -8.08614 )
+
+[node name="brio_water_dispenser" parent="CS Faculty/sala" instance=ExtResource( 15 )]
+transform = Transform( 6.82997, 0, -0.121381, 0, 4.79291, 0, 0.138789, 0, 3.35997, -24.559, 4.38399, -12.7618 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/sala/brio_water_dispenser"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/sala/brio_water_dispenser/StaticBody"]
+transform = Transform( 1, 0, -3.72529e-09, 0, 1, 0, 0, 0, 1, 0.166841, 0, -0.24044 )
+shape = SubResource( 6 )
+
+[node name="glass_table" parent="CS Faculty/sala" instance=ExtResource( 18 )]
+transform = Transform( -4.43074, 0, -4.70249e-07, 0, 3.56908, 0, 2.73746e-07, 0, -3.7872, -29.0608, 4.38512, -6.74286 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/sala/glass_table"]
+transform = Transform( -0.225696, 0, 2.80242e-08, 0, 0.280184, 0, -1.63137e-08, 0, -0.264047, -6.02161, -1.22864, -2.04495 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/sala/glass_table/StaticBody"]
+transform = Transform( -4.43074, 0, -4.70249e-07, 0, 3.56908, 0, 2.73746e-07, 0, -3.7872, -26.6925, 4.38512, -7.74463 )
+shape = SubResource( 4 )
+
+[node name="chair__futuristic_chair" parent="CS Faculty/sala" instance=ExtResource( 20 )]
+transform = Transform( -3.39273, 0, -0.767054, 0, 3.71482, 0, 1.02602, 0, -2.5529, -23.9079, 4.43359, -9.93176 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/sala/chair__futuristic_chair"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/sala/chair__futuristic_chair/StaticBody"]
+transform = Transform( 0.138532, 0, 0.0114198, 0, 1, 0, -0.0104578, 0, 0.27491, 0.469288, 0, -0.378395 )
+shape = SubResource( 5 )
+
+[node name="chair__futuristic_chair3" parent="CS Faculty/sala" instance=ExtResource( 20 )]
+transform = Transform( 0.862504, 0, -3.47905, 0, 3.71482, 0, 2.66627, 0, 0.199689, -31.1776, 4.43359, -12.9935 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/sala/chair__futuristic_chair3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/sala/chair__futuristic_chair3/StaticBody"]
+transform = Transform( 0.138532, 0, 0.0114198, 0, 1, 0, -0.0104578, 0, 0.27491, 0.469288, 0, -0.378395 )
+shape = SubResource( 5 )
+
+[node name="chair__futuristic_chair2" parent="CS Faculty/sala" instance=ExtResource( 20 )]
+transform = Transform( -3.62988, 0, 0.984545, 0, 3.71482, 0, -0.340472, 0, -2.51058, -23.0785, 4.43359, -5.93284 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/sala/chair__futuristic_chair2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/sala/chair__futuristic_chair2/StaticBody"]
+transform = Transform( 0.141614, 0, -0.023099, 0, 1, 0, 0.0090544, 0, 0.268295, 0.455727, 0.0377183, -0.338878 )
+shape = SubResource( 5 )
+
+[node name="chair__futuristic_chair4" parent="CS Faculty/sala" instance=ExtResource( 20 )]
+transform = Transform( -0.587605, 0, 3.48922, 0, 3.71482, 0, -2.708, 0, 0.000807261, -28.0512, 4.43359, -0.55019 )
+
+[node name="StaticBody" type="StaticBody" parent="CS Faculty/sala/chair__futuristic_chair4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="CS Faculty/sala/chair__futuristic_chair4/StaticBody"]
+transform = Transform( 0.141614, 0, -0.023099, 0, 1, 0, 0.0090544, 0, 0.268295, 0.455726, 0.0377182, -0.338879 )
+shape = SubResource( 5 )
 
 [node name="IT Faculty" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, -0.8, 0, 0.6, 0, 0.6, 0, -3.49691e-08, 108.219, 1.481, -2.59333 )
@@ -396,6 +701,15 @@ transform = Transform( -1.59403e-07, 0, 0.501412, 0, 4.15352, 0, -3.64671, 0, -2
 
 [node name="sala" type="Spatial" parent="IT Faculty"]
 
+[node name="brio_water_dispenser" parent="IT Faculty/sala" instance=ExtResource( 15 )]
+transform = Transform( -2.51853e-07, 0, -4.48161, 0, 4.79291, 0, 5.12436, 0, -1.71906e-07, -26.531, 4.38399, -0.972023 )
+
+[node name="StaticBody" type="StaticBody" parent="IT Faculty/sala/brio_water_dispenser"]
+
+[node name="CollisionShape" type="CollisionShape" parent="IT Faculty/sala/brio_water_dispenser/StaticBody"]
+transform = Transform( 1, 0, 4.26326e-14, 0, 1, 0, 0, 0, 1, 0.178007, 0, -0.240902 )
+shape = SubResource( 6 )
+
 [node name="glass_table" parent="IT Faculty/sala" instance=ExtResource( 18 )]
 transform = Transform( -4.43074, 0, -4.70249e-07, 0, 3.56908, 0, 2.73746e-07, 0, -3.7872, -26.6802, 4.38512, -7.74463 )
 
@@ -410,7 +724,6 @@ shape = SubResource( 4 )
 transform = Transform( 3.64831, 0, -0.307483, 0, 3.71482, 0, -0.201192, 0, 2.60674, -31.2541, 4.43359, -8.28606 )
 
 [node name="StaticBody" type="StaticBody" parent="IT Faculty/sala/chair__futuristic_chair"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="IT Faculty/sala/chair__futuristic_chair/StaticBody"]
 transform = Transform( 0.138532, 0, 0.0114198, 0, 1, 0, -0.0104578, 0, 0.27491, 0.469288, 0, -0.378395 )
@@ -420,7 +733,6 @@ shape = SubResource( 5 )
 transform = Transform( -0.112715, 0, -3.42481, 0, 3.71482, 0, 2.74232, 0, -0.500528, -27.6394, 4.43359, -14.3005 )
 
 [node name="StaticBody" type="StaticBody" parent="IT Faculty/sala/chair__futuristic_chair3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="IT Faculty/sala/chair__futuristic_chair3/StaticBody"]
 transform = Transform( 0.138532, 0, 0.0114198, 0, 1, 0, -0.0104578, 0, 0.27491, 0.469288, 0, -0.378395 )
@@ -430,7 +742,6 @@ shape = SubResource( 5 )
 transform = Transform( 3.23551, 0, 1.11023, 0, 3.71482, 0, -1.2802, 0, 2.48091, -30.49, 4.43359, -4.80189 )
 
 [node name="StaticBody" type="StaticBody" parent="IT Faculty/sala/chair__futuristic_chair2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="IT Faculty/sala/chair__futuristic_chair2/StaticBody"]
 transform = Transform( 0.141614, 0, -0.023099, 0, 1, 0, 0.0090544, 0, 0.268295, 0.455726, 0.0377182, -0.338879 )
@@ -440,7 +751,6 @@ shape = SubResource( 5 )
 transform = Transform( -1.06749, 0, 3.45772, 0, 3.71482, 0, -2.62421, 0, -0.350872, -24.5774, 4.43359, -1.78725 )
 
 [node name="StaticBody" type="StaticBody" parent="IT Faculty/sala/chair__futuristic_chair4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="IT Faculty/sala/chair__futuristic_chair4/StaticBody"]
 transform = Transform( 0.141614, 0, -0.023099, 0, 1, 0, 0.0090544, 0, 0.268295, 0.455726, 0.0377182, -0.338879 )
@@ -458,16 +768,7 @@ transform = Transform( -3.074e-07, 0, 7.0325, 0, 7.0325, 0, -5.27437, 0, -2.3055
 transform = Transform( 0.537419, 0, -1.38935e-09, 0, 0.662434, 0, -1.03541e-09, 0, 0.38179, -38.9009, 4.38366, -21.7919 )
 
 [node name="the_canon_printer" parent="IT Faculty/stuff" instance=ExtResource( 14 )]
-transform = Transform( 0.144351, 0, 2.66454e-15, 0, 0.152822, 0, 6.21725e-15, 0, 0.108952, -36.0035, 6.66445, -21.0857 )
-
-[node name="brio_water_dispenser" parent="IT Faculty/stuff" instance=ExtResource( 15 )]
-transform = Transform( -2.51853e-07, 0, -4.48161, 0, 4.79291, 0, 5.12436, 0, -1.71906e-07, -26.531, 4.38399, -0.972015 )
-
-[node name="StaticBody" type="StaticBody" parent="IT Faculty/stuff/brio_water_dispenser"]
-
-[node name="CollisionShape" type="CollisionShape" parent="IT Faculty/stuff/brio_water_dispenser/StaticBody"]
-transform = Transform( 1, 0, 4.26326e-14, 0, 1, 0, 0, 0, 1, 0.178007, 0, -0.240902 )
-shape = SubResource( 6 )
+transform = Transform( 0.144351, 0, 3.10862e-15, 0, 0.152822, 0, 6.21725e-15, 0, 0.108952, -36.0035, 6.66445, -21.0857 )
 
 [node name="bookshelf" parent="IT Faculty/stuff" instance=ExtResource( 17 )]
 transform = Transform( -5.62072e-07, 0, -6.59333, 0, 5.45887, 0, 2.23223, 0, 5.02569e-08, -27.6165, 4.38352, 5.14864 )
@@ -480,15 +781,6 @@ shape = SubResource( 7 )
 
 [node name="Walls" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.127 )
-
-[node name="low_poly_plywood_model" parent="Walls" instance=ExtResource( 25 )]
-transform = Transform( -2.35549e-07, 5.38872, 0, -9.55071, -4.17475e-07, 0, 0, 0, 14.5724, 107.152, 4.11107, 39.9578 )
-
-[node name="StaticBody" type="StaticBody" parent="Walls/low_poly_plywood_model"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Walls/low_poly_plywood_model/StaticBody"]
-transform = Transform( 0.389772, 1.44845e-08, 0, 1.44845e-08, 0.0584058, 0, 0, 0, 0.484407, 5.96046e-08, 0.47842, 0.00561613 )
-shape = SubResource( 9 )
 
 [node name="wall_plain" parent="Walls" instance=ExtResource( 1 )]
 transform = Transform( -3.71547e-08, 0, -0.14, 0, 0.7, 0, 0.85, 0, -6.11959e-09, 37.6916, 3.83694, 16.1442 )
@@ -818,9 +1110,3 @@ transform = Transform( -2, 0, -8.74228e-08, 0, 2, 0, 1.74846e-07, 0, -1, 199.374
 
 [node name="Player" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 117.022, 4.13025, -11.538 )
-
-[node name="computer_desk" parent="." instance=ExtResource( 22 )]
-transform = Transform( -0.632602, 0, 5.53039e-08, 0, 0.632602, 0, -5.53039e-08, 0, -0.632602, 114.772, 5.9768, -3.77104 )
-
-[node name="low_poly_whiteboard" parent="." instance=ExtResource( 23 )]
-transform = Transform( -8.46782e-08, 0, -1.93721, 0, 1.48248, 0, 1.5277, 0, -6.67781e-08, 114.377, 4.29884, -5.18411 )
