@@ -14,6 +14,11 @@ config/name="Finals"
 run/main_scene="res://DIT.tscn"
 config/icon="res://icon.png"
 
+[global]
+
+occ=false
+occlussion=false
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

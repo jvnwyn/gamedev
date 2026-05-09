@@ -21,8 +21,8 @@
 
 [sub_resource type="BoxShape" id=1]
 
-[node name="3rdFloor" type="Spatial"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -95.4959, -17.6286, 85.1443 )
+[node name="4thFloor" type="Spatial"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -198.771, -17.6286, 85.1443 )
 
 [node name="itc401" parent="." instance=ExtResource( 3 )]
 transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.6, 0, 0.7, 0, -3.0598e-08, 134.535, 1.481, 2.0892 )
@@ -165,42 +165,6 @@ transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -
 [node name="StaticBody" type="StaticBody" parent="itc401/chairs/school_chair47"]
 
 [node name="CollisionShape" type="CollisionShape" parent="itc401/chairs/school_chair47/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair27" parent="itc401/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.82341, 6.01698, -18.6058 )
-
-[node name="StaticBody" type="StaticBody" parent="itc401/chairs/school_chair27"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc401/chairs/school_chair27/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair40" parent="itc401/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -14.4502 )
-
-[node name="StaticBody" type="StaticBody" parent="itc401/chairs/school_chair40"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc401/chairs/school_chair40/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair44" parent="itc401/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -10.7144 )
-
-[node name="StaticBody" type="StaticBody" parent="itc401/chairs/school_chair44"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc401/chairs/school_chair44/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair48" parent="itc401/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -6.84192 )
-
-[node name="StaticBody" type="StaticBody" parent="itc401/chairs/school_chair48"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc401/chairs/school_chair48/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 4 )
 
@@ -494,42 +458,6 @@ transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 4 )
 
-[node name="school_chair27" parent="itc402/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.82341, 6.01698, -18.6058 )
-
-[node name="StaticBody" type="StaticBody" parent="itc402/chairs/school_chair27"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc402/chairs/school_chair27/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair40" parent="itc402/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -14.4502 )
-
-[node name="StaticBody" type="StaticBody" parent="itc402/chairs/school_chair40"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc402/chairs/school_chair40/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair44" parent="itc402/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -10.7144 )
-
-[node name="StaticBody" type="StaticBody" parent="itc402/chairs/school_chair44"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc402/chairs/school_chair44/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair48" parent="itc402/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -6.84192 )
-
-[node name="StaticBody" type="StaticBody" parent="itc402/chairs/school_chair48"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc402/chairs/school_chair48/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
 [node name="school_chair28" parent="itc402/chairs" instance=ExtResource( 13 )]
 transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 16.3127, 6.01698, -18.6058 )
 
@@ -787,42 +715,6 @@ transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -
 [node name="StaticBody" type="StaticBody" parent="itc403/chairs/school_chair47"]
 
 [node name="CollisionShape" type="CollisionShape" parent="itc403/chairs/school_chair47/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair27" parent="itc403/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.82341, 6.01698, -18.6058 )
-
-[node name="StaticBody" type="StaticBody" parent="itc403/chairs/school_chair27"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc403/chairs/school_chair27/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair40" parent="itc403/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -14.4502 )
-
-[node name="StaticBody" type="StaticBody" parent="itc403/chairs/school_chair40"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc403/chairs/school_chair40/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair44" parent="itc403/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -10.7144 )
-
-[node name="StaticBody" type="StaticBody" parent="itc403/chairs/school_chair44"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc403/chairs/school_chair44/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair48" parent="itc403/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -6.84192 )
-
-[node name="StaticBody" type="StaticBody" parent="itc403/chairs/school_chair48"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc403/chairs/school_chair48/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 4 )
 
@@ -1128,42 +1020,6 @@ transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 4 )
 
-[node name="school_chair27" parent="itc404/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.82341, 6.01698, -18.6058 )
-
-[node name="StaticBody" type="StaticBody" parent="itc404/chairs/school_chair27"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc404/chairs/school_chair27/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair40" parent="itc404/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -14.4502 )
-
-[node name="StaticBody" type="StaticBody" parent="itc404/chairs/school_chair40"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc404/chairs/school_chair40/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair44" parent="itc404/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -10.7144 )
-
-[node name="StaticBody" type="StaticBody" parent="itc404/chairs/school_chair44"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc404/chairs/school_chair44/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair48" parent="itc404/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -6.84192 )
-
-[node name="StaticBody" type="StaticBody" parent="itc404/chairs/school_chair48"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc404/chairs/school_chair48/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
 [node name="school_chair28" parent="itc404/chairs" instance=ExtResource( 13 )]
 transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 16.3127, 6.01698, -18.6058 )
 
@@ -1421,42 +1277,6 @@ transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -
 [node name="StaticBody" type="StaticBody" parent="itc405/chairs2/school_chair47"]
 
 [node name="CollisionShape" type="CollisionShape" parent="itc405/chairs2/school_chair47/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair27" parent="itc405/chairs2" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.82341, 6.01698, -18.6058 )
-
-[node name="StaticBody" type="StaticBody" parent="itc405/chairs2/school_chair27"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc405/chairs2/school_chair27/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68478e-09, 0, 2.81141, 0, -4.78955e-09, 0, -0.964354, 0.252419, 0, 0.204975 )
-shape = SubResource( 4 )
-
-[node name="school_chair40" parent="itc405/chairs2" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -14.4502 )
-
-[node name="StaticBody" type="StaticBody" parent="itc405/chairs2/school_chair40"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc405/chairs2/school_chair40/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair44" parent="itc405/chairs2" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -10.7144 )
-
-[node name="StaticBody" type="StaticBody" parent="itc405/chairs2/school_chair44"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc405/chairs2/school_chair44/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair48" parent="itc405/chairs2" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -6.84192 )
-
-[node name="StaticBody" type="StaticBody" parent="itc405/chairs2/school_chair48"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc405/chairs2/school_chair48/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 4 )
 
@@ -1762,42 +1582,6 @@ transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 4 )
 
-[node name="school_chair27" parent="itc406/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.82341, 6.01698, -18.6058 )
-
-[node name="StaticBody" type="StaticBody" parent="itc406/chairs/school_chair27"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc406/chairs/school_chair27/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair40" parent="itc406/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -14.4502 )
-
-[node name="StaticBody" type="StaticBody" parent="itc406/chairs/school_chair40"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc406/chairs/school_chair40/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair44" parent="itc406/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -10.7144 )
-
-[node name="StaticBody" type="StaticBody" parent="itc406/chairs/school_chair44"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc406/chairs/school_chair44/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair48" parent="itc406/chairs" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -6.84192 )
-
-[node name="StaticBody" type="StaticBody" parent="itc406/chairs/school_chair48"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc406/chairs/school_chair48/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
 [node name="school_chair28" parent="itc406/chairs" instance=ExtResource( 13 )]
 transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 16.3127, 6.01698, -18.6058 )
 
@@ -2055,42 +1839,6 @@ transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -
 [node name="StaticBody" type="StaticBody" parent="itc407/chairs2/school_chair47"]
 
 [node name="CollisionShape" type="CollisionShape" parent="itc407/chairs2/school_chair47/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair27" parent="itc407/chairs2" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.82341, 6.01698, -18.6058 )
-
-[node name="StaticBody" type="StaticBody" parent="itc407/chairs2/school_chair27"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc407/chairs2/school_chair27/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair40" parent="itc407/chairs2" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -14.4502 )
-
-[node name="StaticBody" type="StaticBody" parent="itc407/chairs2/school_chair40"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc407/chairs2/school_chair40/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair44" parent="itc407/chairs2" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -10.7144 )
-
-[node name="StaticBody" type="StaticBody" parent="itc407/chairs2/school_chair44"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc407/chairs2/school_chair44/StaticBody"]
-transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
-shape = SubResource( 4 )
-
-[node name="school_chair48" parent="itc407/chairs2" instance=ExtResource( 13 )]
-transform = Transform( -3.34091e-08, 0, 1.24225, 0, 0.861331, 0, -0.764311, 0, -5.43006e-08, 1.8234, 6.01698, -6.84192 )
-
-[node name="StaticBody" type="StaticBody" parent="itc407/chairs2/school_chair48"]
-
-[node name="CollisionShape" type="CollisionShape" parent="itc407/chairs2/school_chair48/StaticBody"]
 transform = Transform( -1.06046, 0, -3.68479e-09, 0, 2.81141, 0, -4.78954e-09, 0, -0.964354, 0.252424, 0, -0.200043 )
 shape = SubResource( 4 )
 

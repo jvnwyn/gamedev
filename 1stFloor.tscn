@@ -1773,7 +1773,7 @@ shape = SubResource( 1 )
 transform = Transform( 1.395, 0, 0, 0, 5, 0, 0, 0, 1.11, -19.7563, -17.57, 0 )
 
 [node name="floor_white_tile_2x2_meters" parent="FloorBase" instance=ExtResource( 5 )]
-transform = Transform( 3.177, 0, 0, 0, 3, 0, 0, 0, 3, 72.2316, -0.0082128, -5.88839 )
+transform = Transform( 3.177, 0, 0, 0, 3, 0, 0, 0, 3, 72.2316, -0.00821304, -5.88839 )
 
 [node name="StaticBody" type="StaticBody" parent="FloorBase/floor_white_tile_2x2_meters"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.966179, 0, -7.04163 )
@@ -1783,7 +1783,7 @@ transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 13.7636, 1.36931, -1.48193 )
 shape = SubResource( 2 )
 
 [node name="floor_white_tile_2x2_meters2" parent="FloorBase" instance=ExtResource( 5 )]
-transform = Transform( 3.177, 0, 0, 0, 3, 0, 0, 0, 2.99999, 66.2717, -0.0082128, -5.78583 )
+transform = Transform( 3.177, 0, 0, 0, 3, 0, 0, 0, 2.99999, 66.2717, -0.00821304, -5.78583 )
 
 [node name="StaticBody" type="StaticBody" parent="FloorBase/floor_white_tile_2x2_meters2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.966179, 0, -7.04163 )
@@ -1900,3 +1900,5 @@ transform = Transform( -2, 0, -8.74228e-08, 0, 2, 0, 1.74846e-07, 0, -1, 199.374
 
 [node name="Player" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 117.022, 4.13025, -11.538 )
+
+[node name="StaticBody" type="StaticBody" parent="."]

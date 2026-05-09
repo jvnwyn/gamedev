@@ -1,3 +1,12 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://1stFloor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://2ndFloor.tscn" type="PackedScene" id=2]
 
 [node name="Building" type="Spatial"]
+
+[node name="1stFlr" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="2ndFloor" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -24.5982, 0 )
