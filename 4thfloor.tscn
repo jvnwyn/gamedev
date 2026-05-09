@@ -2157,3 +2157,6 @@ transform = Transform( 0.0678438, 0, 0.032855, 0, 0.04, 0, -0.0423935, 0, 0.0525
 
 [node name="FloorBase" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.465, 0, 0, 0, 0.5, 0, 0, 0, 0.37, -20.0061, -1.92171, -0.11709 )
+
+[node name="FloorBase2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.465, 0, 0, 0, 0.5, 0, 0, 0, 0.37, -20.006, 5.1, -0.117 )
