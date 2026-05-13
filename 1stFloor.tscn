@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=2]
+[gd_scene load_steps=141 format=2]
 
 [ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
 [ext_resource path="res://FloorBase.tscn" type="PackedScene" id=2]
@@ -36,6 +36,9 @@
 [ext_resource path="res://Assets/computer set/cabs/cabinet.glb" type="PackedScene" id=34]
 [ext_resource path="res://Assets/wall-green.glb" type="PackedScene" id=35]
 [ext_resource path="res://2345FlrBase.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Assets/w&d/door/Door.gd" type="Script" id=37]
+[ext_resource path="res://Door.gd" type="Script" id=38]
+[ext_resource path="res://Assets/DoubleDoor.gd" type="Script" id=39]
 
 [sub_resource type="BoxShape" id=9]
 
@@ -676,6 +679,7 @@ shape = SubResource( 17 )
 
 [node name="simple_wood_door" parent="Room101/w&d" instance=ExtResource( 33 )]
 transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+script = ExtResource( 37 )
 
 [node name="StaticBody" type="StaticBody" parent="Room101/w&d/simple_wood_door"]
 
@@ -685,6 +689,7 @@ shape = SubResource( 18 )
 
 [node name="simple_wood_door2" parent="Room101/w&d" instance=ExtResource( 33 )]
 transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+script = ExtResource( 38 )
 
 [node name="StaticBody" type="StaticBody" parent="Room101/w&d/simple_wood_door2"]
 
@@ -1002,6 +1007,7 @@ shape = SubResource( 17 )
 
 [node name="simple_wood_door" parent="Room102/w&d" instance=ExtResource( 33 )]
 transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+script = ExtResource( 38 )
 
 [node name="StaticBody" type="StaticBody" parent="Room102/w&d/simple_wood_door"]
 
@@ -1011,6 +1017,7 @@ shape = SubResource( 18 )
 
 [node name="simple_wood_door2" parent="Room102/w&d" instance=ExtResource( 33 )]
 transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+script = ExtResource( 38 )
 
 [node name="StaticBody" type="StaticBody" parent="Room102/w&d/simple_wood_door2"]
 
@@ -1347,6 +1354,7 @@ shape = SubResource( 17 )
 
 [node name="simple_wood_door" parent="Room103/w&d" instance=ExtResource( 33 )]
 transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+script = ExtResource( 38 )
 
 [node name="StaticBody" type="StaticBody" parent="Room103/w&d/simple_wood_door"]
 
@@ -1356,6 +1364,7 @@ shape = SubResource( 18 )
 
 [node name="simple_wood_door2" parent="Room103/w&d" instance=ExtResource( 33 )]
 transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+script = ExtResource( 38 )
 
 [node name="StaticBody" type="StaticBody" parent="Room103/w&d/simple_wood_door2"]
 
@@ -1560,6 +1569,7 @@ shape = SubResource( 17 )
 
 [node name="simple_wood_door" parent="CS Faculty/w&d" instance=ExtResource( 33 )]
 transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+script = ExtResource( 38 )
 
 [node name="StaticBody" type="StaticBody" parent="CS Faculty/w&d/simple_wood_door"]
 
@@ -1569,6 +1579,7 @@ shape = SubResource( 18 )
 
 [node name="simple_wood_door2" parent="CS Faculty/w&d" instance=ExtResource( 33 )]
 transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+script = ExtResource( 38 )
 
 [node name="StaticBody" type="StaticBody" parent="CS Faculty/w&d/simple_wood_door2"]
 
@@ -1788,6 +1799,7 @@ shape = SubResource( 17 )
 
 [node name="simple_wood_door" parent="IT Faculty/w&d" instance=ExtResource( 33 )]
 transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+script = ExtResource( 38 )
 
 [node name="StaticBody" type="StaticBody" parent="IT Faculty/w&d/simple_wood_door"]
 
@@ -1797,6 +1809,7 @@ shape = SubResource( 18 )
 
 [node name="simple_wood_door2" parent="IT Faculty/w&d" instance=ExtResource( 33 )]
 transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+script = ExtResource( 37 )
 
 [node name="StaticBody" type="StaticBody" parent="IT Faculty/w&d/simple_wood_door2"]
 
@@ -2544,12 +2557,14 @@ transform = Transform( 0.0678438, 0, 0.032855, 0, 0.04, 0, -0.0423935, 0, 0.0525
 
 [node name="double_doors_with_windows3" parent="Door" instance=ExtResource( 8 )]
 transform = Transform( -2, 0, -8.74228e-08, 0, 2, 0, 1.74846e-07, 0, -1, 190.277, 4.4411, -33.0115 )
+script = ExtResource( 39 )
 
 [node name="double_doors_with_windows2" parent="Door" instance=ExtResource( 8 )]
 transform = Transform( -2, 0, -8.74228e-08, 0, 2, 0, 1.74846e-07, 0, -1, 199.374, 4.4411, -33.0115 )
+script = ExtResource( 39 )
 
 [node name="Player" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 117.022, 4.13025, -11.538 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 117.022, 3.91714, -11.538 )
 
 [node name="Ceiling" type="Spatial" parent="."]
 transform = Transform( 5.645, 0, 0, 0, -1.74846e-07, -0.5, 0, 4, -2.18557e-08, 94.15, 11.005, -31.75 )

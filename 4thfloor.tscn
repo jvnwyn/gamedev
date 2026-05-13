@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=2]
+[gd_scene load_steps=100 format=2]
 
 [ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
 [ext_resource path="res://2345FlrBase.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Assets/w&d/door/simple_wood_door.glb" type="PackedScene" id=9]
 [ext_resource path="res://Assets/computer_desk.glb" type="PackedScene" id=10]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Door.gd" type="Script" id=12]
 [ext_resource path="res://Assets/os_room/school_chair.glb" type="PackedScene" id=13]
 [ext_resource path="res://Assets/aircon/mini_air_cooler.glb" type="PackedScene" id=14]
 
@@ -542,6 +543,7 @@ shape = SubResource( 5 )
 
 [node name="simple_wood_door" parent="itc401/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc401/w&d/simple_wood_door"]
 
@@ -551,6 +553,7 @@ shape = SubResource( 6 )
 
 [node name="simple_wood_door2" parent="itc401/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc401/w&d/simple_wood_door2"]
 
@@ -832,6 +835,7 @@ shape = SubResource( 5 )
 
 [node name="simple_wood_door" parent="itc402/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc402/w&d/simple_wood_door"]
 
@@ -841,6 +845,7 @@ shape = SubResource( 6 )
 
 [node name="simple_wood_door2" parent="itc402/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc402/w&d/simple_wood_door2"]
 
@@ -1104,6 +1109,7 @@ shape = SubResource( 5 )
 
 [node name="simple_wood_door" parent="itc403/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc403/w&d/simple_wood_door"]
 
@@ -1113,6 +1119,7 @@ shape = SubResource( 6 )
 
 [node name="simple_wood_door2" parent="itc403/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc403/w&d/simple_wood_door2"]
 
@@ -1394,6 +1401,7 @@ shape = SubResource( 5 )
 
 [node name="simple_wood_door" parent="itc404/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc404/w&d/simple_wood_door"]
 
@@ -1403,6 +1411,7 @@ shape = SubResource( 6 )
 
 [node name="simple_wood_door2" parent="itc404/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc404/w&d/simple_wood_door2"]
 
@@ -1666,6 +1675,7 @@ shape = SubResource( 5 )
 
 [node name="simple_wood_door" parent="itc405/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc405/w&d/simple_wood_door"]
 
@@ -1675,6 +1685,7 @@ shape = SubResource( 6 )
 
 [node name="simple_wood_door2" parent="itc405/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc405/w&d/simple_wood_door2"]
 
@@ -1956,6 +1967,7 @@ shape = SubResource( 5 )
 
 [node name="simple_wood_door" parent="itc406/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc406/w&d/simple_wood_door"]
 
@@ -1965,6 +1977,7 @@ shape = SubResource( 6 )
 
 [node name="simple_wood_door2" parent="itc406/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc406/w&d/simple_wood_door2"]
 
@@ -2228,6 +2241,7 @@ shape = SubResource( 5 )
 
 [node name="simple_wood_door" parent="itc407/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.01175e-07, 0, -1.88707, 0, 4.08802, 0, 4.60236, 0, -8.24866e-08, -23.8863, 4.42413, 16.9647 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc407/w&d/simple_wood_door"]
 
@@ -2237,6 +2251,7 @@ shape = SubResource( 6 )
 
 [node name="simple_wood_door2" parent="itc407/w&d" instance=ExtResource( 9 )]
 transform = Transform( -2.16761e-07, 0, -1.88707, 0, 4.08802, 0, 4.95891, 0, -8.24866e-08, -23.8863, 4.42413, -15.6775 )
+script = ExtResource( 12 )
 
 [node name="StaticBody" type="StaticBody" parent="itc407/w&d/simple_wood_door2"]
 
@@ -2812,7 +2827,7 @@ transform = Transform( 0.465, 0, 0, 0, 0.5, 0, 0, 0, 0.37, -20.006, 5.1, -0.117 
 visible = false
 
 [node name="Player" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 139.835, 4.63865, -12.0227 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 139.835, 4.63865, -12.0227 )
 
 [editable path="Stairs/double_stairs2"]
 [editable path="Stairs/double_stairs"]
