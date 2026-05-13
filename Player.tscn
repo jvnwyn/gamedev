@@ -8,6 +8,7 @@ radius = 0.5
 height = 1.5
 
 [node name="Player" type="KinematicBody"]
+transform = Transform( 0.6897, 0, 0, 0, 0.504452, 0, 0, 0, 0.903591, 0, 0, 0 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
