@@ -14,6 +14,10 @@ var mouseDelta: Vector2 = Vector2()
 export var interact_distance: float = 5.0
 var hovered_door = null
 
+# Snap vector keeps player stuck to ground/stairs when not jumping
+var snap: Vector3 = Vector3.DOWN
+var is_jumping: bool = false
+
 onready var camera = get_node("Camera")
 
 func _ready():
@@ -46,13 +50,9 @@ func _check_door_hover():
 	var new_hovered = null
 	if result:
 		var hit_node = result["collider"]
-		print("Hit: ", hit_node.name, " | class: ", hit_node.get_class())
 		var door = _find_door_ancestor(hit_node)
 		if door:
-			print("Found door: ", door.name)
 			new_hovered = door
-		else:
-			print("No door ancestor found - full path: ", hit_node.get_path())
 
 	if new_hovered != hovered_door:
 		if hovered_door != null:
@@ -85,14 +85,27 @@ func _physics_process(delta):
 
 	velocity.z = (forward * input.y + right * input.x).z * moveSpeed
 	velocity.x = (forward * input.y + right * input.x).x * moveSpeed
+
 	velocity.y -= gravity * delta
-	velocity = move_and_slide(velocity, Vector3.UP)
 
-	if Input.is_action_pressed("jump") and is_on_floor():
+	# Disable snap while jumping so we actually leave the ground
+	if is_jumping:
+		snap = Vector3.ZERO
+	else:
+		snap = Vector3.DOWN * 0.5
+
+	velocity = move_and_slide_with_snap(velocity, snap, Vector3.UP, true, 4, deg2rad(46))
+
+	if is_on_floor():
+		is_jumping = false
+		# Kill downward velocity so gravity doesn't accumulate on slopes/stairs
+		if velocity.y < 0:
+			velocity.y = 0
+
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jumpForce
+		is_jumping = true
+		snap = Vector3.ZERO
 
-	if Input.is_action_just_pressed("interact"):
-		if hovered_door != null:
-			hovered_door.interact()
-		else:
-			print("E pressed but no door hovered")
+	if Input.is_action_just_pressed("interact") and hovered_door != null:
+		hovered_door.interact()
