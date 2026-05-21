@@ -14216,7 +14216,7 @@ shape = SubResource( 129 )
 [node name="room7" type="Spatial" parent="rooms"]
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142.043, 4.58364, -8.42966 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 143.19, 4.826, -6.367 )
 
 [node name="wall_plain" parent="." instance=ExtResource( 1 )]
 transform = Transform( 5.7, 0, 0, 0, -1.74846e-07, -0.5, 0, 4, -2.18557e-08, 94.212, 11, -31.587 )

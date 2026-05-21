@@ -1,19 +1,21 @@
 extends Spatial
- 
+
+signal door_opened(door_position)
+
 export var open_angle: float = 90.0
 export var open_speed: float = 3.0
- 
+
 var is_open: bool = false
 var is_hovered: bool = false
 var tween: Tween
- 
+
 var closed_rotation: float = 0.0
 var target_rotation: float = 0.0
- 
+
 var mesh_instance = null
 var audio_open = null
 var audio_close = null
- 
+
 func _ready():
 	tween = Tween.new()
 	add_child(tween)
@@ -22,7 +24,7 @@ func _ready():
 	mesh_instance = _find_mesh_instance(self)
 	audio_open = _find_node_by_name(self, "AudioOpen")
 	audio_close = _find_node_by_name(self, "AudioClose")
- 
+
 func _find_mesh_instance(node: Node) -> Node:
 	if node is MeshInstance:
 		return node
@@ -31,7 +33,7 @@ func _find_mesh_instance(node: Node) -> Node:
 		if result:
 			return result
 	return null
- 
+
 func _find_node_by_name(node: Node, target: String) -> Node:
 	if node.name == target:
 		return node
@@ -40,7 +42,7 @@ func _find_node_by_name(node: Node, target: String) -> Node:
 		if result:
 			return result
 	return null
- 
+
 func set_hovered(hovered: bool):
 	if is_hovered == hovered:
 		return
@@ -51,7 +53,7 @@ func set_hovered(hovered: bool):
 		_enable_outline()
 	else:
 		_disable_outline()
- 
+
 func _enable_outline():
 	if mesh_instance.get_node_or_null("OutlineMesh"):
 		return
@@ -68,12 +70,12 @@ func _enable_outline():
 	outline.material_override = mat
 	outline.transform = Transform()
 	mesh_instance.add_child(outline)
- 
+
 func _disable_outline():
 	var outline = mesh_instance.get_node_or_null("OutlineMesh")
 	if outline:
 		outline.queue_free()
- 
+
 func interact():
 	is_open = !is_open
 	target_rotation = closed_rotation + open_angle if is_open else closed_rotation
@@ -89,3 +91,6 @@ func interact():
 		audio_open.play()
 	elif not is_open and audio_close:
 		audio_close.play()
+	# Notify the kid when door opens
+	if is_open:
+		emit_signal("door_opened", global_transform.origin)
