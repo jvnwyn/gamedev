@@ -1,4 +1,4 @@
-[gd_scene load_steps=178 format=2]
+[gd_scene load_steps=179 format=2]
 
 [ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
 [ext_resource path="res://2345FlrBase.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Assets/os_room/low_poly_whiteboard.glb" type="PackedScene" id=8]
 [ext_resource path="res://Assets/w&d/door/simple_wood_door.glb" type="PackedScene" id=9]
 [ext_resource path="res://Assets/computer_desk.glb" type="PackedScene" id=10]
+[ext_resource path="res://Assets/long_office_ceiling_light.glb" type="PackedScene" id=11]
 [ext_resource path="res://Door.gd" type="Script" id=12]
 [ext_resource path="res://Assets/os_room/school_chair.glb" type="PackedScene" id=13]
 [ext_resource path="res://Assets/w&d/door/Door.gd" type="Script" id=14]
@@ -615,7 +616,7 @@ data = PoolVector3Array( -1.1019, -1.2727, 0, 1.1019, 1.2727, 0, -1.1019, 1.2727
 data = PoolVector3Array( -1.1019, -1.2727, 0, 1.1019, 1.2727, 0, -1.1019, 1.2727, 0, -1.1019, -1.2727, 0, 1.1019, -1.2727, 0, 1.1019, 1.2727, 0, -1.1019, -1.2727, 56.3038, 1.1019, 1.2727, 56.3038, 1.1019, -1.2727, 56.3038, -1.1019, -1.2727, 56.3038, -1.1019, 1.2727, 56.3038, 1.1019, 1.2727, 56.3038, -1.1019, -1.2727, 0, 1.1019, -1.2727, 56.3038, 1.1019, -1.2727, 0, -1.1019, -1.2727, 0, -1.1019, -1.2727, 56.3038, 1.1019, -1.2727, 56.3038, 1.1019, -1.2727, 0, 1.1019, 1.2727, 56.3038, 1.1019, 1.2727, 0, 1.1019, -1.2727, 0, 1.1019, -1.2727, 56.3038, 1.1019, 1.2727, 56.3038, 1.1019, 1.2727, 0, -1.1019, 1.2727, 56.3038, -1.1019, 1.2727, 0, 1.1019, 1.2727, 0, 1.1019, 1.2727, 56.3038, -1.1019, 1.2727, 56.3038, -1.1019, 1.2727, 0, -1.1019, -1.2727, 56.3038, -1.1019, -1.2727, 0, -1.1019, 1.2727, 0, -1.1019, 1.2727, 56.3038, -1.1019, -1.2727, 56.3038 )
 
 [node name="4thFloor" type="Spatial"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -198.771, -17.6286, 85.1443 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -270.711, -17.6286, 35.1295 )
 
 [node name="itc401" parent="." instance=ExtResource( 3 )]
 transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.6, 0, 0.7, 0, -3.0598e-08, 134.535, 1.481, 2.0892 )
@@ -787,7 +788,6 @@ shape = SubResource( 114 )
 
 [node name="chairs" type="Spatial" parent="itc401"]
 transform = Transform( 1, 0, 6.41117e-09, 0, 1, 0, 6.41115e-09, 0, 1.14667, 0, 0, 0 )
-visible = false
 
 [node name="school_chair47" parent="itc401/chairs" instance=ExtResource( 13 )]
 transform = Transform( -3.34091e-08, 0, -1.24225, 0, 0.861331, 0, 0.764311, 0, -5.43005e-08, -26.1639, 6.01698, 5.96632 )
@@ -3288,7 +3288,6 @@ shape = SubResource( 114 )
 
 [node name="chairs" type="Spatial" parent="itc402"]
 transform = Transform( 1, 0, -4.91853e-09, 0, 1, 0, -3.61361e-09, 0, 1.09645, 0, 0, 0 )
-visible = false
 
 [node name="school_chair47" parent="itc402/chairs" instance=ExtResource( 13 )]
 transform = Transform( -3.34091e-08, 0, -1.24225, 0, 0.861331, 0, 0.764311, 0, -5.43005e-08, -26.1639, 6.01698, 5.96632 )
@@ -5787,7 +5786,6 @@ shape = SubResource( 114 )
 
 [node name="chairs" type="Spatial" parent="itc403"]
 transform = Transform( 1, 0, 1.80031e-08, 0, 1, 0, 2.45042e-08, 0, 1.48051, 0, 0, -1.87422 )
-visible = false
 
 [node name="school_chair47" parent="itc403/chairs" instance=ExtResource( 13 )]
 transform = Transform( -3.34091e-08, 0, -1.24225, 0, 0.861331, 0, 0.764311, 0, -5.43005e-08, -26.1639, 6.01698, 5.96632 )
@@ -8286,7 +8284,6 @@ shape = SubResource( 114 )
 
 [node name="chairs" type="Spatial" parent="itc404"]
 transform = Transform( 1, 0, 4.29229e-08, 0, 1, 0, 2.68953e-08, 0, 1.05293, -1.90735e-06, 0, 2.61474 )
-visible = false
 
 [node name="school_chair47" parent="itc404/chairs" instance=ExtResource( 13 )]
 transform = Transform( -3.34091e-08, 0, -1.24225, 0, 0.861331, 0, 0.764311, 0, -5.43005e-08, -26.1639, 6.01698, 5.96632 )
@@ -10785,7 +10782,6 @@ shape = SubResource( 114 )
 
 [node name="chairs" type="Spatial" parent="itc405"]
 transform = Transform( 1, 0, 1.80031e-08, 0, 1, 0, 2.45042e-08, 0, 1.48051, 0, 0, -3.4366 )
-visible = false
 
 [node name="school_chair47" parent="itc405/chairs" instance=ExtResource( 13 )]
 transform = Transform( -3.34091e-08, 0, -1.24225, 0, 0.861331, 0, 0.764311, 0, -5.43005e-08, -26.1639, 6.01698, 5.96632 )
@@ -13324,7 +13320,6 @@ shape = SubResource( 114 )
 
 [node name="chairs" type="Spatial" parent="itc406"]
 transform = Transform( 1, 0, 3.39739e-08, 0, 1, 0, 2.72462e-08, 0, 1.16733, 0, 0, 0.95569 )
-visible = false
 
 [node name="school_chair47" parent="itc406/chairs" instance=ExtResource( 13 )]
 transform = Transform( -3.34091e-08, 0, -1.24225, 0, 0.861331, 0, 0.764311, 0, -5.43005e-08, -26.1639, 6.01698, 5.96632 )
@@ -18498,6 +18493,220 @@ shape = SubResource( 47 )
 transform = Transform( 350, 0, 0, 0, 350, 0, 0, 0, 350, 67.2961, 70.7794, 53.707 )
 shape = SubResource( 167 )
 
+[node name="double_stairs4" parent="Stairs" instance=ExtResource( 6 )]
+transform = Transform( 0.03, 0, 0, 0, 0.026, 0, 0, 0, 0.055, 142.94, -2.36745, -5.62039 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Plane001/Plane001__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Plane001/Plane001__0/StaticBody"]
+shape = SubResource( 7 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box006/Box006__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box006/Box006__0/StaticBody"]
+shape = SubResource( 8 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box007/Box007__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box007/Box007__0/StaticBody"]
+shape = SubResource( 9 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box008/Box008__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box008/Box008__0/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box009/Box009__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box009/Box009__0/StaticBody"]
+shape = SubResource( 11 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box010/Box010__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box010/Box010__0/StaticBody"]
+shape = SubResource( 12 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box011/Box011__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box011/Box011__0/StaticBody"]
+shape = SubResource( 13 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box012/Box012__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box012/Box012__0/StaticBody"]
+shape = SubResource( 14 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box013/Box013__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box013/Box013__0/StaticBody"]
+shape = SubResource( 15 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box014/Box014__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box014/Box014__0/StaticBody"]
+shape = SubResource( 16 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box015/Box015__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box015/Box015__0/StaticBody"]
+shape = SubResource( 17 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box016/Box016__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box016/Box016__0/StaticBody"]
+shape = SubResource( 18 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box017/Box017__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box017/Box017__0/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box018/Box018__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box018/Box018__0/StaticBody"]
+shape = SubResource( 20 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box019/Box019__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box019/Box019__0/StaticBody"]
+shape = SubResource( 21 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box020/Box020__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box020/Box020__0/StaticBody"]
+shape = SubResource( 22 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box021/Box021__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box021/Box021__0/StaticBody"]
+shape = SubResource( 23 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box022/Box022__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box022/Box022__0/StaticBody"]
+shape = SubResource( 24 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box023/Box023__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box023/Box023__0/StaticBody"]
+shape = SubResource( 25 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box024/Box024__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box024/Box024__0/StaticBody"]
+shape = SubResource( 26 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box025/Box025__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box025/Box025__0/StaticBody"]
+shape = SubResource( 27 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box026/Box026__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box026/Box026__0/StaticBody"]
+shape = SubResource( 28 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box027/Box027__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box027/Box027__0/StaticBody"]
+shape = SubResource( 29 )
+
+[node name="StaticBody2" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box027/Box027__0" index="1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box027/Box027__0/StaticBody2"]
+shape = SubResource( 30 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box028/Box028__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box028/Box028__0/StaticBody"]
+shape = SubResource( 31 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box029/Box029__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box029/Box029__0/StaticBody"]
+shape = SubResource( 32 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box030/Box030__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box030/Box030__0/StaticBody"]
+shape = SubResource( 33 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box031/Box031__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box031/Box031__0/StaticBody"]
+shape = SubResource( 34 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box032/Box032__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box032/Box032__0/StaticBody"]
+shape = SubResource( 35 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Plane002/Plane002__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Plane002/Plane002__0/StaticBody"]
+shape = SubResource( 36 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box033/Box033__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box033/Box033__0/StaticBody"]
+shape = SubResource( 37 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box034/Box034__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box034/Box034__0/StaticBody"]
+shape = SubResource( 38 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box035/Box035__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box035/Box035__0/StaticBody"]
+shape = SubResource( 39 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box036/Box036__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box036/Box036__0/StaticBody"]
+shape = SubResource( 40 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box037/Box037__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box037/Box037__0/StaticBody"]
+shape = SubResource( 41 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box038/Box038__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box038/Box038__0/StaticBody"]
+shape = SubResource( 42 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box039/Box039__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box039/Box039__0/StaticBody"]
+shape = SubResource( 43 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box040/Box040__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box040/Box040__0/StaticBody"]
+shape = SubResource( 44 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box041/Box041__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box041/Box041__0/StaticBody"]
+shape = SubResource( 45 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box042/Box042__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box042/Box042__0/StaticBody"]
+shape = SubResource( 46 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box043/Box043__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box043/Box043__0/StaticBody"]
+shape = SubResource( 47 )
+
+[node name="Area" type="Area" parent="Stairs/double_stairs4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs4/Area"]
+transform = Transform( 350, 0, 0, 0, 350, 0, 0, 0, 350, 67.2961, 70.7794, 53.707 )
+shape = SubResource( 167 )
+
 [node name="double_stairs" parent="Stairs" instance=ExtResource( 6 )]
 transform = Transform( -0.03, 0, -8.30477e-09, 0, 0.026, 0, 4.52987e-09, 0, -0.055, 45.9797, 4.38047, -17.6117 )
 
@@ -18701,6 +18910,209 @@ shape = SubResource( 86 )
 [node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box043/Box043__0/StaticBody"]
 shape = SubResource( 87 )
 
+[node name="double_stairs3" parent="Stairs" instance=ExtResource( 6 )]
+transform = Transform( -0.03, 0, -8.30477e-09, 0, 0.026, 0, 4.52987e-09, 0, -0.055, 45.3669, -1.93029, -17.6117 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Plane001/Plane001__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Plane001/Plane001__0/StaticBody"]
+shape = SubResource( 48 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box006/Box006__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box006/Box006__0/StaticBody"]
+shape = SubResource( 49 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box007/Box007__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box007/Box007__0/StaticBody"]
+shape = SubResource( 50 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box008/Box008__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box008/Box008__0/StaticBody"]
+shape = SubResource( 51 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box009/Box009__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box009/Box009__0/StaticBody"]
+shape = SubResource( 52 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box010/Box010__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box010/Box010__0/StaticBody"]
+shape = SubResource( 53 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box011/Box011__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box011/Box011__0/StaticBody"]
+shape = SubResource( 54 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box012/Box012__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box012/Box012__0/StaticBody"]
+shape = SubResource( 55 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box013/Box013__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box013/Box013__0/StaticBody"]
+shape = SubResource( 56 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box014/Box014__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box014/Box014__0/StaticBody"]
+shape = SubResource( 57 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box015/Box015__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box015/Box015__0/StaticBody"]
+shape = SubResource( 58 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box016/Box016__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box016/Box016__0/StaticBody"]
+shape = SubResource( 59 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box017/Box017__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box017/Box017__0/StaticBody"]
+shape = SubResource( 60 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box018/Box018__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box018/Box018__0/StaticBody"]
+shape = SubResource( 61 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box019/Box019__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box019/Box019__0/StaticBody"]
+shape = SubResource( 62 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box020/Box020__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box020/Box020__0/StaticBody"]
+shape = SubResource( 63 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box021/Box021__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box021/Box021__0/StaticBody"]
+shape = SubResource( 64 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box022/Box022__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box022/Box022__0/StaticBody"]
+shape = SubResource( 65 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box023/Box023__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box023/Box023__0/StaticBody"]
+shape = SubResource( 66 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box024/Box024__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box024/Box024__0/StaticBody"]
+shape = SubResource( 67 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box025/Box025__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box025/Box025__0/StaticBody"]
+shape = SubResource( 68 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box026/Box026__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box026/Box026__0/StaticBody"]
+shape = SubResource( 69 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box027/Box027__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box027/Box027__0/StaticBody"]
+shape = SubResource( 70 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box028/Box028__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box028/Box028__0/StaticBody"]
+shape = SubResource( 71 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box029/Box029__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box029/Box029__0/StaticBody"]
+shape = SubResource( 72 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box030/Box030__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box030/Box030__0/StaticBody"]
+shape = SubResource( 73 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box031/Box031__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box031/Box031__0/StaticBody"]
+shape = SubResource( 74 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box032/Box032__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box032/Box032__0/StaticBody"]
+shape = SubResource( 75 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Plane002/Plane002__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Plane002/Plane002__0/StaticBody"]
+shape = SubResource( 76 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box033/Box033__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box033/Box033__0/StaticBody"]
+shape = SubResource( 77 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box034/Box034__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box034/Box034__0/StaticBody"]
+shape = SubResource( 78 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box035/Box035__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box035/Box035__0/StaticBody"]
+shape = SubResource( 79 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box036/Box036__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box036/Box036__0/StaticBody"]
+shape = SubResource( 80 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box037/Box037__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box037/Box037__0/StaticBody"]
+shape = SubResource( 81 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box038/Box038__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box038/Box038__0/StaticBody"]
+shape = SubResource( 82 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box039/Box039__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box039/Box039__0/StaticBody"]
+shape = SubResource( 83 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box040/Box040__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box040/Box040__0/StaticBody"]
+shape = SubResource( 84 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box041/Box041__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box041/Box041__0/StaticBody"]
+shape = SubResource( 85 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box042/Box042__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box042/Box042__0/StaticBody"]
+shape = SubResource( 86 )
+
+[node name="StaticBody" type="StaticBody" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box043/Box043__0" index="0"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Stairs/double_stairs3/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box043/Box043__0/StaticBody"]
+shape = SubResource( 87 )
+
 [node name="Window" type="Spatial" parent="."]
 
 [node name="picture_window" parent="Window" instance=ExtResource( 7 )]
@@ -18720,7 +19132,167 @@ transform = Transform( 0.465, 0, 0, 0, 0.5, 0, 0, 0, 0.37, -20.0061, -1.92171, -
 
 [node name="FloorBase2" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.465, 0, 0, 0, 0.5, 0, 0, 0, 0.37, -20.006, 5.1, -0.117 )
-visible = false
+
+[node name="Lights" type="Spatial" parent="."]
+
+[node name="Light" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.280197, 0, 1.46249 )
+
+[node name="long_office_ceiling_light20" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 93.2179, 10.2444, -3.7981 )
+
+[node name="long_office_ceiling_light21" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 93.2179, 10.2444, 2.93245 )
+
+[node name="long_office_ceiling_light22" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 83.9002, 10.2444, -3.7981 )
+
+[node name="long_office_ceiling_light23" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 83.9002, 10.2444, 2.93245 )
+
+[node name="long_office_ceiling_light24" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 73.2472, 10.2444, -3.7981 )
+
+[node name="long_office_ceiling_light25" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 73.2472, 10.2444, 2.93245 )
+
+[node name="long_office_ceiling_light30" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 55.4126, 10.2444, -12.1556 )
+
+[node name="long_office_ceiling_light31" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 42.4126, 10.2444, -12.1556 )
+
+[node name="long_office_ceiling_light32" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 69.8728, 10.2444, -12.1556 )
+
+[node name="long_office_ceiling_light33" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 82.8728, 10.2444, -12.1556 )
+
+[node name="long_office_ceiling_light34" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 94.9931, 10.2444, -12.1556 )
+
+[node name="long_office_ceiling_light35" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 107.966, 10.2444, -12.1556 )
+
+[node name="long_office_ceiling_light36" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 121.013, 10.2444, -12.1556 )
+
+[node name="long_office_ceiling_light37" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 131.346, 10.2444, -12.1556 )
+
+[node name="long_office_ceiling_light38" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 144.779, 10.2444, -12.1556 )
+
+[node name="long_office_ceiling_light13" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 0.0145032, 8.74136e-08, 0.999895, 0, -1, 8.74228e-08, 0.999895, -1.26791e-09, -0.0145032, 99.9226, 10.2444, 1.33174 )
+
+[node name="long_office_ceiling_light26" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 93.2179, 10.2444, -3.7981 )
+
+[node name="long_office_ceiling_light27" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 93.2179, 10.2444, 2.93245 )
+
+[node name="long_office_ceiling_light28" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 83.9002, 10.2444, -3.7981 )
+
+[node name="long_office_ceiling_light29" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 83.9002, 10.2444, 2.93245 )
+
+[node name="long_office_ceiling_light47" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 73.2472, 10.2444, -3.7981 )
+
+[node name="long_office_ceiling_light48" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 73.2472, 10.2444, 2.93245 )
+
+[node name="long_office_ceiling_light39" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 137.126, 10.2444, -27.8658 )
+
+[node name="long_office_ceiling_light40" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 137.126, 10.2444, -21.1352 )
+
+[node name="long_office_ceiling_light41" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 146.444, 10.2444, -27.8658 )
+
+[node name="long_office_ceiling_light42" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 146.444, 10.2444, -21.1352 )
+
+[node name="long_office_ceiling_light61" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 126.473, 10.2444, -27.8658 )
+
+[node name="long_office_ceiling_light62" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 126.473, 10.2444, -21.1352 )
+
+[node name="long_office_ceiling_light43" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 113.73, 10.2444, -27.8658 )
+
+[node name="long_office_ceiling_light44" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 113.73, 10.2444, -21.1352 )
+
+[node name="long_office_ceiling_light63" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 103.077, 10.2444, -27.8658 )
+
+[node name="long_office_ceiling_light64" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 103.077, 10.2444, -21.1352 )
+
+[node name="long_office_ceiling_light45" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 88.9326, 10.2444, -27.8658 )
+
+[node name="long_office_ceiling_light46" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 88.9326, 10.2444, -21.1352 )
+
+[node name="long_office_ceiling_light65" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 78.2795, 10.2444, -27.8658 )
+
+[node name="long_office_ceiling_light66" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 78.2795, 10.2444, -21.1352 )
+
+[node name="long_office_ceiling_light67" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 65.5993, 10.2444, -27.8658 )
+
+[node name="long_office_ceiling_light68" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 65.5993, 10.2444, -21.1352 )
+
+[node name="long_office_ceiling_light69" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 54.9462, 10.2444, -27.8658 )
+
+[node name="long_office_ceiling_light70" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 54.9462, 10.2444, -21.1352 )
+
+[node name="long_office_ceiling_light49" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 125.507, 10.2444, -3.7981 )
+
+[node name="long_office_ceiling_light50" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 125.507, 10.2444, 2.93245 )
+
+[node name="long_office_ceiling_light51" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 116.19, 10.2444, -3.7981 )
+
+[node name="long_office_ceiling_light52" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 116.19, 10.2444, 2.93245 )
+
+[node name="long_office_ceiling_light53" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 105.537, 10.2444, -3.7981 )
+
+[node name="long_office_ceiling_light54" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 105.537, 10.2444, 2.93245 )
+
+[node name="long_office_ceiling_light55" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 62.1595, 10.2444, -3.7981 )
+
+[node name="long_office_ceiling_light56" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 62.1595, 10.2444, 2.93245 )
+
+[node name="long_office_ceiling_light57" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 52.8419, 10.2444, -3.7981 )
+
+[node name="long_office_ceiling_light58" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 52.8419, 10.2444, 2.93245 )
+
+[node name="long_office_ceiling_light59" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 42.1888, 10.2444, -3.7981 )
+
+[node name="long_office_ceiling_light60" parent="Light" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 42.1888, 10.2444, 2.93245 )
 
 [editable path="itc401/Spatial/low_poly_whiteboard"]
 [editable path="itc401/Spatial/computer_desk"]
@@ -18976,4 +19548,6 @@ visible = false
 [editable path="itc407/w&d/simple_wood_door2"]
 [editable path="Walls/wall_plain"]
 [editable path="Stairs/double_stairs2"]
+[editable path="Stairs/double_stairs4"]
 [editable path="Stairs/double_stairs"]
+[editable path="Stairs/double_stairs3"]

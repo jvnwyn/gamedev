@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=2]
+[gd_scene load_steps=139 format=2]
 
 [ext_resource path="res://Assets/wall_plain.glb" type="PackedScene" id=1]
 [ext_resource path="res://2345FlrBase.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/picture_window.glb" type="PackedScene" id=7]
 [ext_resource path="res://Assets/os_room/low_poly_whiteboard.glb" type="PackedScene" id=8]
 [ext_resource path="res://Assets/computer_desk.glb" type="PackedScene" id=9]
+[ext_resource path="res://Assets/long_office_ceiling_light.glb" type="PackedScene" id=10]
 [ext_resource path="res://Assets/os_room/school_chair.glb" type="PackedScene" id=13]
 
 [sub_resource type="BoxShape" id=1]
@@ -392,7 +393,7 @@ data = PoolVector3Array( -1.1019, -1.2727, 0, 1.1019, 1.2727, 0, -1.1019, 1.2727
 data = PoolVector3Array( -1.1019, -1.2727, 0, 1.1019, 1.2727, 0, -1.1019, 1.2727, 0, -1.1019, -1.2727, 0, 1.1019, -1.2727, 0, 1.1019, 1.2727, 0, -1.1019, -1.2727, 56.3038, 1.1019, 1.2727, 56.3038, 1.1019, -1.2727, 56.3038, -1.1019, -1.2727, 56.3038, -1.1019, 1.2727, 56.3038, 1.1019, 1.2727, 56.3038, -1.1019, -1.2727, 0, 1.1019, -1.2727, 56.3038, 1.1019, -1.2727, 0, -1.1019, -1.2727, 0, -1.1019, -1.2727, 56.3038, 1.1019, -1.2727, 56.3038, 1.1019, -1.2727, 0, 1.1019, 1.2727, 56.3038, 1.1019, 1.2727, 0, 1.1019, -1.2727, 0, 1.1019, -1.2727, 56.3038, 1.1019, 1.2727, 56.3038, 1.1019, 1.2727, 0, -1.1019, 1.2727, 56.3038, -1.1019, 1.2727, 0, 1.1019, 1.2727, 0, 1.1019, 1.2727, 56.3038, -1.1019, 1.2727, 56.3038, -1.1019, 1.2727, 0, -1.1019, -1.2727, 56.3038, -1.1019, -1.2727, 0, -1.1019, 1.2727, 0, -1.1019, 1.2727, 56.3038, -1.1019, -1.2727, 56.3038 )
 
 [node name="5thfloor" type="Spatial"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -218.602, -17.6286, 15.0653 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -272.758, -17.6286, 15.0653 )
 
 [node name="Walls" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -39.127 )
@@ -428,12 +429,22 @@ transform = Transform( 0.45, 0, 0, 0, 5, 0, 0, 0, 0.45, -0.274857, 4.94658, 0.10
 shape = SubResource( 1 )
 
 [node name="wall_plain3" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( 0.219433, 0, 0, 0, 0.7, 0, 0, 0, 0.2, 39.6843, 3.971, 20.4707 )
+transform = Transform( 0.219433, 0, 0, 0, 0.7, 0, 0, 0, 0.2, 43.7818, 3.971, 20.4707 )
 
 [node name="StaticBody" type="StaticBody" parent="Walls/wall_plain3"]
 transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain3/StaticBody"]
+transform = Transform( 0.45, 0, 0, 0, 5, 0, 0, 0, 0.45, -0.274857, 4.94658, 0.101532 )
+shape = SubResource( 1 )
+
+[node name="wall_plain22" parent="Walls" instance=ExtResource( 1 )]
+transform = Transform( 0.219, 0, 0, 0, 0.7, 0, 0, 0, 0.2, 144.286, 3.84994, 33.9721 )
+
+[node name="StaticBody" type="StaticBody" parent="Walls/wall_plain22"]
+transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/wall_plain22/StaticBody"]
 transform = Transform( 0.45, 0, 0, 0, 5, 0, 0, 0, 0.45, -0.274857, 4.94658, 0.101532 )
 shape = SubResource( 1 )
 
@@ -448,7 +459,7 @@ transform = Transform( 22, 0, 0, 0, 5, 0, 0, 0, 0.45, -0.274857, 4.85676, 0.1015
 shape = SubResource( 1 )
 
 [node name="wall_plain6" parent="Walls" instance=ExtResource( 1 )]
-transform = Transform( -1.44248e-08, 0, 0.2, 0, 0.7, 0, -0.33, 0, -8.74228e-09, 142.023, 3.83694, 43.8407 )
+transform = Transform( -2.92866e-08, 0, 0.2, 0, 0.7, 0, -0.67, 0, -8.74228e-09, 142.023, 3.83694, 40.569 )
 
 [node name="StaticBody" type="StaticBody" parent="Walls/wall_plain6"]
 transform = Transform( 0.45, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -12041,7 +12052,7 @@ shape = SubResource( 88 )
 shape = SubResource( 89 )
 
 [node name="chalkboard3" parent="rooms/room8" instance=ExtResource( 4 )]
-transform = Transform( -0.0136996, 0, 2.86574, 0, 2.86576, 0, -3.92469, 0, -0.0100032, 83.844, 4.58395, 5.493 )
+transform = Transform( -0.0136996, 0, 2.86574, 0, 2.86576, 0, -3.92469, 0, -0.0100032, 83.844, 4.58395, 4.10843 )
 
 [node name="StaticBody" type="StaticBody" parent="rooms/room8/chalkboard3/Sketchfab_model/root/GLTF_SceneRootNode/piece_1_0/Object_4" index="0"]
 
@@ -12063,13 +12074,16 @@ shape = SubResource( 87 )
 [node name="CollisionShape" type="CollisionShape" parent="rooms/room8/chalkboard3/Sketchfab_model/root/GLTF_SceneRootNode/piece_2_1/Object_8/StaticBody"]
 shape = SubResource( 88 )
 
+[node name="Object_9" parent="rooms/room8/chalkboard3/Sketchfab_model/root/GLTF_SceneRootNode/piece_2_1" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, -4.65661e-10, 0, 1, 0, 0, 0 )
+
 [node name="StaticBody" type="StaticBody" parent="rooms/room8/chalkboard3/Sketchfab_model/root/GLTF_SceneRootNode/piece_2_1/Object_9" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="rooms/room8/chalkboard3/Sketchfab_model/root/GLTF_SceneRootNode/piece_2_1/Object_9/StaticBody"]
 shape = SubResource( 89 )
 
 [node name="chalkboard4" parent="rooms/room8" instance=ExtResource( 4 )]
-transform = Transform( -0.0136996, 0, 2.86574, 0, 2.86576, 0, -3.92469, 0, -0.0100032, 83.844, 4.58395, -2.48461 )
+transform = Transform( -0.0136996, 0, 2.86574, 0, 2.86576, 0, -3.92469, 0, -0.0100032, 83.844, 4.58395, -3.8727 )
 
 [node name="StaticBody" type="StaticBody" parent="rooms/room8/chalkboard4/Sketchfab_model/root/GLTF_SceneRootNode/piece_1_0/Object_4" index="0"]
 
@@ -13461,6 +13475,7 @@ transform = Transform( -3.34091e-08, 0, -1.24225, 0, 0.861331, 0, 0.764311, 0, -
 [node name="StaticBody" type="StaticBody" parent="rooms/room5/chairs/school_chair64/Sketchfab_model/root/GLTF_SceneRootNode/legs_0/Object_4" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="rooms/room5/chairs/school_chair64/Sketchfab_model/root/GLTF_SceneRootNode/legs_0/Object_4/StaticBody"]
+transform = Transform( 0.999999, 3.38813e-21, 2.84217e-14, 0, -0.713649, 1.29125e-07, -3.55271e-14, -6.23892e-08, -1.47702, 118.403, 74.3143, 56.0533 )
 shape = SubResource( 90 )
 
 [node name="StaticBody" type="StaticBody" parent="rooms/room5/chairs/school_chair64/Sketchfab_model/root/GLTF_SceneRootNode/side pipes legs_1/Object_6" index="0"]
@@ -14009,7 +14024,7 @@ shape = SubResource( 88 )
 shape = SubResource( 89 )
 
 [node name="chalkboard3" parent="rooms/room5" instance=ExtResource( 4 )]
-transform = Transform( -0.0136996, 0, 2.86574, 0, 2.86576, 0, -3.92469, 0, -0.0100032, 60.8155, 4.58395, 5.493 )
+transform = Transform( -0.0136996, 0, 2.86574, 0, 2.86576, 0, -3.92469, 0, -0.0100032, 60.8155, 4.58395, 4.60918 )
 
 [node name="StaticBody" type="StaticBody" parent="rooms/room5/chalkboard3/Sketchfab_model/root/GLTF_SceneRootNode/piece_1_0/Object_4" index="0"]
 
@@ -14037,7 +14052,7 @@ shape = SubResource( 88 )
 shape = SubResource( 89 )
 
 [node name="chalkboard4" parent="rooms/room5" instance=ExtResource( 4 )]
-transform = Transform( -0.0136996, 0, 2.86574, 0, 2.86576, 0, -3.92469, 0, -0.0100032, 60.8155, 4.58395, -2.48461 )
+transform = Transform( -0.0136996, 0, 2.86574, 0, 2.86576, 0, -3.92469, 0, -0.0100032, 60.8155, 4.58395, -3.41795 )
 
 [node name="StaticBody" type="StaticBody" parent="rooms/room5/chalkboard4/Sketchfab_model/root/GLTF_SceneRootNode/piece_1_0/Object_4" index="0"]
 
@@ -14225,7 +14240,7 @@ visible = false
 [node name="Stairs2" type="Spatial" parent="."]
 
 [node name="double_stairs2" parent="Stairs2" instance=ExtResource( 3 )]
-transform = Transform( 0.03, 0, 0, 0, 0.026, 0, 0, 0, 0.055, 142.26, 4.38047, -5.62039 )
+transform = Transform( 0.03, 0, 0, 0, 0.026, 0, 0, 0, 0.055, 143.074, -2.3013, -5.62039 )
 
 [node name="StaticBody" type="StaticBody" parent="Stairs2/double_stairs2/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Plane001/Plane001__0" index="0"]
 
@@ -14311,6 +14326,9 @@ shape = SubResource( 19 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Stairs2/double_stairs2/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box021/Box021__0/StaticBody"]
 shape = SubResource( 20 )
+
+[node name="Box022__0" parent="Stairs2/double_stairs2/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box022" index="0"]
+transform = Transform( 1, 1.42109e-14, -5.73395e-25, 0, 1, 0, 1.92748e-23, 0, 1, 0, 0, 0 )
 
 [node name="StaticBody" type="StaticBody" parent="Stairs2/double_stairs2/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box022/Box022__0" index="0"]
 
@@ -14433,7 +14451,7 @@ shape = SubResource( 43 )
 shape = SubResource( 44 )
 
 [node name="double_stairs" parent="Stairs2" instance=ExtResource( 3 )]
-transform = Transform( -0.03, 0, -8.30477e-09, 0, 0.026, 0, 4.52987e-09, 0, -0.055, 45.9797, 4.38047, -17.6117 )
+transform = Transform( -0.0299952, 0, -0.000985793, 0, 0.026, 0, 0.000537705, 0, -0.0549912, 44.9661, -2.09758, -17.6117 )
 
 [node name="StaticBody" type="StaticBody" parent="Stairs2/double_stairs/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Plane001/Plane001__0" index="0"]
 
@@ -14634,6 +14652,74 @@ shape = SubResource( 83 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Stairs2/double_stairs/Sketchfab_model/02c509470bee4594b19d865140de342bfbx/RootNode/Box043/Box043__0/StaticBody"]
 shape = SubResource( 84 )
+
+[node name="ceiling" parent="." instance=ExtResource( 1 )]
+transform = Transform( 5.7, 0, 0, 0, -1.79217e-07, 0.5, 0, -4.1, -2.18557e-08, 94.3161, 10.8569, 9.10634 )
+
+[node name="Lights" type="Spatial" parent="."]
+
+[node name="long_office_ceiling_light" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 95.3262, 10.2593, -11.7359 )
+
+[node name="long_office_ceiling_light6" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 97.6249, 10.2593, 0.573259 )
+
+[node name="long_office_ceiling_light7" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 87.2437, 10.2593, 0.573259 )
+
+[node name="long_office_ceiling_light8" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 120.958, 10.2593, 0.573259 )
+
+[node name="long_office_ceiling_light9" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 110.577, 10.2593, 0.573259 )
+
+[node name="long_office_ceiling_light10" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 76.3931, 10.2593, 0.573259 )
+
+[node name="long_office_ceiling_light11" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 66.0119, 10.2593, 0.573259 )
+
+[node name="long_office_ceiling_light12" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 68.533, 10.2593, -24.0934 )
+
+[node name="long_office_ceiling_light13" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 58.1518, 10.2593, -24.0934 )
+
+[node name="long_office_ceiling_light14" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 95.1997, 10.2593, -24.0934 )
+
+[node name="long_office_ceiling_light15" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 84.8185, 10.2593, -24.0934 )
+
+[node name="long_office_ceiling_light16" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 121.153, 10.2593, -24.0934 )
+
+[node name="long_office_ceiling_light17" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 110.772, 10.2593, -24.0934 )
+
+[node name="long_office_ceiling_light18" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 145.486, 10.2593, -24.0934 )
+
+[node name="long_office_ceiling_light19" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 135.105, 10.2593, -24.0934 )
+
+[node name="long_office_ceiling_light20" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 52.0567, 10.2593, -0.0888748 )
+
+[node name="long_office_ceiling_light21" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 41.6755, 10.2593, -0.0888748 )
+
+[node name="long_office_ceiling_light4" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 48.5377, 10.2593, -11.7359 )
+
+[node name="long_office_ceiling_light5" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 70.871, 10.2593, -11.7359 )
+
+[node name="long_office_ceiling_light3" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 118.329, 10.2593, -11.7359 )
+
+[node name="long_office_ceiling_light2" parent="Lights" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 138.743, 10.2593, -11.7359 )
 
 [editable path="rooms/room1/Spatial/chalkboard"]
 [editable path="rooms/room1/Spatial/chalkboard2"]
