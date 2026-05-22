@@ -3,8 +3,7 @@ extends Node
 const FLOORS = {
 	1: "res://1stFloor.tscn",
 	2: "res://2ndFloor.tscn",
-	4: "res://4thFloor.tscn",
-	5: "res://5thFloor.tscn"
+
 }
 
 const SPAWN_POINTS = {
@@ -14,9 +13,9 @@ const SPAWN_POINTS = {
 	5: Vector3(0, 1, 0)
 }
 
-const FLOOR_ORDER = [1, 2, 4, 5]
+const FLOOR_ORDER = [1, 2]
 
-var current_floor: int = 4
+var current_floor: int = 1
 var current_floor_instance: Node = null
 var is_first_load: bool = true
 
