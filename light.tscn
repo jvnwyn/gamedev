@@ -71,9 +71,3 @@ mesh = SubResource( 2 )
 
 [node name="Object_6" type="MeshInstance" parent="Sketchfab_model/root/GLTF_SceneRootNode/Cube_0"]
 mesh = SubResource( 3 )
-
-[node name="OmniLight" type="OmniLight" parent="."]
-transform = Transform( 1, -1.11022e-16, 0, 0, 1, -7.20084e-15, 0, -9.71445e-17, 1, 0, 0.926247, 0 )
-light_energy = 0.2
-omni_range = 30.0
-omni_attenuation = 2.07053

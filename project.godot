@@ -18,6 +18,13 @@ config/icon="res://icon.png"
 
 LightManager="*res://LightManager.gd"
 
+[display]
+
+window/size/width=960
+window/size/height=540
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
 [global]
 
 occ=false

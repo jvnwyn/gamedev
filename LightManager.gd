@@ -10,4 +10,5 @@ func request_turn_on(light):
 
 func release_light(light):
 	if current_light == light:
+		print("Light released: ", light)  # your debug line here
 		current_light = null
