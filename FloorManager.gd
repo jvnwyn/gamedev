@@ -3,6 +3,7 @@ extends Node
 const FLOORS = {
 	1: "res://1stFloor.tscn",
 	2: "res://2ndFloor.tscn",
+	3: "res://4thFloor.tscn",
 
 }
 
@@ -11,7 +12,7 @@ const SPAWN_POINTS = {
 	2: Vector3(143.19, 4.826, -6.367)
 }
 
-const FLOOR_ORDER = [1, 2]
+const FLOOR_ORDER = [1, 2, 3]
 
 var current_floor: int = 1
 var current_floor_instance: Node = null
