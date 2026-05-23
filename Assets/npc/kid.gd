@@ -4,6 +4,7 @@ export var walk_speed: float = 10.0
 export var run_speed: float = 20.0
 export var run_distance: float = 15.0
 export var kill_distance: float = 5.0
+export var stop_distance: float = 6.0  # Stop moving when this close
 export var detect_distance: float = 50.0
 
 var player: Node = null
@@ -45,7 +46,8 @@ func _is_path_clear(direction: Vector3) -> bool:
 	var space = get_world().direct_space_state
 	var origin = global_transform.origin + Vector3.UP * 1.0
 	var end = origin + direction * 8.0
-	var result = space.intersect_ray(origin, end, [self])
+	# Exclude both self and player from raycast so player doesn't block steering
+	var result = space.intersect_ray(origin, end, [self, player])
 	return not result
 
 func _get_steering_direction(desired_dir: Vector3) -> Vector3:
@@ -82,24 +84,30 @@ func _physics_process(delta):
 			has_waypoint = false
 
 	if in_range:
-		var desired = (target_pos - global_transform.origin)
-		desired.y = 0
-		desired = desired.normalized()
+		# Stop moving when close enough — just face the player and wait
+		if dist_to_player <= stop_distance:
+			velocity = Vector3.ZERO
+			var look_target = Vector3(player.global_transform.origin.x, global_transform.origin.y, player.global_transform.origin.z)
+			look_at(look_target, Vector3.UP)
+		else:
+			var desired = (target_pos - global_transform.origin)
+			desired.y = 0
+			desired = desired.normalized()
 
-		var move_dir = _get_steering_direction(desired)
-		var speed = run_speed if dist_to_player <= run_distance else walk_speed
+			var move_dir = _get_steering_direction(desired)
+			var speed = run_speed if dist_to_player <= run_distance else walk_speed
 
-		velocity.x = move_dir.x * speed
-		velocity.y = 0
-		velocity.z = move_dir.z * speed
+			velocity.x = move_dir.x * speed
+			velocity.y = 0
+			velocity.z = move_dir.z * speed
 
-		var look_target = global_transform.origin + Vector3(move_dir.x, 0, move_dir.z)
-		look_at(look_target, Vector3.UP)
+			var look_target = global_transform.origin + Vector3(move_dir.x, 0, move_dir.z)
+			look_at(look_target, Vector3.UP)
 
-		if anim_player:
-			if not anim_player.is_playing():
-				anim_player.play("walking")
-			anim_player.playback_speed = 2.5 if dist_to_player <= run_distance else 1.0
+			if anim_player:
+				if not anim_player.is_playing():
+					anim_player.play("walking")
+				anim_player.playback_speed = 2.5 if dist_to_player <= run_distance else 1.0
 		is_moving = true
 	else:
 		velocity = Vector3.ZERO

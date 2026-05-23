@@ -7,10 +7,8 @@ const FLOORS = {
 }
 
 const SPAWN_POINTS = {
-	1: Vector3(0, 1, 0),
-	2: Vector3(0, 1, 0),
-	4: Vector3(143.19, 4.826, -6.367),
-	5: Vector3(0, 1, 0)
+	1: Vector3(138.19, 4.234, -9.903),
+	2: Vector3(143.19, 4.826, -6.367)
 }
 
 const FLOOR_ORDER = [1, 2]
@@ -20,7 +18,7 @@ var current_floor_instance: Node = null
 var is_first_load: bool = true
 
 onready var player = get_node("../Player")
-onready var kid = get_node("../Kid")
+onready var kid = get_node("../kid")
 
 func _ready():
 	call_deferred("load_floor", current_floor)
