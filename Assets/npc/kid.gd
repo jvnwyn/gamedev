@@ -35,8 +35,10 @@ func _ready():
 
 func teleport_to_opposite_stair(floor_num: int):
 	var opposite = "right" if PlayerData.last_stair_id == "left" else "left"
+	print("Player used: ", PlayerData.last_stair_id, " Kid spawning at: ", opposite)
 	if KID_SPAWN_POINTS.has(floor_num) and KID_SPAWN_POINTS[floor_num].has(opposite):
-		global_transform.origin = KID_SPAWN_POINTS[floor_num][opposite]
+		var spawn = KID_SPAWN_POINTS[floor_num][opposite]
+		global_transform.origin = Vector3(spawn.x, spawn.y + 1.0, spawn.z)
 
 func _connect_doors():
 	var doors = get_tree().get_nodes_in_group("doors")

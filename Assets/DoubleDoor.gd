@@ -119,3 +119,7 @@ func interact():
 		audio_open.play()
 	elif not is_open and audio_close:
 		audio_close.play()
+
+func unlock():
+	if not is_open:
+		interact()

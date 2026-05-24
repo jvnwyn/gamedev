@@ -140,6 +140,12 @@ func collect_key():
 	key_slot_panel.margin_left = 4
 	key_slot_panel.margin_right = 52
 	key_slot_panel.visible = true
+	
+	# Unlock the key doors
+	var doors = get_tree().get_nodes_in_group("key_doors")
+	for door in doors:
+		if door.has_method("unlock"):
+			door.unlock()
 
 func fade_out_hud():
 	if not is_inside_tree():

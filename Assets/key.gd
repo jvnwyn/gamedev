@@ -2,6 +2,7 @@ extends Spatial
 
 var mesh_instance = null
 var is_hovered: bool = false
+var is_collected: bool = false
 
 func _ready():
 	if PlayerData.key_collected:
@@ -51,9 +52,24 @@ func _disable_outline():
 	if outline:
 		outline.queue_free()
 
+
 func interact():
+	if is_collected:
+		return
+	is_collected = true
+	
 	var player = get_tree().get_root().find_node("Player", true, false)
 	if player and player.has_method("collect_key"):
 		player.collect_key()
 	PlayerData.key_collected = true
+	
+	var sound = AudioStreamPlayer.new()
+	var stream = load("res://Assets/Audio/key.ogg")
+	stream.loop = false
+	sound.stream = stream
+	get_tree().get_root().add_child(sound)
+	sound.play()
+	var timer = get_tree().create_timer(3.0)
+	timer.connect("timeout", sound, "queue_free")
+	
 	call_deferred("queue_free")

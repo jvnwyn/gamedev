@@ -33,8 +33,8 @@ func _on_StartGame_pressed():
 	get_tree().change_scene("res://Main.tscn")
 
 func _on_Setting_pressed():
-	pass
+	click_sound.play()
+	get_tree().change_scene("res://Setting.tscn")
 
 func _on_Quit_pressed():
 	get_tree().quit()
-
