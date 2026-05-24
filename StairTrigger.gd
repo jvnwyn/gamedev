@@ -1,13 +1,12 @@
 extends Area
 
 export var goes_up: bool = true
+export var stair_id: String = "left"
 
 var active: bool = false
 
 func _ready():
 	connect("body_entered", self, "_on_body_entered")
-	# Wait half a second before becoming active
-	# This prevents triggering immediately on player spawn
 	var timer = Timer.new()
 	add_child(timer)
 	timer.wait_time = 0.5
@@ -19,9 +18,13 @@ func _on_timer_done():
 	active = true
 
 func _on_body_entered(body):
+	print("body entered: ", body.name)
 	if not active:
+		print("not active yet")
 		return
 	if body.name == "Player":
+		print("player detected, going up: ", goes_up)
+		PlayerData.last_stair_id = stair_id
 		var floor_manager = get_tree().get_root().find_node("FloorManager", true, false)
 		if floor_manager == null:
 			return

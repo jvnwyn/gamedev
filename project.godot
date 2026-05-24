@@ -16,7 +16,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-LightManager="*res://LightManager.gd"
+PlayerData="*res://PlayerData.gd"
+AudioManager="*res://AudioManager.gd"
 
 [display]
 

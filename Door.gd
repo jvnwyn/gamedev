@@ -22,8 +22,14 @@ func _ready():
 	closed_rotation = rotation_degrees.y
 	target_rotation = closed_rotation
 	mesh_instance = _find_mesh_instance(self)
-	audio_open = _find_node_by_name(self, "AudioOpen")
-	audio_close = _find_node_by_name(self, "AudioClose")
+	
+	audio_open = AudioStreamPlayer3D.new()
+	audio_open.stream = load("res://Assets/Audio/door-opening.wav")
+	add_child(audio_open)
+	
+	audio_close = AudioStreamPlayer3D.new()
+	audio_close.stream = load("res://Assets/Audio/door-close.wav")
+	add_child(audio_close)
 
 func _find_mesh_instance(node: Node) -> Node:
 	if node is MeshInstance:

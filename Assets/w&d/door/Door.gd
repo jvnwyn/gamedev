@@ -8,13 +8,13 @@ export var open_speed: float = 3.0
 var is_open: bool = false
 var is_hovered: bool = false
 var tween: Tween
+
 var closed_rotation: float = 0.0
 var target_rotation: float = 0.0
-var mesh_instance = null
-var audio_player: AudioStreamPlayer3D
 
-var audio_open_stream = preload("res://Assets/Audio/door-opening.wav")
-var audio_close_stream = preload("res://Assets/Audio/door-close.wav")
+var mesh_instance = null
+var audio_open = null
+var audio_close = null
 
 func _ready():
 	tween = Tween.new()
@@ -22,8 +22,14 @@ func _ready():
 	closed_rotation = rotation_degrees.y
 	target_rotation = closed_rotation
 	mesh_instance = _find_mesh_instance(self)
-	audio_player = AudioStreamPlayer3D.new()
-	add_child(audio_player)
+	
+	audio_open = AudioStreamPlayer3D.new()
+	audio_open.stream = load("res://Assets/Audio/door-opening.wav")
+	add_child(audio_open)
+	
+	audio_close = AudioStreamPlayer3D.new()
+	audio_close.stream = load("res://Assets/Audio/door-close.wav")
+	add_child(audio_close)
 
 func _find_mesh_instance(node: Node) -> Node:
 	if node is MeshInstance:
@@ -87,10 +93,10 @@ func interact():
 		Tween.TRANS_SINE, Tween.EASE_IN_OUT
 	)
 	tween.start()
-	if is_open:
-		audio_player.stream = audio_open_stream
-	else:
-		audio_player.stream = audio_close_stream
-	audio_player.play()
+	if is_open and audio_open:
+		audio_open.play()
+	elif not is_open and audio_close:
+		audio_close.play()
+	# Notify the kid when door opens
 	if is_open:
 		emit_signal("door_opened", global_transform.origin)

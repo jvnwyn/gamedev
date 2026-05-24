@@ -2,9 +2,9 @@ extends KinematicBody
 
 export var walk_speed: float = 10.0
 export var run_speed: float = 20.0
-export var run_distance: float = 15.0
-export var kill_distance: float = 5.0
-export var stop_distance: float = 6.0  # Stop moving when this close
+export var run_distance: float = 20.0
+export var kill_distance: float = 6.0
+export var stop_distance: float = 6.0
 export var detect_distance: float = 50.0
 
 var player: Node = null
@@ -16,10 +16,27 @@ var velocity: Vector3 = Vector3.ZERO
 var door_waypoint: Vector3 = Vector3.ZERO
 var has_waypoint: bool = false
 
+const KID_SPAWN_POINTS = {
+	1: {
+		"left": Vector3(-156.683899, -13.050052, -6.316),
+		"right": Vector3(139.354446, -13.050052, 8.122311)
+	},
+	2: {
+		"left": Vector3(-148.320618, -5.89223, -9.219653),
+		"right": Vector3(161.127502, -5.89223, 7.395763)
+	}
+}
+
 func _ready():
 	player = get_tree().get_root().find_node("Player", true, false)
-	anim_player = _find_node_by_name(self, "AnimationPlayer")
-	call_deferred("_connect_doors")
+	set_process(false)
+	set_physics_process(false)
+	return
+
+func teleport_to_opposite_stair(floor_num: int):
+	var opposite = "right" if PlayerData.last_stair_id == "left" else "left"
+	if KID_SPAWN_POINTS.has(floor_num) and KID_SPAWN_POINTS[floor_num].has(opposite):
+		global_transform.origin = KID_SPAWN_POINTS[floor_num][opposite]
 
 func _connect_doors():
 	var doors = get_tree().get_nodes_in_group("doors")
@@ -46,7 +63,6 @@ func _is_path_clear(direction: Vector3) -> bool:
 	var space = get_world().direct_space_state
 	var origin = global_transform.origin + Vector3.UP * 1.0
 	var end = origin + direction * 8.0
-	# Exclude both self and player from raycast so player doesn't block steering
 	var result = space.intersect_ray(origin, end, [self, player])
 	return not result
 
@@ -84,7 +100,11 @@ func _physics_process(delta):
 			has_waypoint = false
 
 	if in_range:
-		# Stop moving when close enough — just face the player and wait
+		if dist_to_player <= run_distance:
+			AudioManager.play_hunt()
+		else:
+			AudioManager.stop_hunt()
+
 		if dist_to_player <= stop_distance:
 			velocity = Vector3.ZERO
 			var look_target = Vector3(player.global_transform.origin.x, global_transform.origin.y, player.global_transform.origin.z)
@@ -110,18 +130,21 @@ func _physics_process(delta):
 				anim_player.playback_speed = 2.5 if dist_to_player <= run_distance else 1.0
 		is_moving = true
 	else:
+		AudioManager.stop_hunt()
 		velocity = Vector3.ZERO
 		if anim_player and is_moving:
 			anim_player.stop()
 			is_moving = false
 
 	move_and_slide(velocity, Vector3.UP)
-
+	
 func _kill_player():
 	is_dead = true
 	velocity = Vector3.ZERO
 	if anim_player:
 		anim_player.stop()
+
+	AudioManager.play_kid_laugh()
 
 	if player:
 		player.set_physics_process(false)
