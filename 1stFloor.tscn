@@ -548,7 +548,7 @@ extents = Vector3( 3.22773, 2.38864, 13.8544 )
 extents = Vector3( 0.50666, 1, 0.500165 )
 
 [node name="1stFlr" type="Spatial"]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -297.854, 67.3915, 10.2881 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -347.018, -17.695, 58.495 )
 
 [node name="Room101" parent="." instance=ExtResource( 3 )]
 transform = Transform( -2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, 110.525, 1.481, -20.8761 )
@@ -4094,7 +4094,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5668, 0, 0 )
 transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -9.8834, 0, 0 )
 
 [node name="low_poly_file_cabinet" parent="Spatial4" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
