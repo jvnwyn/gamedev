@@ -3220,7 +3220,6 @@ transform = Transform( 0.465, 0, 0, 0, 0.5, 0, 0, 0, 0.37, -20.0061, -1.92171, -
 
 [node name="FloorBase2" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.465, 0, 0, 0, 0.5, 0, 0, 0, 0.37, -20.006, 5.1, -0.117 )
-visible = false
 
 [node name="Lights" type="Spatial" parent="."]
 

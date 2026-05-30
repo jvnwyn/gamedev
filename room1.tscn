@@ -1,0 +1,270 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/computer set/school_desk.glb" type="PackedScene" id=1]
+[ext_resource path="res://RoomBase.tscn" type="PackedScene" id=2]
+[ext_resource path="res://desktop/desktop_pc.glb" type="PackedScene" id=3]
+[ext_resource path="res://FloorBase.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+
+[sub_resource type="BoxShape" id=3]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 227.787, 39.5517, 18.4631 )
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.976501, 1, 1 )
+
+[node name="room1" type="Spatial"]
+
+[node name="RoomBase" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2, 3, -2 )
+
+[node name="PCSET3" type="Spatial" parent="RoomBase"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 1.91022, -7.24693, 4 )
+
+[node name="PC75" type="Spatial" parent="RoomBase/PCSET3"]
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, -13.5897, 8.48885, 0.0175505 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET3/PC75" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET3/PC75" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC76" type="Spatial" parent="RoomBase/PCSET3"]
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, -13.5897, 8.48885, -2.20552 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET3/PC76" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET3/PC76" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC77" type="Spatial" parent="RoomBase/PCSET3"]
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, -13.5897, 8.48885, -4.43873 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET3/PC77" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET3/PC77" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC78" type="Spatial" parent="RoomBase/PCSET3"]
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, -13.5897, 8.48885, -6.61834 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET3/PC78" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET3/PC78" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC79" type="Spatial" parent="RoomBase/PCSET3"]
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, -13.5897, 8.48885, -8.8943 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET3/PC79" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET3/PC79" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC80" type="Spatial" parent="RoomBase/PCSET3"]
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, -13.5897, 8.48885, -10.9695 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET3/PC80" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET3/PC80" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC81" type="Spatial" parent="RoomBase/PCSET3"]
+transform = Transform( 0.000188496, 0, -0.0299994, 0, 0.03, 0, 0.0299994, 0, 0.000188496, -24.0259, 8.48885, 4.70156 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET3/PC81" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET3/PC81" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC82" type="Spatial" parent="RoomBase/PCSET3"]
+transform = Transform( 0.000188496, 0, -0.0299994, 0, 0.03, 0, 0.0299994, 0, 0.000188496, -24.0259, 8.48885, 2.47849 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET3/PC82" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET3/PC82" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC83" type="Spatial" parent="RoomBase/PCSET3"]
+transform = Transform( 0.000188496, 0, -0.0299994, 0, 0.03, 0, 0.0299994, 0, 0.000188496, -24.0259, 8.48885, 0.245277 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET3/PC83" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET3/PC83" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC84" type="Spatial" parent="RoomBase/PCSET3"]
+transform = Transform( 0.000188496, 0, -0.0299994, 0, 0.03, 0, 0.0299994, 0, 0.000188496, -24.0259, 8.48885, -1.93433 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET3/PC84" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET3/PC84" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC85" type="Spatial" parent="RoomBase/PCSET3"]
+transform = Transform( 0.000188496, 0, -0.0299994, 0, 0.03, 0, 0.0299994, 0, 0.000188496, -24.0259, 8.48885, -4.21029 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET3/PC85" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET3/PC85" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC86" type="Spatial" parent="RoomBase/PCSET3"]
+transform = Transform( 0.000188496, 0, -0.0299994, 0, 0.03, 0, 0.0299994, 0, 0.000188496, -24.0259, 8.48885, -6.28547 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET3/PC86" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET3/PC86" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="StaticBody" type="StaticBody" parent="RoomBase/PCSET3"]
+transform = Transform( 0.870213, 0, 0, 0, 1.11963, 0, 0, 0, 6.21311, -18.8073, 6.59583, -3.24468 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RoomBase/PCSET3/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="PCSET2" type="Spatial" parent="RoomBase"]
+transform = Transform( 0.000376992, 0, -0.0599988, 0, 0.06, 0, 0.0599988, 0, 0.000376992, -36.6994, 9.73077, 13.4031 )
+
+[node name="PC87" type="Spatial" parent="RoomBase/PCSET2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET2/PC87" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET2/PC87" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC88" type="Spatial" parent="RoomBase/PCSET2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -74.101, 0, -0.465576 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET2/PC88" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET2/PC88" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC89" type="Spatial" parent="RoomBase/PCSET2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -148.54, 0, -0.933289 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET2/PC89" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET2/PC89" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC90" type="Spatial" parent="RoomBase/PCSET2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -221.192, 0, -1.38983 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET2/PC90" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET2/PC90" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC91" type="Spatial" parent="RoomBase/PCSET2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -297.056, 0, -1.86646 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET2/PC91" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET2/PC91" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC92" type="Spatial" parent="RoomBase/PCSET2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -366.227, 0, -2.30109 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET2/PC92" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET2/PC92" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="StaticBody" type="StaticBody" parent="RoomBase/PCSET2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -338.356, -27.957, -132.453 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RoomBase/PCSET2/StaticBody"]
+transform = Transform( 1, 0, 9.31323e-09, 0, 0.999999, 0, -9.31323e-09, 0, 1, 75.8334, -42.7601, -26.4407 )
+shape = SubResource( 2 )
+
+[node name="PCSET" type="Spatial" parent="RoomBase"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 3.06934, -7.24693, 4 )
+
+[node name="PC69" type="Spatial" parent="RoomBase/PCSET"]
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, -19.3334, 8.48885, 0.0175505 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET/PC69" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET/PC69" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC70" type="Spatial" parent="RoomBase/PCSET"]
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, -19.3334, 8.48885, -2.20552 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET/PC70" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET/PC70" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC71" type="Spatial" parent="RoomBase/PCSET"]
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, -19.3334, 8.48885, -4.43873 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET/PC71" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET/PC71" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC72" type="Spatial" parent="RoomBase/PCSET"]
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, -19.3334, 8.48885, -6.61834 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET/PC72" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET/PC72" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC73" type="Spatial" parent="RoomBase/PCSET"]
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, -19.3334, 8.48885, -8.8943 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET/PC73" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET/PC73" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="PC74" type="Spatial" parent="RoomBase/PCSET"]
+transform = Transform( -1.31134e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.31134e-09, -19.3334, 8.48885, -10.9695 )
+
+[node name="desktop_pc" parent="RoomBase/PCSET/PC74" instance=ExtResource( 3 )]
+transform = Transform( 50, 0, 2.27374e-13, 0, 50, 0, -2.27374e-13, 0, 50, -89.3586, -51.864, -151.323 )
+
+[node name="school_desk" parent="RoomBase/PCSET/PC74" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -112.799, -105.302, -156.244 )
+
+[node name="StaticBody" type="StaticBody" parent="RoomBase/PCSET"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RoomBase/PCSET/StaticBody"]
+transform = Transform( 0.648521, 0, 0, 0, 1.14211, 0, 0, 0, 6.52753, -24.0465, 6.43351, -3.10355 )
+shape = SubResource( 1 )
+
+[node name="FloorBase" parent="." instance=ExtResource( 4 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -128, -4, -6 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.6897, 0, 0, 0, 0.504452, 0, 0, 0, 0.903591, -21.4601, 5.85678, 0.540594 )
