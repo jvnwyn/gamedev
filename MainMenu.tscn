@@ -1,7 +1,10 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/ui/DIT404.png" type="Texture" id=2]
+[ext_resource path="res://Assets/ui/hallway.png" type="Texture" id=3]
+[ext_resource path="res://Assets/ui/FacultyRoom.jpg" type="Texture" id=4]
+[ext_resource path="res://Assets/ui/presentation_room.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Assets/ui/Cinzel/Cinzel-VariableFont_wght.ttf"
@@ -19,23 +22,6 @@ font_data = SubResource( 1 )
 [sub_resource type="StyleBoxEmpty" id=13]
 
 [sub_resource type="StyleBoxEmpty" id=3]
-
-[sub_resource type="DynamicFontData" id=4]
-font_path = "res://Assets/ui/Cinzel/Cinzel-VariableFont_wght.ttf"
-
-[sub_resource type="DynamicFont" id=5]
-size = 32
-font_data = SubResource( 4 )
-
-[sub_resource type="StyleBoxEmpty" id=15]
-
-[sub_resource type="StyleBoxEmpty" id=16]
-
-[sub_resource type="StyleBoxEmpty" id=17]
-
-[sub_resource type="StyleBoxEmpty" id=18]
-
-[sub_resource type="StyleBoxEmpty" id=6]
 
 [sub_resource type="DynamicFontData" id=7]
 font_path = "res://Assets/ui/Cinzel/Cinzel-VariableFont_wght.ttf"
@@ -59,9 +45,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Hallway" type="TextureRect" parent="."]
+margin_left = -8.0
+margin_top = -84.0
+margin_right = 1358.0
+margin_bottom = 684.0
+texture = ExtResource( 3 )
+
+[node name="PresentationRoom" type="TextureRect" parent="."]
+margin_left = -8.0
+margin_top = -84.0
+margin_right = 1358.0
+margin_bottom = 684.0
+texture = ExtResource( 5 )
+
+[node name="FacultyRoom" type="TextureRect" parent="."]
+margin_left = -8.0
+margin_top = -84.0
+margin_right = 1358.0
+margin_bottom = 684.0
+texture = ExtResource( 4 )
+
+[node name="FadeOverlay" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 color = Color( 0, 0, 0, 1 )
 
 [node name="Title" type="TextureRect" parent="."]
@@ -69,10 +77,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -960.0
-margin_top = -632.0
-margin_right = 960.0
-margin_bottom = 448.0
+margin_left = -1138.0
+margin_top = -656.0
+margin_right = 782.0
+margin_bottom = 424.0
 texture = ExtResource( 2 )
 
 [node name="StartGame" type="Button" parent="."]
@@ -80,10 +88,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -94.0
-margin_top = -227.0
-margin_right = 100.0
-margin_bottom = -183.0
+margin_left = -333.0
+margin_top = -230.0
+margin_right = -139.0
+margin_bottom = -186.0
 custom_colors/font_color_hover = Color( 0.588235, 0.588235, 0.588235, 1 )
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 14 )
@@ -93,33 +101,15 @@ custom_styles/disabled = SubResource( 13 )
 custom_styles/normal = SubResource( 3 )
 text = "Start Game"
 
-[node name="Setting" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -76.0
-margin_top = -183.0
-margin_right = 81.0
-margin_bottom = -133.0
-custom_colors/font_color_hover = Color( 0.588235, 0.588235, 0.588235, 1 )
-custom_fonts/font = SubResource( 5 )
-custom_styles/hover = SubResource( 15 )
-custom_styles/pressed = SubResource( 16 )
-custom_styles/focus = SubResource( 17 )
-custom_styles/disabled = SubResource( 18 )
-custom_styles/normal = SubResource( 6 )
-text = "Settings"
-
 [node name="Quit" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -45.5
-margin_top = -137.0
-margin_right = 45.5
-margin_bottom = -87.0
+margin_left = -284.5
+margin_top = -190.0
+margin_right = -193.5
+margin_bottom = -140.0
 custom_colors/font_color_hover = Color( 0.588235, 0.588235, 0.588235, 1 )
 custom_fonts/font = SubResource( 8 )
 custom_styles/hover = SubResource( 19 )
@@ -130,5 +120,4 @@ custom_styles/normal = SubResource( 9 )
 text = "Quit"
 
 [connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]
-[connection signal="pressed" from="Setting" to="." method="_on_Setting_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

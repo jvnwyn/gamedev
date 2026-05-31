@@ -18,20 +18,19 @@ var has_waypoint: bool = false
 
 const KID_SPAWN_POINTS = {
 	1: {
-		"left": Vector3(-156.683899, -13.050052, -6.316),
-		"right": Vector3(139.354446, -13.050052, 8.122311)
+		"left": Vector3(81.658096, -1.675, 33.628777),
+		"right": Vector3(-215.921326, -1.675, 14.360372)
 	},
 	2: {
-		"left": Vector3(-148.320618, -5.89223, -9.219653),
-		"right": Vector3(161.127502, -5.89223, 7.395763)
+		"left": Vector3(-215.921326, -1.675, 14.360372),
+		"right": Vector3(81.658096, -1.675, 33.628777)
 	}
 }
 
 func _ready():
 	player = get_tree().get_root().find_node("Player", true, false)
-	set_process(false)
-	set_physics_process(false)
-	return
+	anim_player = _find_node_by_name(self, "AnimationPlayer")
+	call_deferred("_connect_doors")
 
 func teleport_to_opposite_stair(floor_num: int):
 	var opposite = "right" if PlayerData.last_stair_id == "left" else "left"
