@@ -1,0 +1,14 @@
+# Godot export files
+*.exe
+*.pck
+*.zip
+
+# Godot cache and temp files
+.import/
+export.cfg
+export_presets.cfg
+*.translation
+
+# Mono/C# files
+.mono/
+data_*/
